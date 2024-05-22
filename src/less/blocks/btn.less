@@ -1,0 +1,53 @@
+.btn {
+    display: inline-block;
+    // min-width: 220px;
+    padding: 16px 52px;
+
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+
+    border-radius: 16px;
+
+	color: @white;
+    background-color: @accent;
+    transition: color 0.5s, background-color 0.5s;
+
+    .xs-block({
+        padding: 18px 7vw;
+    });
+
+    &:hover, &:active, a:focus {
+        background-color: @accent-hover;
+    }
+}
+
+.btn-o {
+    color: @black;
+    background-color: @white;
+
+    &:hover, &:active, a:focus {
+        color: @accent;
+        background-color: @white;
+    }
+}
+
+.btn-link {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: url(../img/arrow-right.svg);
+        right: 1.5vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+a.btn {
+    color: @white;
+}
+
+a.btn-o {
+    color: @black;
+}

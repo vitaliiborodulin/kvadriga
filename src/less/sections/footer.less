@@ -1,0 +1,199 @@
+.footer {
+	&__content {
+        padding: 40px 40px 16px;
+
+        .xs-block({
+            padding: 24px 0;
+        });
+    }
+
+    font-size: 14px;
+    line-height: 1.4;
+    color: fade(@black, 40%);
+
+    a {
+        color: @black;
+        transition: color 0.5s;
+
+        &:hover, &:active, :focus {
+            color: @accent;
+        }
+    }
+
+    &__top {
+        display: flex;
+        // flex-wrap: wrap;
+        gap: 8px;
+        .xl-block({
+            flex-direction: column;
+        });
+    }
+
+    &__links {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__icon {
+        // flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 120px;
+        height: 120px;
+
+        background-color: @white;
+        border-radius: 32px;
+        text-align: center;
+
+        .xs-block({
+            width: 79px;
+            height: 79px;
+            border-radius: 24px;
+        });
+    }
+
+    svg {
+        path {
+            transition: fill 0.5s;
+        }
+    }
+
+    // &__icon + &__icon {
+    //     margin-left: 8px;
+    // }
+
+    &__icon:hover, &__icon:active, &__icon:focus {
+        path {
+            fill: @accent;
+        }
+    }
+
+    &__popup {
+        position: relative;
+        // margin-left: 8px;
+        padding: 18px 184px 18px 24px;
+        // flex-shrink: 1;
+        width: 100%;
+        max-width: 348px;
+        height: 120px;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 45%, #FFFFFF 74.42%), url(../img/map.png) no-repeat right center/cover;
+        border-radius: 32px;
+        overflow: hidden;
+
+        .xs-block({
+            max-width: 100%;
+            height: 112px;
+        });
+
+        &::after {
+            position: absolute;
+            content: url(../img/pick.svg);
+            top: 50%;
+            transform: translateY(-50%);
+            right: 56px;
+        }
+    }
+
+    &__member {
+        // flex-shrink: 1;
+        // flex-grow: 1;
+        width: 100%;
+        max-width: 600px;
+        min-width: 316px;
+        height: 120px;
+        padding: 20px 160px 20px 16px;
+        background: fade(@black, 3%) url(../img/member.svg) no-repeat 90% center/ 80px;
+        border-radius: 32px;
+        text-align: right;
+        overflow: hidden;
+
+        .xs-block({
+            max-width: 100%;
+            height: 112px;
+        });
+    }
+
+    &__middle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .xs-block({
+            // margin: 24px 0;
+            margin-bottom: 0;
+            flex-wrap: wrap
+        });
+    }
+
+    &__menu {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 376px;
+        width: 100%;
+
+        .xs-block({
+            padding: 24px 0;
+        });
+
+        li {
+            width: 120px;
+            margin-bottom: 40px;
+
+            span {
+                margin-left: 4px;
+                color: fade(@black, 40%);
+            }
+        }
+    }
+
+    &__contact {
+        padding: 40px 0;
+        text-align: right;
+
+        .xs-block({
+            padding-top: 24px;
+            padding-bottom: 16px;
+            text-align: left;
+            order: -1;
+            border-bottom: 1px solid fade(@black, 10%);
+        });
+    }
+
+    &__logo {
+        display: inline-block;
+        max-width: 147px;
+        margin-bottom: 56px;
+
+        .xs(margin-bottom, 32px);
+    }
+
+    &__bottom {
+        display: flex;
+        // flex-wrap: wrap;
+        padding-top: 16px;
+        border-top: 1px solid fade(@black, 10%);
+
+        .xs-block({
+            flex-direction: column
+        });
+
+        > * {
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-left: 28px;
+            .xs(margin-left, 0);
+        }
+
+        p:last-of-type {
+            margin-left: auto;
+            .xs(margin-left, 0);
+        }
+
+    }
+}

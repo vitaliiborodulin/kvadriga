@@ -1,0 +1,157 @@
+// USER VARIABLES SECTION
+@white: #fff;
+@black: #021A0D;
+@accent: #00C566;
+@accent-hover: #00B75F;
+@bg: #F0F2F0;
+
+
+@fontsize: 17px; // Body Font Size
+@lineheight: 1.5; // Document Line Height
+
+@userfont: 'GraphikLCG', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+.reset();
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.container {
+    .wrapper();
+}
+
+
+// ::placeholder {
+// 	color: @white;
+// }
+
+::selection {
+	background-color: fade(@accent, 30%);
+	color: @black;
+}
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 1px solid @accent2 }
+// 	&:required:valid { border: 1px solid green }
+// }
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('../fonts/GraphikLCG-Regular.eot');
+    src: url('../fonts/GraphikLCG-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikLCG-Regular.woff2') format('woff2'),
+        url('../fonts/GraphikLCG-Regular.woff') format('woff'),
+        url('../fonts/GraphikLCG-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('../fonts/GraphikLCG-Medium.eot');
+    src: url('../fonts/GraphikLCG-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikLCG-Medium.woff2') format('woff2'),
+        url('../fonts/GraphikLCG-Medium.woff') format('woff'),
+        url('../fonts/GraphikLCG-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: @userfont;
+    font-size: @fontsize;
+    line-height: @lineheight;
+    font-weight: 400;
+    color: @black;
+    background-color: @bg;
+    text-rendering: optimizeSpeed;
+    // position: relative;
+    min-width: 375px;
+    letter-spacing: -0.01em;
+}
+
+main {
+    min-height: 100vh;
+}
+
+a:link {
+    color: @accent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: @accent-hover;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+strong, b {
+    font-weight: 500;
+}
+
+/* Служебные классы */
+
+.tac {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+    outline: none !important; 
+}
+
+// fix safari
+input[type='submit'] { 
+	-webkit-appearance: none; 
+	-moz-appearance: none; 
+	appearance: none; 
+}

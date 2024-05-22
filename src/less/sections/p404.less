@@ -1,0 +1,48 @@
+.p404 {
+    padding: 20px 0;
+    
+    &__content {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        background-color: #E4E7E5;
+        border-radius: 40px;
+
+        .xs-block({
+            padding: 14px;
+            border-radius: 24px;
+        });
+    }
+
+    h1 {
+        margin-top: 50px;
+        margin-bottom: 16px;
+
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+
+        .xs-block({
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 22px;
+        });
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+
+        &:last-of-type {
+            margin-bottom: 24px;
+        }
+    }
+
+    .btn + .btn {
+        margin-left: 8px;
+    }
+}
