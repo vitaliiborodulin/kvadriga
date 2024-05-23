@@ -1,0 +1,132 @@
+.withus {
+    display: flex;
+    min-height: 640px;
+    // padding: 40px;
+    background-color: @white;
+    border-radius: 40px;
+    overflow: hidden;
+
+    .lg-block({
+        flex-direction: column;
+        min-height: auto;
+    });
+
+    .xs-block({
+        // padding: 24px 16px;
+        border-radius: 24px;
+    });
+
+    &__intro {
+        padding: 40px;
+        width: 34%;
+    
+        .lg-block({
+            width: 100%;
+        });
+
+        .xs-block({
+            padding: 24px 16px;
+        });
+
+        .h2 {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+
+            .xs(font-size, 22px);
+
+            br {
+                .xs(display, none);
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+        // --f-carousel-spacing: 10px;
+        // --f-carousel-slide-width: 100%;
+        --f-progress-color: @white;
+
+        width: 66%;
+        
+        .lg-block({
+            width: 100%;
+        });
+    }
+
+    &__slide {
+        padding: 44px 40px 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        color: @white;
+        background-color: @accent;
+
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+
+        .lg-block({
+            padding-top: 84px;
+        });
+
+        .xs-block({
+            padding: 16px;
+            padding-top: 40px;
+            font-size: 22px;
+        });
+
+        .h3 {
+            font-weight: 500;
+        }
+
+        > * {
+            max-width: 672px;
+        }
+
+        .btn {
+            margin-top: auto;
+            .xl(margin-top, 184px);
+        }
+    }
+
+    .f-carousel.has-dots {
+        margin-bottom: 0;
+    }
+
+    .f-carousel__dots {
+        bottom: 40px;
+        right: 40px;
+        justify-content: flex-end;
+
+        .xl-block({
+            top: 40px;
+            align-items: flex-start;
+            justify-content: center;
+        });
+
+        .xs-block({
+            top: 16px;
+            left: 16px;
+        });
+    }
+
+    .f-carousel__dots li button {
+        margin-right: 8px;
+        width: 83px;
+        height: 8px;
+        background-color: @white;
+        border-radius: 999px;
+        // opacity: 0.2;
+    }
+    
+    .f-carousel__dot {
+        // width: 83px;
+        background-color: @white;
+        height: 8px;
+        width: 10px;
+    }
+}

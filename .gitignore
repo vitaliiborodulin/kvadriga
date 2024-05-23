@@ -1,0 +1,5 @@
+node_modules
+addon
+dist
+build
+debug.log

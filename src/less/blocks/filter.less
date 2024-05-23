@@ -1,0 +1,38 @@
+.filter {
+    &__buttons {
+        margin-bottom: 24px;
+        display: flex;
+        overflow-x: auto;
+        .xs(margin-bottom, 16px);
+
+        button {
+            flex-shrink: 0;
+            margin-right: 8px;
+            padding: 5px 16px;
+            font-size: 17px;
+            border: none;
+            border-radius: 50px;
+
+            color: @black;
+            background-color: fade(@black, 5%);
+
+            cursor: pointer;
+            transition: all 0.5s;
+
+            .xs-block({
+                padding: 4px 16px;
+                font-size: 14px;
+            });
+
+            &:hover, &:active, &:focus {
+                color: @white;
+                background-color: @black;
+            }
+        }
+    }
+}
+
+.mixitup-control-active {
+    color: @white!important;
+    background-color: @black!important;
+}
