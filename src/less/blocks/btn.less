@@ -11,7 +11,7 @@
 
 	color: @white;
     background-color: @accent;
-    transition: color 0.5s, background-color 0.5s;
+    transition: all 0.5s;
 
     .xs-block({
         padding: 18px 7vw;
@@ -23,12 +23,15 @@
 }
 
 .btn-o {
-    color: @white;
+    color: fade(@white, 60%);
     background-color: transparent;
-    border: 1.5px solid @white;
+    border: 2px solid fade(@white, 40%);
+
 
     &:hover, &:active, a:focus {
         border: 2px solid @white;
+        color: @white;
+        background-color: transparent;
     }
 }
 

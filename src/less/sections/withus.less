@@ -1,20 +1,23 @@
 .withus {
-    display: flex;
-    min-height: 640px;
-    // padding: 40px;
-    background-color: @white;
-    border-radius: 40px;
-    overflow: hidden;
+    
+    &__content {
+        display: flex;
+        min-height: 640px;
+        // padding: 40px;
+        background-color: @white;
+        border-radius: 40px;
+        overflow: hidden;
 
-    .lg-block({
-        flex-direction: column;
-        min-height: auto;
-    });
+        .lg-block({
+            flex-direction: column;
+            min-height: auto;
+        });
 
-    .xs-block({
-        // padding: 24px 16px;
-        border-radius: 24px;
-    });
+        .xs-block({
+            // padding: 24px 16px;
+            border-radius: 24px;
+        });
+    }
 
     &__intro {
         padding: 40px;
