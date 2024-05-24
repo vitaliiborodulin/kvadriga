@@ -32,7 +32,7 @@ $('.accomp__title').on('click', function () {
         descr.css('max-height', 64);
     }
 });
-if(document.querySelector('filter__items')){
+if(document.querySelector('.filter__items')){
     let mixer = mixitup('.filter__items');
     mixer.filter('all');
 }
