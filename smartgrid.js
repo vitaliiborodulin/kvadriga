@@ -12,9 +12,9 @@ module.exports = {
 		lg: {
 			width: "992px"
 		},
-		// md: {
-		// 	width: "900px"
-		// },
+		md: {
+			width: "768px"
+		},
 		// sm: {
 		// 	width: "768px",
 		// 	// fields: "24px"

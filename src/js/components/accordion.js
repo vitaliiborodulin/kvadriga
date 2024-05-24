@@ -14,3 +14,19 @@ $('.faq__ask').on('click', function () {
         answer.slideUp(300);
     }
 });
+
+
+$('.accomp__title').on('click', function () {
+    const descr = $(this).next();
+    const heightMax = $('.accomp__descr p').height();
+
+    if (!$(this).hasClass('active')){
+        $(this).addClass('active');
+        descr.addClass('open');
+        descr.css('max-height', heightMax);
+    } else {
+        $(this).removeClass('active');
+        descr.removeClass('open');
+        descr.css('max-height', 64);
+    }
+});
