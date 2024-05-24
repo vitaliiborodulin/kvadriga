@@ -211,8 +211,16 @@ button {
   display: flex;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
@@ -235,7 +243,7 @@ input[type='submit'] {
   border-radius: 16px;
   color: #fff;
   background-color: #00C566;
-  transition: color 0.5s, background-color 0.5s;
+  transition: all 0.5s;
 }
 
 .btn:hover,
@@ -245,15 +253,17 @@ input[type='submit'] {
 }
 
 .btn-o {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border: 1.5px solid #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-o:hover,
 .btn-o:active,
 .btn-o a:focus {
   border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
 }
 
 .btn-w {
@@ -312,7 +322,7 @@ input[type='submit'] {
   background-color: #021A0D !important;
 }
 
-.withus {
+.withus__content {
   display: flex;
   min-height: 640px;
   background-color: #fff;
@@ -450,6 +460,46 @@ input[type='submit'] {
 
 .accomp__descr.open::after {
   display: none;
+}
+
+.hero__content {
+  padding: 48px;
+  background: #021A0D url(../img/hero-bg.jpg) no-repeat center right / cover;
+  color: #fff;
+  border-radius: 24px;
+}
+
+.hero .h1 {
+  margin-bottom: 278px;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.hero span {
+  display: block;
+}
+
+.hero span img {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.hero span + span {
+  margin-top: 24px;
+}
+
+.hero .btn {
+  margin-right: 16px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+.hero .btn * {
+  vertical-align: middle;
+  margin: 0 8px;
 }
 
 .content {
@@ -906,7 +956,7 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 992px) {
-  .withus {
+  .withus__content {
     flex-direction: column;
     min-height: auto;
   }
@@ -921,6 +971,26 @@ input[type='submit'] {
 
   .withus__slide {
     padding-top: 84px;
+  }
+
+  .hero__content {
+    padding: 16px;
+    background: #021A0D;
+  }
+
+  .hero .h1 {
+    margin-bottom: 74px;
+    font-size: 30px;
+  }
+
+  .hero span img {
+    margin-left: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+
+  .hero span + span {
+    margin-top: 12px;
   }
 
   .content__title {
@@ -954,7 +1024,7 @@ input[type='submit'] {
     font-size: 14px;
   }
 
-  .withus {
+  .withus__content {
     border-radius: 24px;
   }
 
@@ -984,6 +1054,11 @@ input[type='submit'] {
   .accomp__title {
     font-size: 17px;
     letter-spacing: -0.03em;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .content__title {
