@@ -47,7 +47,6 @@ if(document.querySelector('.ssfilter__items')){
     mixer.filter('all');
 }
 // withus
-
 function navigationFill() {  
 
     var pr = $('.f-carousel__dots li .f-carousel__dot');
@@ -57,15 +56,12 @@ function navigationFill() {
     $(progressbar).animate({ width: "100%" }, 'slow');
 }
 
-// navigationFill();
-
 const withus = document.querySelector('.withus__slider');
 
 if(withus) {
-    // const withusSliderCarousel = new Carousel(withusSliderContainer, withusSliderOptions, {Autoplay});
     const withusSlider = new Carousel(withus, { 
         // infinite: false,
-        // Navigation: false,
+        Navigation: false,
         // Dots: false,
         Autoplay : {
             timeout : 2000
@@ -98,8 +94,6 @@ if(ss) {
         // }
     });
 }
-
-
 
 
 $(window).resize(function(){
