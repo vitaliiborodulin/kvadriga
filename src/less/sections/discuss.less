@@ -1,0 +1,30 @@
+.discuss {
+
+
+    &__content {
+        padding: 40px;
+
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        grid-template-areas: 
+            "title form"
+            "contact form"
+        ;
+        
+        background-color: @black;
+        color: @white;
+        border-radius: 40px;
+    }
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__contact {
+        grid-area: contact;
+    }
+
+    &__form {
+        grid-area: form;
+    }
+}
