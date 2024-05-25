@@ -36,6 +36,16 @@ if(document.querySelector('.filter__items')){
     let mixer = mixitup('.filter__items');
     mixer.filter('all');
 }
+
+// services slider
+if(document.querySelector('.ssfilter__items')){
+    var mixer = mixitup('.ssfilter__items', {
+        animation: {
+            enable: false
+        },
+    });
+    mixer.filter('all');
+}
 // withus
 
 // function navigationFill() {  
@@ -69,6 +79,39 @@ if(withusSliderContainer) {
     // const withusSliderCarousel = new Carousel(withusSliderContainer, withusSliderOptions, {Autoplay});
     const withusSliderCarousel = new Carousel(withusSliderContainer, withusSliderOptions);
 }
+
+// services slider
+const ss = document.querySelector('.ss__slider');
+
+if(ss) {
+    var ssSliderCarousel = new Carousel(ss, { 
+        Navigation: false,
+        Dots: false,
+        // 'slidesPerPage' : 2,
+        // 'friction' : 0.8,
+        // 'center': true, 
+        // Autoplay : {
+        //     timeout : 2000
+        // },
+        // on: {
+        //     change: (instance) => {
+        //         console.log(1)
+        //     }
+        // }
+    });
+}
+
+const ssSliderOptions = 
+
+
+
+$(window).resize(function(){
+    ssSliderCarousel.reInit();
+});
+
+$('.ss__filter-buttons button').on('click', function(){
+    ssSliderCarousel.reInit();
+});
 
 
 
