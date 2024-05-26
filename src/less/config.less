@@ -126,6 +126,8 @@ button {
 
 /* Служебные классы */
 
+// заголовки
+
 .h2 {
     font-size: 36px;
     line-height: 1.2;
@@ -137,9 +139,18 @@ button {
     });
 }
 
-.tac {
-    text-align: center;
+// цвета
+
+.c-b40 {
+    color: fade(@black, 40%);
 }
+
+// .bg-black {
+//     color: @white!important;
+//     background-color: @black!important;
+// }
+
+// каркасные
 
 .d-flex {
     display: flex;
@@ -157,10 +168,17 @@ button {
     flex-wrap: wrap;
 }
 
-// .bg-black {
-//     color: @white!important;
-//     background-color: @black!important;
-// }
+// размерные
+
+.w-100 {
+    width: 100%;
+}
+
+// выравнивание
+
+.tac {
+    text-align: center;
+}
 
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */

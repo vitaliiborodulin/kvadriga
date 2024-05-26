@@ -1,5 +1,9 @@
 if(document.querySelector('.filter__items')){
-    let mixer = mixitup('.filter__items');
+    let mixer = mixitup('.filter__items', {
+        animation: {
+            enable: false
+        },
+    });
     mixer.filter('all');
 }
 

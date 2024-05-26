@@ -45,13 +45,12 @@ if(ss) {
         //     }
         // }
     });
+
+    $(window).resize(function(){
+        ssSlider.reInit();
+    });
+    
+    $('.ss__filter-buttons button').on('click', function(){
+        ssSlider.reInit();
+    });
 }
-
-
-$(window).resize(function(){
-    ssSlider.reInit();
-});
-
-$('.ss__filter-buttons button').on('click', function(){
-    ssSlider.reInit();
-});
