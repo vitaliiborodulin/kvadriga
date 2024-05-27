@@ -214,6 +214,10 @@ button {
   color: rgba(2, 26, 13, 0.4);
 }
 
+.c-w40 {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .d-flex {
   display: flex;
 }
@@ -340,8 +344,43 @@ input[type='submit'] {
   background-color: #021A0D !important;
 }
 
-.form__submit {
+.form__input {
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 17px;
+  border-radius: 16px;
   border: none;
+  outline: none;
+  opacity: 0.6;
+}
+
+.form__input:focus {
+  opacity: 1;
+}
+
+.form__input + .form__input {
+  margin-top: 8px;
+}
+
+.form__submit {
+  margin-top: 24px;
+  max-width: 310px;
+  border: none;
+  cursor: pointer;
+}
+
+.form .acceptance {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.form .acceptance b,
+.form .acceptance a,
+.form .acceptance strong {
+  font-weight: 500;
+  color: #021A0D;
 }
 
 .withus__content {
@@ -494,6 +533,10 @@ input[type='submit'] {
   display: none;
 }
 
+.discuss {
+  margin-top: 24px;
+}
+
 .discuss__content {
   padding: 40px;
   display: grid;
@@ -506,14 +549,67 @@ input[type='submit'] {
 
 .discuss__title {
   grid-area: title;
+  margin-bottom: 88px;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 .discuss__contact {
   grid-area: contact;
+  font-size: 17px;
+}
+
+.discuss__contact-wrap {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.discuss__contact-list {
+  margin-right: 23px;
+  display: flex;
+}
+
+.discuss__contact-list li {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.discuss__contact-list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.discuss__contact-list li:first-child {
+  z-index: 2;
+}
+
+.discuss__contact-list li:last-child {
+  background-color: #2BAAEF;
+  margin-left: -16px;
 }
 
 .discuss__form {
   grid-area: form;
+  padding-left: 40px;
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.discuss__form .acceptance b,
+.discuss__form .acceptance a,
+.discuss__form .acceptance strong {
+  color: #fff;
+}
+
+.discuss .form__submit {
+  margin-top: 96px;
+  max-width: 237px;
 }
 
 .ss__content {
@@ -524,12 +620,15 @@ input[type='submit'] {
 
 .ss__header {
   margin-bottom: 40px;
+}
+
+.ss__header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.ss__header span {
+.ss__header-wrapper span {
   color: rgba(2, 26, 13, 0.4);
 }
 
@@ -636,6 +735,10 @@ input[type='submit'] {
 
 .widget__soc li + li {
   margin-left: 8px;
+}
+
+.widget .form {
+  margin-top: 24px;
 }
 
 .widget--greet .widget__title,
@@ -1275,6 +1378,27 @@ input[type='submit'] {
     padding-top: 84px;
   }
 
+  .discuss__content {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "form" "contact";
+  }
+
+  .discuss__title {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+
+  .discuss__contact {
+    margin-top: 40px;
+  }
+
+  .discuss__form {
+    padding-left: 0;
+    padding-top: 24px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
   .hero__content {
     padding: 16px;
     background: #021A0D;
@@ -1377,6 +1501,37 @@ input[type='submit'] {
   .accomp__title {
     font-size: 17px;
     letter-spacing: -0.03em;
+  }
+
+  .discuss {
+    margin-top: 16px;
+  }
+
+  .discuss__content {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .discuss__contact {
+    font-size: 14px;
+  }
+
+  .discuss__contact-list {
+    margin-right: 16px;
+  }
+
+  .discuss__contact-list li {
+    width: 64px;
+    height: 64px;
+  }
+
+  .discuss__contact-list li:last-child img {
+    width: 24px;
+    height: 20px;
+  }
+
+  .discuss .form__submit {
+    margin-top: 24px;
   }
 
   .widget__title {

@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"> -->
-	<link rel="stylesheet" href="css/styles.css?v=1">
+	<link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 
 <body>
@@ -54,15 +54,17 @@
 		        <div class="ss__content">
 		
 		            <div class="ss__header">
-		                <h2 class="h2">Услуги <span>36</span></h2>
-		                <a href="serviсes.html" class="ss__header-link">все</a>
-		            </div>
+		                <div class="ss__header-wrapper">
+		                    <h2 class="h2">Услуги <span>36</span></h2>
+		                    <a href="serviсes.html" class="ss__header-link">все</a>
+		                </div>
 		
-		            <div class="ss__filter-buttons filter__buttons">
-		                <button type="button" data-filter="all" class="mixitup-control-active">Все</button>
-		                <button type="button" data-filter=".cat-lic">Лицензирование</button>
-		                <button type="button" data-filter=".cat-eco">Экологическое проектирование</button>
-		                <button type="button" class="search"><img src="img/search.svg" alt=""></button>
+		                <div class="ss__filter-buttons filter__buttons">
+		                    <button type="button" data-filter="all" class="mixitup-control-active">Все</button>
+		                    <button type="button" data-filter=".cat-lic">Лицензирование</button>
+		                    <button type="button" data-filter=".cat-eco">Экологическое проектирование</button>
+		                    <button type="button" class="search"><img src="img/search.svg" alt=""></button>
+		                </div>
 		            </div>
 		
 		            <div class="ss__slider f-carousel ssfilter__items">
@@ -114,6 +116,47 @@
 		                </div>
 		                
 		            </div>
+		
+		        </div>
+		
+		    </div>
+		</section>
+		
+		<section class="discuss">
+		    <div class="container">
+		
+		        <div class="discuss__content">
+		
+		            <div class="discuss__title">
+		                <strong>Обсудим ваш проект?</strong>
+		                <span class="c-w40">Выезжаем в любую <br> точку России соблюдаем сроки, выполняем <br> задачи любой сложности!</span>
+		            </div>
+		
+		            <div class="discuss__contact">
+		                <p>Можете написать нашему эксперту напрямую в Telegram</p>
+		                <div class="discuss__contact-wrap">
+		                    <ul class="discuss__contact-list">
+		                        <li><a href="#"><img src="img/discuss-women.jpg" alt=""></a></li>
+		                        <li><a href="#" target="_blank" title="Написать в Telegram"><img src="img/tg-w.svg" alt="" width="30" height="25"></a></li>
+		                    </ul>
+		                    <div class="discuss__contact-text">
+		                        <div class="discuss__contact-name">Екатерина</div>
+		                        <div class="discuss__contact-occup c-w40">Отвечает за качество</div>
+		                    </div>
+		                </div>
+		            </div>
+		
+		            <form class="form discuss__form">
+		                <input type="text" class="form__input" name="name" placeholder="Ваше имя" required>
+		                <input type="text" class="form__input" name="contact" placeholder="Телефон или почта" required>
+		                <div class="acceptance">
+		                    <label>
+		                        <input type="checkbox" name="accept">
+		                        <span class="c-w40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+		                    </label>
+		                </div>
+		                <input type="submit" class="btn btn-link form__submit w-100" value="Оставить заявку">
+		            </form>
 		
 		        </div>
 		
