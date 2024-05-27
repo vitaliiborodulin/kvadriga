@@ -102,9 +102,39 @@
 						<div class="widget__title">
 							Нет ответа на ваш вопрос?
 						</div>
-						<div class="widget__greet-text">
+						<div class="widget__text">
 							Задайте его нам, заполнив форму ниже, а мы ответим там, где вам удобно
 						</div>
+                        <form class="form">
+                            <input type="text" class="form__input" name="name" placeholder="Имя">
+                            <input type="text" class="form__input" name="contact" placeholder="Телефон или почта">
+                            <input type="text" class="form__input" name="text" placeholder="Ваш вопрос">
+                            <div class="acceptance">
+                                <label>
+                                    <input type="checkbox" name="accept">
+                                    <span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-link form__submit w-100">Отправить</button>
+                        </form>
+                        <div class="widget__chat">
+                            <ul class="widget__soc">
+                                <li>
+                                    <a href="#" title="telegram" target="_blank">
+                                        <img src="img/tg-widget.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="whatsapp" target="_blank">
+                                        <img src="img/wa-widget.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="widget__text c-b40">
+                                Начать чат с нами в мессенджере
+                            </div>
+                        </div>
+
 					</div>
 
                 </aside>
@@ -112,8 +142,8 @@
             </div>
         </div>
 
+        //= html/discuss.html
         //= html/accomp.html
-
         //= html/withus-slider.html
 
     </main>

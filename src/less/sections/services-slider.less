@@ -12,11 +12,13 @@
 
     &__header {
         margin-bottom: 40px;
+        .md(margin-bottom, 24px);
+    }
+
+    &__header-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        .md(margin-bottom, 24px);
 
         span {
             color: fade(@black, 40%);

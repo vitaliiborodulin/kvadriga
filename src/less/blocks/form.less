@@ -1,6 +1,42 @@
 .form {
 
-    &__submit {
+    &__input {
+        // display: block;
+        width: 100%;
+        padding: 15px 24px;
+        font-size: 17px;
+        border-radius: 16px;
         border: none;
+        outline: none;
+
+        opacity: 0.6;
+
+        &:focus {
+            opacity: 1;
+        }
     }
+
+    &__input + &__input {
+        margin-top: 8px;
+    }
+
+    &__submit {
+        margin-top: 24px;
+        max-width: 310px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .acceptance {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+
+        b, a, strong {
+            font-weight: 500;
+            color: @black;
+        }
+    }
+    
 }
