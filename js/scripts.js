@@ -1,5 +1,34 @@
 $(function() {
 
+var ss_custom = {
+	"main_bar_sticky": "true"
+};
+
+function animateNav() {
+	var win_scroll = $(window).scrollTop(),
+			win_height = $(window).height(),
+			main_nav = $('.header__bottom'),
+			main_nav_offset = '',
+			scroll_by = 100;
+
+	main_nav_offset = $(main_nav).outerHeight();
+
+	if (win_scroll > scroll_by) {
+			$(main_nav).addClass('sticky-nav');
+			window.setTimeout(function() {
+					$(main_nav).addClass('fix');
+			}, 200);
+	} else {
+			$(main_nav).removeClass('sticky-nav fix');
+	}
+
+}
+
+animateNav();
+
+$(window).on('load scroll', function() {
+	animateNav();
+});
 // $('.faq__ask:first').addClass('active');
 // $('.faq__answer:first').show();
 
@@ -32,6 +61,20 @@ $('.accomp__title').on('click', function () {
         descr.css('max-height', 64);
     }
 });
+
+// виджет содержания
+
+$('.context-title').on('click', function () {
+    const text = $(this).next();
+
+    if (!$(this).hasClass('active')){
+        $(this).addClass('active');
+        text.slideDown(300);
+    } else {
+        $(this).removeClass('active');
+        text.slideUp(300);
+    }
+});
 if(document.querySelector('.filter__items')){
     let mixer = mixitup('.filter__items', {
         animation: {
@@ -50,6 +93,9 @@ if(document.querySelector('.ssfilter__items')){
     });
     mixer.filter('all');
 }
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
 // withus
 function navigationFill() {  
 
@@ -106,7 +152,5 @@ if(ss) {
         ssSlider.reInit();
     });
 }
-
-
 
 });

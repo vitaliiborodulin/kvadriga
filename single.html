@@ -12,6 +12,7 @@
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"> -->
 	<link rel="stylesheet" href="css/styles.css?v=2">
@@ -20,10 +21,56 @@
 <body class="single">
 
 	<!-- header -->
-	<header class="header">
-	    <div class="container">
-	       
-	    </div>
+	<header class="header d-xl-none">
+	            
+	            <div class="header__top">
+	                <div class="container">
+	
+	                    <div class="header__top-content">
+	                        <div class="header__address">Волгоград, ул. Рокоссовского, 62</div>
+	                        <div class="header__work">с 9 до 20</div>
+	                        <ul class="header__top-menu">
+	                            <li><a href="about.html">О нас</a></li>
+	                            <li><a href="feedback.html">Отзывы</a></li>
+	                            <li><a href="blog.html">Блог</a></li>
+	                            <li><a href="faq.html">FAQ</a></li>
+	                        </ul>
+	                        <div class="header__copy">info@kvadriga-eco.ru</div>
+	                    </div>
+	
+	                </div>
+	            </div>
+	
+	            <div class="header__bottom">
+	                <div class="container">
+	
+	                    <div class="header__bottom-content">
+	
+	                        <div class="header__nav">
+	                            <a href="index.html" class="header__logo">
+	                                <img src="img/logo.svg" alt="">
+	                            </a>
+	                            <ul class="header__bottom-menu">
+	                                <li><a href="service.html">Услуги <span class="c-b40 online">36</span></a></li>
+	                                <li><a href="price.html">Цены</a></li>
+	                                <li><a href="case.html">Кейсы <span class="c-b40">753</span></a></li>
+	                            </ul>
+	                        </div>
+	        
+	                        <a href="#" class="header__tel btn-w">8 800 500-01-97</a>
+	        
+	                        <a href="#" class="btn header__mail">
+	                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                                <path d="M19.2334 22.9333L18.0667 21.7667L19.8084 20H14.8333V18.3334H19.8084L18.0417 16.5667L19.2334 15.4L23 19.1667L19.2334 22.9333ZM3.66665 20C3.20555 20 2.8125 19.8375 2.4875 19.5125C2.1625 19.1875 2 18.7944 2 18.3334V5.66665C2 5.20555 2.1625 4.8125 2.4875 4.4875C2.8125 4.1625 3.20555 4 3.66665 4H20.3334C20.7945 4 21.1875 4.1625 21.5125 4.4875C21.8375 4.8125 22 5.20555 22 5.66665V13.8333C21.5722 13.6111 21.1264 13.4444 20.6625 13.3333C20.1986 13.2222 19.7222 13.1667 19.2334 13.1667C17.5445 13.1667 16.1111 13.7556 14.9334 14.9334C13.7556 16.1111 13.1667 17.5444 13.1667 19.2333V20H3.66665ZM12 12.6167L20.3334 7.33333V5.66665L12 10.8833L3.66665 5.66665V7.33333L12 12.6167Z" fill="white"/>
+	                            </svg>                            
+	                        </a>
+	                        <a href="#" class="btn header__consult">Консультация</a>
+	
+	                    </div>
+	
+	                </div>
+	            </div>
+	
 	</header>
 	<!-- end header -->
 
@@ -58,9 +105,27 @@
 
                     <p class="has-medium-font-size">Получение лицензии – обязательное условие для работы с металлоломом. Лицензия дает право хранить, перерабатывать, заготавливать и реализовывать лом цветного и черного металла.</p>
 
+
+                    <div class="context">
+                        <div class="context-title active">
+							Содержание
+						</div>
+                        <div class="context-text">
+                            <ul>
+                                <li><a href="#start">С чего начать?</a></li>
+                                <li><a href="#">Что нельзя принимать на переработку?</a></li>
+                                <li><a href="#">Плюсы и минусы ведения бизнеса</a></li>
+                                <li><a href="#">Важность постановки на учет</a></li>
+                                <li><a href="#">ООО или ИП?</a></li>
+                                <li><a href="#">Регистрация в налоговой / ОКВЭД</a></li>
+                                <li><a href="#">Выбор расположения и площади для открытия металлоприемки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <p>Один из способов начать бизнес с нуля с относительно небольшими вложениями – открыть пункт приема металлолома. Такое предприятие сможет работать круглый год, оно не зависит от сезона. Обязательные условия стабильной работы и получения легальной прибыли – официальная регистрация и получение государственной лицензии. Лом черных и цветных металлов относится к группе отходов третьего класса опасности, поэтому для любых работ с ним нужно пройти процедуру лицензирования.</p>
 
-                    <h2>С чего начать?</h2>
+                    <h2 id="start">С чего начать?</h2>
 
                     <p class="has-medium-font-size">Прежде чем открыть приемку металлолома, нужно проанализировать текущую ситуацию в регионе: определить уровень конкуренции, пути сбыта собранного металла и решение других вопросов. Такой бизнес уже давно перестал быть делом маленьких частных пунктов – все большую долю рынка занимают крупные предприятия.</p>
 
@@ -229,7 +294,7 @@
 	                        </a>
 	                    </div>
 	    
-	                    <button type="button" class="footer__popup">Приглашаем к нам в офисы в <b>Москве</b> и <b>Екатеринбурге</b></button>
+	                    <button type="button" class="footer__popup" data-fancybox data-src="#map">Приглашаем к нам в офисы в <b>Москве</b> и <b>Екатеринбурге</b></button>
 	                    <p class="footer__member">Являемся членами <br> <a href="#" target="_blank">Уральской торгово- <br>промышленной палаты</a> <br> с 2017 года</p>
 	
 	            </div>
@@ -263,6 +328,7 @@
 	<!-- end footer -->
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<script src="js/carousel.umd.js"></script>
 	<script src="js/carousel.autoplay.umd.js"></script>
 	<script src="js/mixitup.min.js"></script>
