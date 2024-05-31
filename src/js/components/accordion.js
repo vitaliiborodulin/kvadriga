@@ -30,3 +30,17 @@ $('.accomp__title').on('click', function () {
         descr.css('max-height', 64);
     }
 });
+
+// виджет содержания
+
+$('.context-title').on('click', function () {
+    const text = $(this).next();
+
+    if (!$(this).hasClass('active')){
+        $(this).addClass('active');
+        text.slideDown(300);
+    } else {
+        $(this).removeClass('active');
+        text.slideUp(300);
+    }
+});

@@ -1,5 +1,9 @@
 .widget {
 
+    & + & {
+        margin-top: 40px;
+    }
+
     padding: 24px;
     border-radius: 24px;
     background-color: fade(@black, 5%);
@@ -15,10 +19,26 @@
         });
     }
 
-    &__text {
+    &__text, .context-text {
         font-size: 14px;
         line-height: 1.4;
         letter-spacing: -0.01em;
+
+        li {
+
+           a {
+                color: inherit;
+                transition: color 0.5s;
+                
+                &:hover {
+                    color: @accent;
+                }
+           } 
+        }
+
+        li + li {
+            margin-top: 20px;
+        }
     }
 
     &__btn {
