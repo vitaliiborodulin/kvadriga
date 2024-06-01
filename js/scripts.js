@@ -93,8 +93,27 @@ if(document.querySelector('.ssfilter__items')){
     });
     mixer.filter('all');
 }
+
+// reinit masonry
+$('.feedback__filters button').on('click', function(){
+    $('.feedback__items').masonry({
+        itemSelector: '.feedback__item',
+        columnWidth: 484,
+    });
+});
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
+});
+
+Fancybox.bind('[data-fancybox="single"]', {
+    groupAttr: false,
+});
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+    groupAll: true,
+    Thumbs: {
+        type: "classic",
+    },
 });
 // withus
 function navigationFill() {  
@@ -123,15 +142,16 @@ if(withus) {
     // });
 }
 
-// services slider
+// service slider
 const ss = document.querySelector('.ss__slider');
 
 if(ss) {
     var ssSlider = new Carousel(ss, { 
         Navigation: false,
         Dots: false,
-        'infinite' : false, 
-        'slidesPerPage' : 2,
+        infinite : false,
+        dragFree: false
+        // 'slidesPerPage' : 2,
         // 'friction' : 0.8,
         // 'center': true, 
         // Autoplay : {
@@ -151,6 +171,43 @@ if(ss) {
     $('.ss__filter-buttons button').on('click', function(){
         ssSlider.reInit();
     });
+}
+$('.feedback__items').masonry({
+    // options
+    itemSelector: '.feedback__item',
+    columnWidth: 484,
+    // columnWidth: '.grid-sizer',
+    // percentPosition: true
+});
+const mapHideBtn = $('.map__hide');
+
+if(window.matchMedia('(max-width: 768px)').matches){
+
+    mapHideBtn.on('click', function(){
+        const mapInfo = $(this).parent();
+        let mapInfoHeight = mapInfo.height();
+        mapInfo.css('max-height', 0);
+
+        if(mapInfoHeight > 0) {
+            $(mapInfo).animate({ 'max-height': 0 }, 'slow').addClass('hide');
+        } else {
+            $(mapInfo).animate({ 'max-height': '45vh' }, 'slow').removeClass('hide');
+        }
+    });
+
+} else {
+
+    mapHideBtn.on('click', function(){
+        const mapInfo = $(this).parent();
+        let mapInfoWidth = mapInfo.width();
+        
+        if(mapInfoWidth > 0) {
+            $(mapInfo).animate({ width: 0 }, 'slow').addClass('hide');
+        } else {
+            $(mapInfo).animate({ width: 512 }, 'slow').removeClass('hide');
+        }
+    });
+
 }
 
 });

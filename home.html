@@ -130,7 +130,7 @@
         
                         <div class="ss__slide f-carousel__slide mix cat-eco">
                             <h3 class="ss__title">
-                                Лицензия на опасные отходы I-IV классов опасности 
+                                Лицензия на опасные отходы I-IV классов опасности
                                 <span>за 20 дней</span>
                             </h3>
                             <p class="ss__price">от 250 000 ₽</p>
@@ -220,7 +220,7 @@
                                 <span class="c-w40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
                             </label>
                         </div>
-                        <input type="submit" class="btn btn-link form__submit w-100" value="Оставить заявку">
+                        <button type="submit" class="btn btn-link form__submit w-100">Оставить заявку</button>
                     </form>
         
                 </div>
@@ -313,10 +313,10 @@
 	    
 	            <div class="footer__middle">
 	                <ul class="footer__menu">
-	                    <li><a href="#">Услуги <span>36</span></a></li>
-	                    <li><a href="#">О нас</a></li>
-	                    <li><a href="#">Блог</a></li>
-	                    <li><a href="#">Цены </a></li>
+	                    <li><a href="service.html">Услуги <span>36</span></a></li>
+	                    <li><a href="about.html">О нас</a></li>
+	                    <li><a href="blog.html">Блог</a></li>
+	                    <li><a href="price.html">Цены </a></li>
 	                    <li><a href="feedback.html">Отзывы</a></li>
 	                    <li><a href="faq.html">FAQ</a></li>
 	                    <li><a href="case.html">Кейсы <span>753</span></a></li>
@@ -338,14 +338,55 @@
 	    </div>
 	</footer>
 	<!-- end footer -->
-	<div class="popup" id="map" style="display: none;">
+	<div class="popup map" id="map" style="display: none;">
 		<div class="popup__inner">
 	
-			
+			<div class="map__info">
+				<div class="map__cards">
+	
+					<div class="map__card">
+						<div class="map__card-header">
+							<div class="map__card-descr">
+								<div class="map__city">Екатеринбург</div>
+								<div class="map__address">ул. Бориса Ельцина, 1а <br> 18 этаж, офис 18.8</div>
+								<a href="#" class="map__route" target="_blank">Маршрут</a>
+								<div class="map__time">с 9 до 20, ежедневно</div>
+							</div>
+							<div class="map__card-pic"><img src="img/pic-novo.svg" alt=""></div>
+						</div>
+		
+						<div class="map__contacts">
+							<a href="tel:8 800 500-41-63" class="btn btn-w btn-link map__tel-btn" target="_blank">8 800 500-41-63</a>
+							<a href="mailto:info@kvadriga-eco.ru" class="btn btn-w map__mail-btn"><img src="img/inbox-b.svg" alt=""></a>
+						</div>
+					</div>
+	
+					<div class="map__card">
+						<div class="map__card-header">
+							<div class="map__card-descr">
+								<div class="map__city">Москва</div>
+								<div class="map__address">БЦ «Симонов Плаза» <br> офис 1210</div>
+								<a href="#" class="map__route" target="_blank">Маршрут</a>
+								<div class="map__time">с 9 до 20, ежедневно</div>
+							</div>
+							<div class="map__card-pic"><img src="img/pic-moscow.svg" alt=""></div>
+						</div>
+		
+						<div class="map__contacts">
+							<a href="tel:8 800 500-36-38" class="btn btn-w btn-link map__tel-btn" target="_blank">8 800 500-36-38</a>
+							<a href="mailto:info@kvadriga-eco.ru" class="btn btn-w map__mail-btn"><img src="img/inbox-b.svg" alt=""></a>
+						</div>
+					</div>
+		
+					
+					
+				</div>
+				<button type="button" class="map__hide"><img src="img/shevron.svg" alt=""></button>
+			</div>
 	
 			<div class="popup__map">
 				
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab33e8d3235b059e19d9665349497eb052965894ee1c15ad82738667218b30b4d&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab33e8d3235b059e19d9665349497eb052965894ee1c15ad82738667218b30b4d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 	
 			</div>
 	
@@ -353,6 +394,7 @@
 	</div>
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<script src="js/carousel.umd.js"></script>
 	<script src="js/carousel.autoplay.umd.js"></script>
