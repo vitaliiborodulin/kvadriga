@@ -1,18 +1,23 @@
 .ss {
     &__content {
-        padding: 40px;
+        padding: 40px 0;
         border: 3px solid fade(@black, 5%);
         border-radius: 40px;
 
         .md-block({
-            padding: 24px 16px;
+            padding: 24px 0;
             border-radius: 24px;
         });
     }
 
     &__header {
+        padding: 0 40px;
         margin-bottom: 40px;
-        .md(margin-bottom, 24px);
+
+        .md-block({
+            padding: 0 24px;
+            margin-bottom: 24px;
+        });
     }
 
     &__header-wrapper {
@@ -69,11 +74,38 @@
     }
 
     &__slider {
-        --f-carousel-spacing: 24px;
+        position: relative;
+        padding-left: 40px;
+        --f-carousel-spacing: 20px;
+
+        // мне кажется это не нужно:
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            // -webkit-filter: grayscale(100%);
+            // -moz-filter: grayscale(100%);
+            // -ms-filter: grayscale(100%);
+            // -o-filter: grayscale(100%);
+            // filter: grayscale(100%);
+            // filter: gray; /* IE 6-9 */
+            // background-color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(-90deg, #f0f2f0, hsla(120, 7%, 95%, 0));
+        }
+
+        .xs-block({
+            padding-left: 24px;
+            --f-carousel-spacing: 15px;
+        });
     }
 
     &__slide {
-        // width: 450px;
+        width: 450px;
         height: 495px;
         padding: 32px;
 
@@ -88,9 +120,21 @@
         background: @white url(../img/service-slider-bg.png) no-repeat center/cover;
         border-radius: 24px;
 
+        .xs-block({
+            width: 256px;
+            height: 264px;
+            padding: 16px;
+            font-size: 22px;
+            border-radius: 16px;
+        });
+
         span {
             display: block;
             color: fade(@black, 40%);
+        }
+
+        &:hover {
+            border: 1px solid red;
         }
     }
 

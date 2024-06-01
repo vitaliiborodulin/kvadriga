@@ -1,13 +1,23 @@
 .feedback {
 
-    // &__items {
+    &__items {
         // display: grid;
         // grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         // grid-gap: 24px;
-    // }
+        max-width: 968px;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+    }
 
     &__item {
-        margin-bottom: 24px;
+        float: left;
+        width: 450px;
+        // margin-bottom: 24px;
+        margin: 12px;
         padding: 32px;
         border-radius: 24px;
         background-color: fade(@black, 5%);
@@ -16,6 +26,10 @@
             padding: 16px;
             border-radius: 16px;
         });
+    }
+
+    &__item--width2 {
+        width: 100%;
     }
 
     &__header {

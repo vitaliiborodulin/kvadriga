@@ -17,5 +17,12 @@ if(document.querySelector('.ssfilter__items')){
     mixer.filter('all');
 }
 
+// reinit masonry
+$('.feedback__filters button').on('click', function(){
+    $('.feedback__items').masonry({
+        itemSelector: '.feedback__item',
+        columnWidth: 484,
+    });
+});
 
 

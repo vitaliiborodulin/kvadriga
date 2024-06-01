@@ -25,15 +25,16 @@ if(withus) {
     // });
 }
 
-// services slider
+// service slider
 const ss = document.querySelector('.ss__slider');
 
 if(ss) {
     var ssSlider = new Carousel(ss, { 
         Navigation: false,
         Dots: false,
-        'infinite' : false, 
-        'slidesPerPage' : 2,
+        infinite : false,
+        dragFree: false
+        // 'slidesPerPage' : 2,
         // 'friction' : 0.8,
         // 'center': true, 
         // Autoplay : {

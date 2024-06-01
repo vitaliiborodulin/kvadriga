@@ -1,6 +1,9 @@
 .discuss {
     margin-top: 24px;
-    .xs(margin-top, 16px);
+    .xs-block({
+        margin-top: 16px;
+        margin-bottom: 16px;
+    });
 
     &__content {
         padding: 40px;
@@ -132,10 +135,12 @@
 
     .form__submit {
         margin-top: 96px;
-        max-width: 237px;
+        // max-width: 237px;
+        font-size: 19px;
 
         .xs-block({
             margin-top: 24px;
+            font-size: 17px;
         });
     }
 

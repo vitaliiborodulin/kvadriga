@@ -20,6 +20,10 @@
     &:hover, &:active, a:focus {
         background-color: @accent-hover;
     }
+
+    &:disabled {
+        opacity: 0.4;
+    }
 }
 
 .btn-o {
@@ -54,6 +58,17 @@
         right: 1.5vw;
         top: 50%;
         transform: translateY(-50%);
+
+        .xs-block({
+            right: 3vw;
+        });
+    }
+
+}
+
+.btn-w.btn-link {
+    &::after {
+        content: url(../img/arrow-right-b.svg);
     }
 }
 

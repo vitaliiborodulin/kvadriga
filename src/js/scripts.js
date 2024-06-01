@@ -5,5 +5,7 @@ $(function() {
 //= components/filter.js
 //= components/popup.js
 //= components/slider.js
+//= components/masonry.js
+//= components/map.js
 
 });
