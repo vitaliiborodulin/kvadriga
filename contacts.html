@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 
-<body class="home">
+<body>
 
 	<!-- header -->
 	<header class="header d-xl-none">
@@ -76,117 +76,86 @@
 
     <main>
 
-        <section class="hero">
-            <div class="container">
+        <div class="container">
 
-                <div class="hero__content">
-                    <h1 class="h1">
-                        <span>
-                            Экологическое сопровождение
-                            <img src="img/security.svg" alt="">
-                        </span>
-                        <span>
-                            Лицензирование  предприятий
-                            <img src="img/release-green.svg" alt="">
-                        </span>
-                    </h1>
-                    <div class="d-flex flex-wrap">
-                        <a href="https://ekaterinburg.flamp.ru/firm/kvadriga_ooo-70000001055473992?utm_source=widget&utm_medium=open_filial&utm_campaign=micro_widget&utm_content=flamp4&__cf_chl_tk=soHa8HrWJZm6o0ilokmrXgt7FhVovUzbc3JWiE9LBzE-1713778973-0.0.1.1-1898#reviews" class="btn btn-o" target="_blank">
-                            <img src="img/star.svg" alt="">
-                            5 из 5
-                            <img src="img/flamp.svg" alt="">
-                        </a>
-                        <a href="case.html" class="btn btn-o">
-                            <img src="img/release.svg" alt="">
-                            2 500 реализованных проектов
-                        </a>
+            <div class="content content-100">
+
+                <div class="content__header">
+
+                    <div class="content__info breadcrumbs">
+                        <span><a href="index.html">Главная</a></span>
+                        <span class="sep">&bull;</span>
+                        <span>Контакты</span>
                     </div>
+                    <h1 class="content__title">Наши офисы</h1>
+    
+                    <div class="filter__buttons">
+                        <button type="button" data-filter="all" class="mixitup-control-active">Россия</button>
+                        <button type="button" data-filter=".cat-moscow">Москва</button>
+                        <button type="button" data-filter=".cat-eburg">Екатеринбург</button>
+                    </div>
+
                 </div>
+    
+                <div class="content__main">
 
-            </div>
-        </section>
-
-
-        <section class="ss">
-            <div class="container">
-        
-                <div class="ss__content">
-        
-                    <div class="ss__header">
-                        <div class="ss__header-wrapper">
-                            <h2 class="h2">Услуги <span>36</span></h2>
-                            <a href="serviсe.html" class="ss__header-link">все</a>
+                    <div class="map__wrapper">
+                        <div class="map__info">
+                            <div class="map__cards filter__items">
+                
+                                <div class="map__card mix cat-eburg">
+                                    <div class="map__card-header">
+                                        <div class="map__card-descr">
+                                            <div class="map__city">Екатеринбург</div>
+                                            <div class="map__address">ул. Бориса Ельцина, 1а <br> 18 этаж, офис 18.8</div>
+                                            <a href="#" class="map__route" target="_blank">Маршрут</a>
+                                            <div class="map__time">с 9 до 20, ежедневно</div>
+                                        </div>
+                                        <div class="map__card-pic"><img src="img/pic-novo.svg" alt=""></div>
+                                    </div>
+                    
+                                    <div class="map__contacts">
+                                        <a href="tel:8 800 500-41-63" class="btn btn-w btn-link map__tel-btn" target="_blank">8 800 500-41-63</a>
+                                        <a href="mailto:info@kvadriga-eco.ru" class="btn btn-w map__mail-btn"><img src="img/inbox-b.svg" alt=""></a>
+                                    </div>
+                                </div>
+                
+                                <div class="map__card mix cat-moscow">
+                                    <div class="map__card-header">
+                                        <div class="map__card-descr">
+                                            <div class="map__city">Москва</div>
+                                            <div class="map__address">БЦ «Симонов Плаза» <br> офис 1210</div>
+                                            <a href="#" class="map__route" target="_blank">Маршрут</a>
+                                            <div class="map__time">с 9 до 20, ежедневно</div>
+                                        </div>
+                                        <div class="map__card-pic"><img src="img/pic-moscow.svg" alt=""></div>
+                                    </div>
+                    
+                                    <div class="map__contacts">
+                                        <a href="tel:8 800 500-36-38" class="btn btn-w btn-link map__tel-btn" target="_blank">8 800 500-36-38</a>
+                                        <a href="mailto:info@kvadriga-eco.ru" class="btn btn-w map__mail-btn"><img src="img/inbox-b.svg" alt=""></a>
+                                    </div>
+                                </div>
+                    
+                                
+                                
+                            </div>
+                            <button type="button" class="btn-map map__hide"><img src="img/shevron.svg" alt=""></button>
                         </div>
-        
-                        <div class="ss__filter-buttons filter__buttons">
-                            <button type="button" data-filter="all" class="mixitup-control-active">Все</button>
-                            <button type="button" data-filter=".cat-lic">Лицензирование</button>
-                            <button type="button" data-filter=".cat-eco">Экологическое проектирование</button>
-                            <button type="button" class="search"><img src="img/search.svg" alt=""></button>
+                
+                        <div class="map__box">
+                            
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab33e8d3235b059e19d9665349497eb052965894ee1c15ad82738667218b30b4d&amp;width=100%25&amp;height=538&amp;lang=ru_RU&amp;scroll=true"></script>
+                
                         </div>
                     </div>
-        
-                    <div class="ss__slider f-carousel ssfilter__items">
-        
-                        <div class="ss__slide f-carousel__slide mix cat-eco">
-                            <h3 class="ss__title">
-                                Лицензия на опасные отходы I-IV классов опасности
-                                <span>за 20 дней</span>
-                            </h3>
-                            <p class="ss__price">от 250 000 ₽</p>
-                        </div>
-        
-                        <div class="ss__slide f-carousel__slide mix cat-eco">
-                            <h3 class="ss__title">
-                                Государственная экологическая экспертиза
-                                <span>за 90 дней (4 мес)</span>
-                            </h3>
-                            <p class="ss__price">от 1 млн ₽</p>
-                        </div>
-        
-                        <div class="ss__slide f-carousel__slide mix cat-lic">
-                            <h3 class="ss__title">
-                                Лицензия на лом черных и цветных металлов
-                                <span>за 25 дней</span>
-                            </h3>
-                            <p class="ss__price">от 149 000 ₽</p>
-                        </div>
-        
-                        <div class="ss__slide f-carousel__slide mix cat-lic">
-                            <h3 class="ss__title">
-                                Лицензия на опасные отходы I-IV классов опасности 
-                                <span>за 25 дней</span>
-                            </h3>
-                            <p class="ss__price">от 149 000 ₽</p>
-                        </div>
-                        <div class="ss__slide f-carousel__slide mix cat-lic">
-                            <h3 class="ss__title">
-                                Лицензия на опасные отходы I-IV классов опасности 
-                                <span>за 25 дней</span>
-                            </h3>
-                            <p class="ss__price">от 149 000 ₽</p>
-                        </div>
-                        <div class="ss__slide f-carousel__slide mix cat-lic">
-                            <h3 class="ss__title">
-                                Лицензия на опасные отходы I-IV классов опасности 
-                                <span>за 25 дней</span>
-                            </h3>
-                            <p class="ss__price">от 149 000 ₽</p>
-                        </div>
-                        
-                    </div>
-        
+
                 </div>
+            
+            </div>
+
+        </div>
         
-            </div>
-        </section>
-
-        <section style="padding: 40px;">
-            <div class="container">
-                тут еще контент
-            </div>
-        </section>
-
         <section class="discuss">
             <div class="container">
         
@@ -272,7 +241,6 @@
             </div>
         </section>
 
-        
     </main>
 
 	<!-- footer -->

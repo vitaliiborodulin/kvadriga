@@ -191,7 +191,7 @@ if(window.matchMedia('(max-width: 768px)').matches){
         if(mapInfoHeight > 0) {
             $(mapInfo).animate({ 'max-height': 0 }, 'slow').addClass('hide');
         } else {
-            $(mapInfo).animate({ 'max-height': '45vh' }, 'slow').removeClass('hide');
+            $(mapInfo).animate({ 'max-height': '45%' }, 'slow').removeClass('hide');
         }
     });
 
