@@ -1869,11 +1869,6 @@ input[type='submit'] {
   padding: 0;
 }
 
-.popup .map__info {
-  left: 34px;
-  top: 34px;
-}
-
 @media screen and (max-width: 1200px) {
   .d-xl-none {
     display: none;
