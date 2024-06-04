@@ -1,0 +1,28 @@
+.pagination {
+    display: flex;
+    align-items: center;
+
+    .md-block({
+        flex-direction: column;
+        align-items: center;
+    });
+
+    &__more {
+        flex-grow: 1;
+        width: 100%!important;
+
+        .md-block({
+            margin-bottom: 8px;
+        });
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn-page {
+            margin: 4px;
+        }
+    }
+}

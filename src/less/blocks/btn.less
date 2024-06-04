@@ -72,6 +72,80 @@
     }
 }
 
+.btn-map {
+    background-color: @white;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 8px 8px 16px 0px #021A0D1A;
+
+    .md-block({
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    });
+}
+
+.btn-page {
+    display: inline-block;
+    color: @black!important;
+    background-color: fade(@black, 5%);
+
+    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+
+    text-align: center;
+    line-height: 56px;
+    transition: all 0.5s;
+
+   .xs-block({
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+   });
+
+    &:hover {
+        background-color: fade(@black, 10%);
+    }
+
+    &:active, &.active {
+        color: @white!important;
+        background-color: @black;
+    }
+
+}
+
+.btn-next, .btn-prev {
+    position: relative;
+    font-size: 0;
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../img/shevron.svg) no-repeat center;
+    }
+}
+
+.btn-prev {
+    transform: rotate(90deg);
+}
+
+.btn-next {
+    transform: rotate(-90deg);
+}
+
 // a.btn {
 //     color: @white;
 // }

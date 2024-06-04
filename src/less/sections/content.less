@@ -1,5 +1,4 @@
 .content {
-    margin-top: 30px;//временно
     // padding: 24px 40px 40px;
     padding-bottom: 40px;
     // border-bottom-left-radius: 40px;
@@ -33,6 +32,13 @@
         background-color: transparent;
         padding-bottom: 0;
     });
+
+    &.content-100 {
+        grid-template-areas: 
+            "header header"
+            "main main"
+	    ;
+    }
 
     &__header {
         grid-area: header;
@@ -205,6 +211,16 @@
             }
         }
 
+        // в блоке карточек карты
+        .map__wrapper a {
+            color: @black;
+            transition: color 0.5s;
+
+            &:hover {
+                color: @accent;
+            }
+        }
+
         blockquote {
             margin: 40px 0;
             padding: 40px;
@@ -334,5 +350,37 @@
 
     &:hover {
         color: @accent;
+    }
+}
+
+
+// слишком незначительный
+.notice-p {
+    margin-top: 24px;
+    color: fade(@black, 40%);
+
+    &__descr {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    &__descr--lead {
+        position: relative;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        font-size: 17px;
+        line-height: 1.2;
+        font-weight: 500;
+
+        .xs-block({
+            margin-bottom: 24px;
+        });
+
+        &::after {
+            position: absolute;
+            content: url(../img/notice.svg);
+            left: 0;
+            top: 0;
+        }
     }
 }
