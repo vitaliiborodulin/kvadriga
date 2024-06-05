@@ -275,8 +275,11 @@ input[type='submit'] {
   background-color: #00B75F;
 }
 
-.btn:disabled {
+.btn:disabled,
+.btn.disabled {
   opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
 }
 
 .btn-o {
@@ -475,6 +478,29 @@ input[type='submit'] {
 .form .acceptance strong {
   font-weight: 500;
   color: #021A0D;
+}
+
+.form .acceptance label {
+  display: flex;
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form .custom-checkbox {
+  flex-shrink: 0;
+  margin-right: 8px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form__checkbox:checked + .custom-checkbox {
+  background: #fff url(../img/check.svg) no-repeat center;
 }
 
 .withus__content {

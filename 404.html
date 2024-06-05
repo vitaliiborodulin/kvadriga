@@ -193,16 +193,17 @@
 		                </div>
 		            </div>
 		
-		            <form class="form discuss__form">
-		                <input type="text" class="form__input" name="name" placeholder="Ваше имя" required>
-		                <input type="text" class="form__input" name="contact" placeholder="Телефон или почта" required>
+		            <form class="form discuss__form rp" method="post">
+		                <input type="text" class="form__input rpole" name="name" placeholder="Ваше имя" required>
+		                <input type="text" class="form__input rpole" name="contact" placeholder="Телефон или почта" required>
 		                <div class="acceptance">
 		                    <label>
-		                        <input type="checkbox" name="accept">
+		                        <input type="checkbox" name="accept" class="form__checkbox">
+		                        <span class="custom-checkbox"></span>
 		                        <span class="c-w40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
 		                    </label>
 		                </div>
-		                <button type="submit" class="btn btn-link form__submit w-100">Оставить заявку</button>
+		                <button type="submit" class="btn btn-link form__submit w-100 disabled">Оставить заявку</button>
 		            </form>
 		
 		        </div>
@@ -322,8 +323,8 @@
 
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/fancybox.umd.js"></script>
 	<script src="js/carousel.umd.js"></script>
 	<script src="js/carousel.autoplay.umd.js"></script>
 	<script src="js/mixitup.min.js"></script>
