@@ -37,6 +37,42 @@
             font-weight: 500;
             color: @black;
         }
+
+        label {
+            display: flex;
+        }
+    }
+
+    &__checkbox {
+        display: none;
     }
     
+    .custom-checkbox {
+        flex-shrink: 0;
+        margin-right: 8px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: @white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .custom-checkbox-b {
+        background-color: @black;
+    }
+
+    &__checkbox:checked + .custom-checkbox {
+        background: @white url(../img/check.svg) no-repeat center;
+    }
+
+    &__checkbox:checked + .custom-checkbox-b {
+        background: @black url(../img/check-w.svg) no-repeat center;
+    }
+
+    // .field-is-not-filled {
+    //     border: 1px solid red;
+    // }
+
 }
+
