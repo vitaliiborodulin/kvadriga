@@ -499,8 +499,16 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+.form .custom-checkbox-b {
+  background-color: #021A0D;
+}
+
 .form__checkbox:checked + .custom-checkbox {
   background: #fff url(../img/check.svg) no-repeat center;
+}
+
+.form__checkbox:checked + .custom-checkbox-b {
+  background: #021A0D url(../img/check-w.svg) no-repeat center;
 }
 
 .withus__content {
