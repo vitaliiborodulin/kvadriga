@@ -2,7 +2,7 @@
     
     &__content {
         display: flex;
-        min-height: 640px;
+        
         // padding: 40px;
         background-color: @white;
         border-radius: 40px;
@@ -22,6 +22,10 @@
     &__intro {
         padding: 40px;
         width: 34%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     
         .lg-block({
             width: 100%;
@@ -40,9 +44,13 @@
             .xs(font-size, 22px);
 
             br {
-                .xs(display, none);
+                .lg(display, none);
             }
         }
+    }
+
+    &__slide-arrows {
+        margin-top: auto;
     }
 
     &__slider {
@@ -61,6 +69,7 @@
 
     &__slide {
         padding: 44px 40px 40px;
+        min-height: 640px;
 
         display: flex;
         flex-direction: column;
@@ -73,8 +82,12 @@
         line-height: 1.2;
         letter-spacing: -0.03em;
 
+        background-position: center bottom;
+        background-repeat: no-repeat;
+
         .lg-block({
             padding-top: 84px;
+            min-height: 400px;
         });
 
         .xs-block({
@@ -85,6 +98,12 @@
 
         .h3 {
             font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin: 0 3px;
+            }
         }
 
         > * {
@@ -93,7 +112,8 @@
 
         .btn {
             margin-top: auto;
-            .xl(margin-top, 184px);
+            // .xl(margin-top, 184px);
+            .xs(width, 100%);
         }
     }
 
@@ -106,9 +126,12 @@
         right: 40px;
         justify-content: flex-end;
         flex-wrap: nowrap;
+        max-width: 95%;
 
         .xl-block({
             top: 40px;
+            left: 40px;
+            bottom: unset;
             align-items: flex-start;
             justify-content: center;
         });
@@ -116,6 +139,7 @@
         .xs-block({
             top: 16px;
             left: 16px;
+            right: 16px;
         });
     }
 
@@ -124,7 +148,7 @@
         width: 83px;
         height: 8px;
         // background-color: @white;
-        background-color: fade(@white, 20%);;
+        background-color: fade(@white, 20%);
         border-radius: 999px;
         opacity: 1;
 
@@ -135,9 +159,7 @@
         }
     }
 
-    // .f-carousel__dots li.is-current .f-carousel__dot {
-    //     width: 100%;
-    // }
+    
     
     .f-carousel__dot {
         // width: 83px;
@@ -147,5 +169,13 @@
         width: 0;
         border-radius: 999px;
         margin-right: auto;
+        opacity: 0;
+
+        transition: width 2s;
+    }
+
+    .f-carousel__dots li.is-current .f-carousel__dot {
+        width: 100%;
+        opacity: 1;
     }
 }
