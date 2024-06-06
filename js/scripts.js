@@ -249,6 +249,17 @@ if(ss) {
         ssSlider.reInit();
     });
 }
+
+// snews slider
+const ns = document.querySelector('.news__slider');
+
+if(ns) {
+    var newsSlider = new Carousel(ns, { 
+        // Navigation: false,
+        Dots: false,
+        infinite : false,
+    });
+}
 $('.feedback__items').masonry({
     // options
     itemSelector: '.feedback__item',
