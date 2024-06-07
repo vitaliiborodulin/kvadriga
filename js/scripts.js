@@ -1,34 +1,23 @@
 $(function() {
 
-var ss_custom = {
-	"main_bar_sticky": "true"
-};
 
-function animateNav() {
-	var win_scroll = $(window).scrollTop(),
-			win_height = $(window).height(),
-			main_nav = $('.header__bottom'),
-			main_nav_offset = '',
-			scroll_by = 100;
+new ClipboardJS('.header__copy-btn');
 
-	main_nav_offset = $(main_nav).outerHeight();
+// var clipboardDemos=new ClipboardJS('.header__copy-btn');
 
-	if (win_scroll > scroll_by) {
-			$(main_nav).addClass('sticky-nav');
-			window.setTimeout(function() {
-					$(main_nav).addClass('fix');
-			}, 200);
-	} else {
-			$(main_nav).removeClass('sticky-nav fix');
-	}
+// clipboardDemos.on('success',function(e){
+//     e.clearSelection();
+//     console.info('Action:',e.action);
+//     console.info('Text:',e.text);
+//     console.info('Trigger:',e.trigger);
+//     showTooltip(e.trigger,'Copied!');
+// });
 
-}
-
-animateNav();
-
-$(window).on('load scroll', function() {
-	animateNav();
-});
+// clipboardDemos.on('error',function(e){
+//     console.error('Action:',e.action);
+//     console.error('Trigger:',e.trigger);
+//     showTooltip(e.trigger,fallbackMessage(e.action));
+// });
 // $('.faq__ask:first').addClass('active');
 // $('.faq__answer:first').show();
 

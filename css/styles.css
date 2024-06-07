@@ -464,7 +464,6 @@ input[type='submit'] {
   border-radius: 16px;
   border: none;
   outline: none;
-  opacity: 0.6;
 }
 
 .form__input:focus {
@@ -1074,17 +1073,10 @@ input[type='submit'] {
 .header__work {
   position: relative;
   color: rgba(2, 26, 13, 0.4);
-  transition: color 0.5s;
   padding-left: 24px;
 }
 
-.header__address:hover,
-.header__work:hover {
-  color: #021A0D;
-}
-
 .header__address {
-  cursor: pointer;
   margin-left: 48px;
 }
 
@@ -1093,6 +1085,15 @@ input[type='submit'] {
   content: url(../img/nav.svg);
   left: 0;
   top: 0;
+}
+
+.header__address-link {
+  color: inherit;
+  transition: color 0.5s;
+}
+
+.header__address-link:hover {
+  color: #021A0D;
 }
 
 .header__work {
@@ -1122,6 +1123,22 @@ input[type='submit'] {
 
 .header__top-menu li a:hover {
   background-color: rgba(2, 26, 13, 0.05);
+}
+
+.header__copy {
+  display: flex;
+  align-items: center;
+}
+
+.header__copy-btn {
+  margin-left: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(2, 26, 13, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__bottom {
@@ -2021,8 +2038,6 @@ input[type='submit'] {
 .map {
   width: 100%;
   height: 100%;
-  padding: 24px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .map__wrapper {
@@ -2205,11 +2220,71 @@ input[type='submit'] {
   height: 100%!important;
 }
 
-.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
-  padding-top: 4px;
+.popup {
+  max-width: 480px;
+  padding: 40px;
+  border-radius: 32px;
+  background-color: #fff;
 }
 
-.fancybox__content > .f-button.is-close-btn {
+.popup__title {
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.popup__text {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.popup__form .form__input {
+  background-color: #F0F2F0;
+}
+
+.popup__form .form__submit {
+  max-width: 100%;
+}
+
+.fancybox__slide {
+  padding: 0;
+}
+
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
+  padding-top: 0;
+}
+
+.fancybox__backdrop {
+  background-color: rgba(2, 26, 13, 0.5);
+}
+
+.fancybox__content > .f-button.is-close-btn,
+.is-compact .fancybox__content > .f-button.is-close-btn {
+  top: 16px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  color: rgba(2, 26, 13, 0.4);
+  opacity: 1;
+  background-color: transparent;
+}
+
+.popup.popup-thank .btn {
+  margin-top: 80px;
+}
+
+.popup.map {
+  max-width: 100%;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+}
+
+.popup.map.fancybox__content > .f-button.is-close-btn {
   top: 34px;
   right: 34px;
   width: 56px;
@@ -2221,25 +2296,17 @@ input[type='submit'] {
   box-shadow: 8px 8px 16px 0px #021A0D1A;
 }
 
-.fancybox__content > .f-button.is-close-btn svg {
+.popup.map.fancybox__content > .f-button.is-close-btn svg {
   stroke: #021A0D;
 }
 
-.fancybox__content > .f-button.is-close-btn:hover {
+.popup.map.fancybox__content > .f-button.is-close-btn:hover {
   opacity: 1;
 }
 
-.is-compact .fancybox__content > .f-button.is-close-btn {
+.is-compact .popup.map.fancybox__content > .f-button.is-close-btn {
   top: 34px;
   right: 34px;
-}
-
-.fancybox__backdrop {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.fancybox__slide {
-  padding: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2529,14 +2596,14 @@ input[type='submit'] {
     border-bottom-right-radius: 0;
   }
 
-  .fancybox__content > .f-button.is-close-btn {
+  .popup.map.fancybox__content > .f-button.is-close-btn {
     width: 44px;
     height: 44px;
     top: 20px;
     right: 8px;
   }
 
-  .is-compact .fancybox__content > .f-button.is-close-btn {
+  .is-compact .popup.map.fancybox__content > .f-button.is-close-btn {
     top: 20px;
     right: 8px;
   }

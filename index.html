@@ -12,6 +12,7 @@
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
+	<!-- <link rel="stylesheet" href="https://clipboardjs.com/bower_components/primer-css/css/primer.css"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"> -->
@@ -108,6 +109,43 @@
 	    </div>
 	</footer>
 	<!-- end footer -->
+	<div class="popup popup-thank" id="thank" style="display: none;">
+		<div class="popup__inner">
+	
+			<div class="popup__title">Спасибо, ваш запрос отправлен!</div>
+			<div class="popup__text">
+				Наши специалисты свяжутся с вами в течении 15 минут. 
+			</div>
+	
+			<a href="#" class="btn btn-link w-100" data-fancybox-close>Отлично</a>
+	
+		</div>
+	</div>
+	
+	<div class="popup popup-consult" id="consult" style="display: none;">
+		<div class="popup__inner">
+	
+			<div class="popup__title">Бесплатная консультация</div>
+			<div class="popup__text">
+				Заполните ваши данные, наши специалисты свяжутся с вами в течении 15 минут.
+			</div>
+	
+			<form class="form popup__form rp" method="post">
+				<input type="text" class="form__input rpole" name="name" placeholder="Ваше имя" required>
+				<input type="text" class="form__input rpole" name="contact" placeholder="Номер телефона" required>
+				<div class="acceptance">
+					<label>
+						<input type="checkbox" name="accept" class="form__checkbox">
+						<span class="custom-checkbox custom-checkbox-b"></span>
+						<span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+					</label>
+				</div>
+				<button type="submit" class="btn btn-link form__submit w-100 disabled">Оставить заявку</button>
+			</form>
+	
+		</div>
+	</div>
+	
 	<div class="popup map" id="map" style="display: none;">
 		<div class="popup__inner">
 	
@@ -173,6 +211,8 @@
 	<script src="js/carousel.umd.js"></script>
 	<script src="js/carousel.autoplay.umd.js"></script>
 	<script src="js/mixitup.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<!-- <script src="https://clipboardjs.com/assets/scripts/tooltips.js"></script> -->
 	<script src="js/scripts.js?v=1"></script>
 	<!-- end scripts -->
 
