@@ -1,6 +1,7 @@
 $(function() {
 
-//= components/header-sticky.js
+
+//= components/clipboard.js
 //= components/accordion.js
 //= components/filter.js
 //= components/form.js

@@ -34,11 +34,11 @@
     border: 2px solid @white;
 
 
-    // &:hover, &:active, a:focus {
-    //     border: 2px solid @white;
-    //     color: @white;
-    //     background-color: transparent;
-    // }
+    &:hover, &:active, a:focus {
+        border: 2px solid @white;
+        color: @white;
+        background-color: transparent;
+    }
 }
 
 .btn-w {
@@ -48,6 +48,16 @@
     &:hover, &:active, a:focus {
         color: @accent;
         background-color: @white;
+    }
+}
+
+.btn-b {
+    color: @white;
+    background-color: @black;
+
+    &:hover, &:active, a:focus {
+        color: @accent!important;
+        background-color: @black!important;
     }
 }
 
@@ -71,6 +81,12 @@
 .btn-w.btn-link {
     &::after {
         content: url(../img/arrow-right-b.svg);
+    }
+}
+
+.btn-b.btn-link:hover {
+    &::after {
+        content: url(../img/arrow-right-green-gr.svg);
     }
 }
 

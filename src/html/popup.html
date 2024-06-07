@@ -1,3 +1,40 @@
+<div class="popup popup-thank" id="thank" style="display: none;">
+	<div class="popup__inner">
+
+		<div class="popup__title">Спасибо, ваш запрос отправлен!</div>
+		<div class="popup__text">
+			Наши специалисты свяжутся с вами в течении 15 минут. 
+		</div>
+
+		<a href="#" class="btn btn-link w-100" data-fancybox-close>Отлично</a>
+
+	</div>
+</div>
+
+<div class="popup popup-consult" id="consult" style="display: none;">
+	<div class="popup__inner">
+
+		<div class="popup__title">Бесплатная консультация</div>
+		<div class="popup__text">
+			Заполните ваши данные, наши специалисты свяжутся с вами в течении 15 минут.
+		</div>
+
+		<form class="form popup__form rp" method="post">
+			<input type="text" class="form__input rpole" name="name" placeholder="Ваше имя" required>
+			<input type="text" class="form__input rpole" name="contact" placeholder="Номер телефона" required>
+			<div class="acceptance">
+				<label>
+					<input type="checkbox" name="accept" class="form__checkbox">
+					<span class="custom-checkbox custom-checkbox-b"></span>
+					<span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+				</label>
+			</div>
+			<button type="submit" class="btn btn-link form__submit w-100 disabled">Оставить заявку</button>
+		</form>
+
+	</div>
+</div>
+
 <div class="popup map" id="map" style="display: none;">
 	<div class="popup__inner">
 

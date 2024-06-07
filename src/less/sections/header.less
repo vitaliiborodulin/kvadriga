@@ -16,16 +16,11 @@
     &__address, &__work {
         position: relative;
         color: fade(@black, 40%);
-        transition: color 0.5s;
+        
         padding-left: 24px;
-
-        &:hover {
-            color: @black;
-        }
     }
 
     &__address {
-        cursor: pointer;
         margin-left: 48px;
 
         &::before {
@@ -33,6 +28,15 @@
             content: url(../img/nav.svg);
             left: 0;
             top: 0;
+        }
+    }
+
+    &__address-link {
+        color: inherit;
+        transition: color 0.5s;
+
+        &:hover {
+            color: @black;
         }
     }
 
@@ -63,6 +67,23 @@
                 background-color: fade(@black, 5%);
             }
         }
+    }
+
+    &__copy {
+        display: flex;
+        align-items: center;
+    }
+
+    &__copy-btn {
+        margin-left: 8px;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background-color: fade(@black, 5%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     // нижнее меню
