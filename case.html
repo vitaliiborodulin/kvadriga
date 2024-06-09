@@ -86,124 +86,151 @@
 	<!-- end header -->
 
     <main>
+
         <div class="container">
 
-            <div class="content">
+            <div class="content content-100">
 
                 <div class="content__header">
 
                     <div class="info breadcrumbs">
                         <span><a href="index.html">Главная</a></span>
                         <span class="sep">&bull;</span>
-                        <span>Цены на наши услуги</span>
+                        <span>Кейсы</span>
                     </div>
-                    <h1 class="content__title">Цены на наши услуги <span class="c-b40">(без НДС)</span></h1>
+                    <h1 class="content__title">Реализованные проекты</h1>
+    
+                    <div class="content__header-wrapper">
+                        <div class="filter__buttons">
+                            <button type="button" data-filter="all" class="mixitup-control-active">Все</button>
+                            <button type="button" data-filter=".cat-lic">Лицензирование</button>
+                            <button type="button" data-filter=".cat-eco">Экологическое проектирование</button>
+                        </div>
+    
+                        <!-- <select name="sort" id="sort" class="content__sort d-md-none">
+                            <option value="new" selected>Сначала новые</option>
+                            <option value="old">Сначала старые</option>
+                            <option value="big">Сначала крупные</option>
+                            <option value="small">Сначала небольшие</option>
+                        </select> -->
+                    </div>
 
                 </div>
     
                 <div class="content__main">
 
-                    <section class="price">
+                    <div class="case__box filter__items">
 
-                        <div class="price__box">
-
-                            <div class="price__list">
-
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Паспорта отходов</a></div>
-                                    <div class="price__money">5 000 ₽</div>
+                        <div class="case__card-wrapper case__card-wrapper-big mix cat-lic">
+                            <div class="case__card" style="background-image: url(img/case-bg-1.jpg);">
+                                <div class="case__logo"><img src="img/case-logo-1.png" alt=""></div>
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для лидера Российской золотодобычи</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Нижний Куранах</div>
+                                    <div class="case__data">Март 2024</div>
                                 </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Биотестирование отходов 5 класса опасности</a></div>
-                                    <div class="price__money">5 000 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Расчет и определение класса опасности токсичных отходов</a></div>
-                                    <div class="price__money">4 500 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Производственно экологический контроль (ПЭК)</a></div>
-                                    <div class="price__money">4 500 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Отчетности об образовании, утилизации, обезвреживании, о размещении отходов субъектов малого и среднего предпринимательства (МСП)</a></div>
-                                    <div class="price__money">от 42 000 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Проект нормативов образования отходов и лимитов на их размещение (ПНООЛР)</a></div>
-                                    <div class="price__money">от 47 000 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Постановка объектов, оказывающих негативное воздействие на окружающую среду (НВОС), на государственный учет в Росприроднадзоре</a></div>
-                                    <div class="price__money">16 000 ₽ <span>/ 1 площадка</span></div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Разработка и согласование проекта нормативов предельно-допустимых выбросов (ПДВ)</a></div>
-                                    <div class="price__money">от 180 000 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Проект нормативов допустимых сбросов (НДС)</a></div>
-                                    <div class="price__money">от 400 000 ₽</div>
-                                </div>
-                                <div class="price__item">
-                                    <div class="price__text"><a href="#">Разработка и согласование проекта санитарной защитной зоны (СЗЗ)</a></div>
-                                    <div class="price__money">от 1 млн ₽</div>
-                                </div>
-
-                                <div class="pagination">
-                                    <button type="button" class="btn-page pagination__more">Загрузить еще</button>
-                                    <div class="pagination__list">
-                                        <button type="button" class="btn-page btn-prev">prev</button>
-                                        <a href="#" class="btn-page active">2</a>
-                                        <a href="#" class="btn-page d-xs-none">3</a>
-                                        <a href="#" class="btn-page d-xs-none">4</a>
-                                        <a href="#" class="btn-page">...</a>
-                                        <a href="#" class="btn-page">53</a>
-                                        <button type="button" class="btn-page btn-next">next</button>
-                                    </div>
-                                </div>
-
                             </div>
-
                         </div>
 
-                    </section>
+                        <div class="case__card-wrapper mix cat-eco">
+                            <div class="case__card case__card-05 case__card-b">
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для ГК 1520</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Екатеринбург</div>
+                                    <div class="case__data">Март 2024</div>
+                                </div>
+                            </div>
+                            <div class="case__card case__card-05" style="background-image: url(img/case-bg-2.jpg);">
+                                <div class="case__logo"><img src="img/case-logo-2.png" alt=""></div>
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для ГК 1520</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Екатеринбург</div>
+                                    <div class="case__data">Март 2024</div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="notice-p">
-                        <p class="notice-p__descr notice-p__descr--lead">Здесь приведены только ориентировочные, примерные цены</p>
-                        <p class="notice-p__descr">Стоимость экологических услуг зависят от многих факторов (уровень ответственности предприятия или объекта строительства, особенности территории, параметры объекта, прохождение экспертизы, необходимые разрешения и допуски). Для того, чтобы точно определить стоимость необходимых вам работ, а также узнать больше о действующих акциях и скидках обратитесь к нашим специалистам по телефону или через форму обратной связи, расположенную ниже.</p>
+                        <div class="case__card-wrapper mix cat-lic">
+                            <div class="case__card case__card-05 case__card-b">
+                                <a href="case-item.html" class="case__descr">Лицензия № Л020-00113-72/00678014 для Лидерартстрой</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Москва</div>
+                                    <div class="case__data">Апрель 2024</div>
+                                </div>
+                            </div>
+                            <div class="case__card case__card-05 case__card-b">
+                                <a href="case-item.html" class="case__descr">Лицензия № Л028-01077-74/00770860 для Мос Кабель МСК 1</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Москва</div>
+                                    <div class="case__data">Март 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case__card-wrapper mix cat-eco">
+                            <div class="case__card" style="background-image: url(img/case-bg-3.jpg);">
+                                <div class="case__logo"><img src="img/case-logo-4.png" alt=""></div>
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для ГК 1520</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Екатеринбург</div>
+                                    <div class="case__data">Март 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case__card-wrapper mix cat-lic">
+                            <div class="case__card case__card-b">
+                                <div class="case__logo"><img src="img/case-logo-3.png" alt=""></div>
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для ГК 1520</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Екатеринбург</div>
+                                    <div class="case__data">Март 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case__card-wrapper mix cat-eco">
+                            <div class="case__card case__card-b">
+                                <a href="case-item.html" class="case__descr">Лицензия №Л020-00113-77/00018012 для АСК</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Владивосток</div>
+                                    <div class="case__data">Февраль 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case__card-wrapper case__card-wrapper-big mix cat-lic">
+                            <div class="case__card" style="background-image: url(img/case-bg-4.jpg);">
+                                <div class="case__logo"><img src="img/case-logo-5.png" alt=""></div>
+                                <a href="case-item.html" class="case__descr">Получено положительное санитарно-эпидемиологическое заключение для Курганмашзавода</a>
+                                <div class="case__bottom">
+                                    <div class="case__city">Курган</div>
+                                    <div class="case__data">Февраль 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pagination">
+                        <button type="button" class="btn-page pagination__more">Загрузить еще</button>
+                        <div class="pagination__list">
+                            <button type="button" class="btn-page btn-prev">prev</button>
+                            <a href="#" class="btn-page active">2</a>
+                            <a href="#" class="btn-page d-xs-none">3</a>
+                            <a href="#" class="btn-page d-xs-none">4</a>
+                            <a href="#" class="btn-page">...</a>
+                            <a href="#" class="btn-page">53</a>
+                            <button type="button" class="btn-page btn-next">next</button>
+                        </div>
                     </div>
                     
                 </div>
-        
-                <aside class="aside">
-
-                    <div class="widget widget--faq">
-						<div class="widget__title">
-							Подскажем стоимость вашей услуги онлайн
-						</div>
-						<div class="widget__text">
-							Оставьте заявку и наш специалист подберет индивидуальное предложение для вас
-						</div>
-                        <form class="form">
-                            <input type="text" class="form__input" name="name" placeholder="Имя">
-                            <input type="text" class="form__input" name="contact" placeholder="Телефон или почта">
-                            <div class="acceptance">
-                                <label>
-                                    <input type="checkbox" name="accept" class="form__checkbox">
-                                    <span class="custom-checkbox custom-checkbox-b"></span>
-                                    <span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-link form__submit w-100">Оставить заявку</button>
-                        </form>
-					</div>
-
-                </aside>
-
+            
             </div>
-        </div>
 
+        </div>
+        
         <section class="discuss">
             <div class="container">
         

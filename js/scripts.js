@@ -143,6 +143,11 @@ $('.rp').each(function(){
         }
     });
 });
+
+
+// document.querySelector('select').addEventListener('change', function() {
+//     this.classList.toggle('selected', !!this.value);
+//   });
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
@@ -239,7 +244,7 @@ if(ss) {
     });
 }
 
-// snews slider
+// news slider
 const ns = document.querySelector('.news__slider');
 
 if(ns) {
@@ -249,6 +254,90 @@ if(ns) {
         infinite : false,
     });
 }
+
+// case slider
+// const cs = document.querySelector('.case__slider');
+
+// if(cs) {
+//     var caseSlider = new Carousel(cs, { 
+//         // Navigation: false,
+//         dragFree: false,
+//         // Dots: false,
+//         infinite : false,
+//     });
+// }
+
+const caseSlider = new Swiper('.case__slider', {
+    // Optional parameters
+    // direction: 'vertical',
+    // loop: true,
+
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+
+    breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 3.2,
+          spaceBetween: 24
+        }
+    },
+
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+  
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    }
+});
+
+const feedbackSlider = new Swiper('.feedback__slider', {
+    loop: true,
+
+    slidesPerView: 3,
+    spaceBetween: 16,
+    
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    }
+});
+
+
+var licenceSlider = new Swiper('.licence__slider', {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+  });
 $('.feedback__items').masonry({
     // options
     itemSelector: '.feedback__item',
