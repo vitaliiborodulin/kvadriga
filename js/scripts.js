@@ -303,40 +303,58 @@ const caseSlider = new Swiper('.case__slider', {
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
+        dragSize: 300
     }
 });
 
-const feedbackSlider = new Swiper('.feedback__slider', {
+// const feedbackSlider = new Swiper('.feedback__slider', {
+//     loop: true,
+
+//     slidesPerView: 3,
+//     spaceBetween: 16,
+    
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     scrollbar: {
+//         el: '.swiper-scrollbar',
+//         draggable: true,
+//         // dragSize: 20
+//     }
+// });
+
+
+var licenseSlider = new Swiper('.license__slider', {
     loop: true,
-
-    slidesPerView: 3,
-    spaceBetween: 16,
-    
-    
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    // slidesPerView: 1.2,
+    // spaceBetween: 0,
+    // grabCursor: true,
+    //   effect: "creative",
+    //   creativeEffect: {
+    //     prev: {
+    //       shadow: true,
+    //       translate: ["-20%", 0, -1],
+    //     //   translate: ["90%", 0, 0],
+    //     },
+    //     next: {
+    //       translate: ["80%", 0, 0],
+    //     },
+    //   },
+    // effect: "coverflow",
+    // effect: "cards",
+    // slidesPerView: 3,
+    // slidesPerColumn: 1,
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     // type: 'progressbar'
+    // },
+    autoplay: {
+        delay: 5000,
     },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-    }
-});
-
-
-var licenceSlider = new Swiper('.licence__slider', {
-    grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
+    slidesPerView: 1.2,
+    spaceBetween: 0,
+    
   });
 $('.feedback__items').masonry({
     // options

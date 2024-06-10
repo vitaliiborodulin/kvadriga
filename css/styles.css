@@ -1087,6 +1087,53 @@ option:checked {
   border: 1px solid red;
 }
 
+.license__slider {
+  width: 100%;
+  height: 640px;
+}
+
+.license__slide {
+  padding: 88px 40px 40px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.license .swiper-slide-active {
+  width: 80%!important;
+}
+
+.license .swiper-slide-next {
+  margin-left: -100px;
+  z-index: 2!important;
+}
+
+.license__header {
+  margin-bottom: 16px;
+  max-width: 50%;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.license__descr {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  max-width: 50%;
+}
+
+.license .btn {
+  margin-top: auto;
+}
+
+.license .swiper-pagination {
+  top: 0;
+}
+
 .case__box {
   display: flex;
   flex-wrap: wrap;
