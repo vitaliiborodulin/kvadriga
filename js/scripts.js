@@ -327,34 +327,13 @@ const caseSlider = new Swiper('.case__slider', {
 
 var licenseSlider = new Swiper('.license__slider', {
     loop: true,
-    // slidesPerView: 1.2,
-    // spaceBetween: 0,
-    // grabCursor: true,
-    //   effect: "creative",
-    //   creativeEffect: {
-    //     prev: {
-    //       shadow: true,
-    //       translate: ["-20%", 0, -1],
-    //     //   translate: ["90%", 0, 0],
-    //     },
-    //     next: {
-    //       translate: ["80%", 0, 0],
-    //     },
-    //   },
-    // effect: "coverflow",
-    // effect: "cards",
-    // slidesPerView: 3,
-    // slidesPerColumn: 1,
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     // type: 'progressbar'
-    // },
-    autoplay: {
-        delay: 5000,
-    },
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
     spaceBetween: 0,
-    
+    breakpoints: {
+        768: {
+          slidesPerView: 1.2
+        },
+    },
   });
 $('.feedback__items').masonry({
     // options

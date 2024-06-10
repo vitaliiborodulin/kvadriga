@@ -1102,12 +1102,11 @@ option:checked {
 }
 
 .license .swiper-slide-active {
-  width: 80%!important;
+  margin-left: 0;
 }
 
 .license .swiper-slide-next {
   margin-left: -100px;
-  z-index: 2!important;
 }
 
 .license__header {
@@ -1120,10 +1119,10 @@ option:checked {
 }
 
 .license__descr {
+  max-width: 50%;
   font-size: 17px;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  max-width: 50%;
 }
 
 .license .btn {
@@ -2782,6 +2781,30 @@ option:checked {
   .ss__header {
     padding: 0 24px;
     margin-bottom: 24px;
+  }
+
+  .license__slider {
+    height: 480px;
+  }
+
+  .license__slide {
+    padding: 24px 16px 16px;
+    border-radius: 24px;
+  }
+
+  .license .swiper-slide-next {
+    margin-left: -40px;
+  }
+
+  .license__header {
+    margin-bottom: 8px;
+    max-width: 80%;
+    font-size: 22px;
+  }
+
+  .license__descr {
+    max-width: 80%;
+    font-size: 14px;
   }
 
   .case__box {
