@@ -1098,15 +1098,19 @@ option:checked {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
   color: #fff;
 }
 
 .license .swiper-slide-active {
+  width: 100%!important;
   margin-left: 0;
 }
 
 .license .swiper-slide-next {
-  margin-left: -100px;
+  margin-left: -200px;
 }
 
 .license__header {
@@ -1129,8 +1133,63 @@ option:checked {
   margin-top: auto;
 }
 
-.license .swiper-pagination {
+.license .swiper-pagination-bullets {
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  height: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 70%;
+}
+
+.license .swiper-pagination-bullet {
+  position: relative;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.license .swiper-pagination-bullet::after {
+  display: block;
+  content: '';
+  left: 0;
   top: 0;
+  width: 0;
+  height: 8px;
+  background-color: #fff;
+  opacity: 0;
+  border-radius: 10px;
+  transition: width 5s;
+}
+
+.license .swiper-pagination-bullet-active::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.license .swiper-button-box {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 70%;
+}
+
+.license .swiper-button-next,
+.license .swiper-button-prev {
+  bottom: 0;
+  top: unset;
+}
+
+.license .swiper-button-prev {
+  right: 60px;
+  left: unset;
+}
+
+.license .swiper-button-next {
+  right: 0;
 }
 
 .case__box {
@@ -2788,7 +2847,7 @@ option:checked {
   }
 
   .license__slide {
-    padding: 24px 16px 16px;
+    padding: 56px 16px 16px;
     border-radius: 24px;
   }
 
@@ -2805,6 +2864,15 @@ option:checked {
   .license__descr {
     max-width: 80%;
     font-size: 14px;
+  }
+
+  .license .btn {
+    width: 90%;
+  }
+
+  .license .swiper-pagination-bullets {
+    top: 24px;
+    left: 16px;
   }
 
   .case__box {

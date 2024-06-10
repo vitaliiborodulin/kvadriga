@@ -329,10 +329,20 @@ var licenseSlider = new Swiper('.license__slider', {
     loop: true,
     slidesPerView: 1.1,
     spaceBetween: 0,
-    breakpoints: {
-        768: {
-          slidesPerView: 1.2
-        },
+    // breakpoints: {
+    //     768: {
+    //       slidesPerView: 1.2
+    //     },
+    // },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay: {
+        delay: 5000,
     },
   });
 $('.feedback__items').masonry({
