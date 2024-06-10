@@ -51,3 +51,8 @@ $('.rp').each(function(){
         }
     });
 });
+
+
+// document.querySelector('select').addEventListener('change', function() {
+//     this.classList.toggle('selected', !!this.value);
+//   });

@@ -40,3 +40,53 @@
     color: @white!important;
     background-color: @black!important;
 }
+
+.content__sort {
+    flex-shrink: 0;
+
+    display: block;
+    text-align: center;
+    // height: 35.5px;
+
+    padding: 5px 16px;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+
+    color: @black;
+    background-color: fade(@black, 5%);
+
+    cursor: pointer;
+    transition: all 0.5s;
+
+    border: 0;
+    outline: none;
+    appearance: none;            /* remove arrow        */
+    -webkit-appearance: none;    /* remove arrow Chrome */
+    -moz-appearance: none;       /* remove arrow FF     */
+
+    cursor: pointer;
+
+    font-size: inherit; /* Согласованность размера шрифтов */
+    -webkit-user-select: none; /* Запрет на выделение текста */
+    -moz-user-select: none; /* Предотвращение случайного выделения текста */
+
+    .xs-block({
+        padding: 4px 16px;
+        font-size: 14px;
+    });
+
+    &:hover, &:active, &:focus {
+        border: 0;
+        appearance: none;
+    }
+
+    option {
+        padding: 10px 16px;
+    }
+}
+
+.content__sort.selected option:checked, option:checked{
+    color: @white;
+    background-color: @black;
+}

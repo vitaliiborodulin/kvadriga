@@ -1,0 +1,111 @@
+.f-carousel {
+    position: relative;
+}
+
+.f-button {
+    position: absolute;
+    opacity: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background-color: @white;
+
+    transition: opacity 0.5s;
+    box-shadow: 8px 8px 16px 0px #021A0D1A;
+    z-index: 999;
+}
+
+.f-button:hover:not([disabled]){
+    background-color: @white;
+}
+
+.f-carousel:hover .f-button {
+    opacity: 1;
+}
+
+.f-carousel__dots {
+    // margin-top: 24px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 90%;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.f-carousel__dots li, 
+.f-carousel__dots li button,
+.f-carousel__dot {
+    width: 100%;
+    height: 8px;
+}
+
+.f-carousel__dot {
+    border-radius: 0;
+}
+
+// swiper
+
+.swiper {
+    // width: 464px;
+    // height: 592px;
+}
+
+.swiper-scrollbar {
+    background-color: @bg;
+    // bottom: -24px!important;
+    // left: 40px!important;
+    // right: 40px!important;
+    // width: 94%!important;
+    height: 8px!important;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: @black;
+//     width: 20%!important;
+  }
+  
+// .swiper-container-horizontal > .swiper-scrollbar {
+//     border-radius: 2px;
+//     height: 5px;
+//     width: 200px;
+//     bottom: -24px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+
+//   .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+//     bottom: -24px;
+//     background-color: @bg;
+//     height: 8px;
+//   }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background-color: @white;
+
+    transition: opacity 0.5s;
+    box-shadow: 8px 8px 16px 0px #021A0D1A;
+    // opacity: 0;
+  }
+
+//   .swiper-button-disabled {
+//     opacity: 0!important;
+//   }
+
+//   .case__slider:hover .swiper-button-next, 
+//   .case__slider:hover .swiper-button-prev {
+//     opacity: 1;
+//   }
+
+//   .case__slider:hover .swiper-button-next.swiper-button-disabled, 
+//   .case__slider:hover .swiper-button-prev.swiper-button-disabled {
+//     opacity: 0.35!important;
+//   }
+
+  .swiper-button-next svg, .swiper-button-prev svg {
+    width: auto;
+    height: auto;
+  }
