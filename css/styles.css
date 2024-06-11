@@ -375,6 +375,34 @@ input[type='submit'] {
   background-color: #021A0D;
 }
 
+.btn-next,
+.btn-prev {
+  position: relative;
+  font-size: 0;
+}
+
+.btn-next::after,
+.btn-prev::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../img/shevron.svg) no-repeat center;
+}
+
+.btn-prev {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.btn-next {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .filter__buttons {
   margin-top: 24px;
   display: flex;
@@ -971,6 +999,85 @@ option:checked {
   font-size: 19px;
 }
 
+.service__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service__box .service__card {
+  width: 474px;
+  max-width: 100%;
+}
+
+.service__card {
+  position: relative;
+  height: 495px;
+}
+
+.service__card-box {
+  position: relative;
+  z-index: 3;
+  padding: 32px;
+  height: 100%;
+  transition: height 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #021A0D;
+  background: #fff url(../img/service-slider-bg.png) no-repeat center / cover;
+  border-radius: 14px;
+}
+
+.service__card-box span {
+  display: block;
+  color: rgba(2, 26, 13, 0.4);
+}
+
+.service__card:hover .service__card-box {
+  height: 85%;
+}
+
+.service__title {
+  font-size: 36px;
+}
+
+.service__buttons {
+  position: absolute;
+  z-index: 1;
+  bottom: 2px;
+  right: 2px;
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+}
+
+.service__buttons .btn {
+  width: 100%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.service__buttons .btn + .btn {
+  margin-left: 8px;
+}
+
+.page-service .content,
+.page-service .content__header,
+.page-service .content__main {
+  background-color: #F0F2F0;
+}
+
+.page-service .content {
+  border: 3px solid rgba(2, 26, 13, 0.05);
+}
+
+.page-service .pagination {
+  margin-top: 24px;
+}
+
 .ss__content {
   padding: 40px 0;
   border: 3px solid rgba(2, 26, 13, 0.05);
@@ -1026,55 +1133,6 @@ option:checked {
   top: 0;
   z-index: 2;
   background: linear-gradient(-90deg, #f0f2f0, hsla(120, 7%, 95%, 0));
-}
-
-.ss__slide {
-  position: relative;
-  height: 495px;
-}
-
-.ss__slide-box {
-  position: relative;
-  z-index: 3;
-  padding: 32px;
-  height: 100%;
-  transition: height 0.5s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 36px;
-  line-height: 1.2;
-  color: #021A0D;
-  background: #fff url(../img/service-slider-bg.png) no-repeat center / cover;
-  border-radius: 24px;
-}
-
-.ss__slide-box span {
-  display: block;
-  color: rgba(2, 26, 13, 0.4);
-}
-
-.ss__slide:hover .ss__slide-box {
-  height: 85%;
-}
-
-.ss__buttons {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  width: 100%;
-  margin-top: 8px;
-  display: flex;
-}
-
-.ss__buttons .btn {
-  width: 100%;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-
-.ss__buttons .btn + .btn {
-  margin-left: 8px;
 }
 
 .license__slider {
@@ -1700,60 +1758,6 @@ option:checked {
   padding: 0 40px;
 }
 
-.content__main h2 {
-  margin-top: 40px;
-  margin-bottom: 16px;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: -0.03em;
-  scroll-margin-top: 220px;
-}
-
-.content__main h3 {
-  margin-top: 40px;
-  margin-bottom: 16px;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-}
-
-.content__main p {
-  margin-bottom: 16px;
-}
-
-.content__main p.has-medium-font-size {
-  font-size: 22px;
-}
-
-.content__main ul,
-.content__main ol {
-  -webkit-padding-start: 10px;
-          padding-inline-start: 10px;
-}
-
-.content__main ul li {
-  list-style-position: inside;
-  list-style-type: disc;
-}
-
-.content__main ol li {
-  list-style-position: inside;
-}
-
-.content__main li {
-  margin-bottom: 16px;
-}
-
-.content__main a {
-  color: #00C466;
-}
-
-.content__main a:hover {
-  cursor: pointer;
-}
-
 .content__main .map__wrapper a {
   color: #021A0D;
   transition: color 0.5s;
@@ -1763,7 +1767,61 @@ option:checked {
   color: #00C466;
 }
 
-.content__main blockquote {
+.content__page h2 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  scroll-margin-top: 220px;
+}
+
+.content__page h3 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.content__page p {
+  margin-bottom: 16px;
+}
+
+.content__page p.has-medium-font-size {
+  font-size: 22px;
+}
+
+.content__page ul,
+.content__page ol {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+}
+
+.content__page ul li {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.content__page ol li {
+  list-style-position: inside;
+}
+
+.content__page li {
+  margin-bottom: 16px;
+}
+
+.content__page a {
+  color: #00C466;
+}
+
+.content__page a:hover {
+  cursor: pointer;
+}
+
+.content__page blockquote {
   margin: 40px 0;
   padding: 40px;
   background-color: rgba(2, 26, 13, 0.05);
@@ -1771,7 +1829,7 @@ option:checked {
   font-size: 22px;
 }
 
-.content__main cite {
+.content__page cite {
   display: block;
   margin-top: 16px;
   font-size: 14px;
@@ -3130,22 +3188,25 @@ option:checked {
     font-size: 17px;
   }
 
-  .ss__slider {
-    padding-left: 24px;
-  }
-
-  .ss__slide {
+  .service__card {
     height: 264px;
   }
 
-  .ss__slide-box {
+  .service__card-box {
     padding: 16px;
     font-size: 22px;
-    border-radius: 16px;
   }
 
-  .ss__slide:hover .ss__slide-box {
+  .service__card:hover .service__card-box {
     height: 75%;
+  }
+
+  .service__title {
+    font-size: 22px;
+  }
+
+  .ss__slider {
+    padding-left: 24px;
   }
 
   .widget__title {
@@ -3161,15 +3222,15 @@ option:checked {
     font-size: 30px;
   }
 
-  .content__main h2 {
+  .content__page h2 {
     font-size: 20px;
   }
 
-  .content__main h3 {
+  .content__page h3 {
     font-size: 20px;
   }
 
-  .content__main blockquote {
+  .content__page blockquote {
     padding: 24px;
     margin: 24px 0;
   }
