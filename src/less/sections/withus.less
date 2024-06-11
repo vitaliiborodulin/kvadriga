@@ -49,17 +49,25 @@
         }
     }
 
-    &__slide-arrows {
+    .swiper-button-box {
+        position: relative;
+        width: 100%;
+        height: 56px;
         margin-top: auto;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+        bottom: 0;
+    }
+
+    .swiper-button-next {
+        left: 60px;
+        bottom: 0;
     }
 
     &__slider {
         position: relative;
-        // --f-carousel-spacing: 10px;
-        // --f-carousel-slide-width: 100%;
-        // --f-progress-color: @white;
-        --f-progress-color: transparent;
-
         width: 66%;
         
         .lg-block({
@@ -117,65 +125,69 @@
         }
     }
 
-    .f-carousel.has-dots {
-        margin-bottom: 0;
-    }
 
-    .f-carousel__dots {
+    .swiper-pagination-bullets {
         bottom: 40px;
         right: 40px;
-        justify-content: flex-end;
-        flex-wrap: nowrap;
+        text-align: right;
         max-width: 95%;
+        display: flex;
+        justify-content: flex-end;
 
-        .xl-block({
+        .lg-block({
             top: 40px;
             left: 40px;
+            width: 90%;
             bottom: unset;
-            align-items: flex-start;
-            justify-content: center;
+            text-align: left;
         });
 
         .xs-block({
-            top: 16px;
+            top: 10px;
             left: 16px;
             right: 16px;
         });
     }
 
-    .f-carousel__dots li {
+    .swiper-pagination-bullet {
         margin-right: 8px;
         width: 83px;
         height: 8px;
         // background-color: @white;
         background-color: fade(@white, 20%);
-        border-radius: 999px;
+        border-radius: 10px;
         opacity: 1;
 
-        button {
-            width: 100%;
+        .lg-block({
+           width: 100%;
+        });
+
+        &::after {
+            display: block;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 0;
             height: 8px;
-            text-align: left;
+            background-color: @white;
+            opacity: 0;
+            border-radius: 10px;
+
+            transition: width 3s;
         }
     }
 
-    
-    
-    .f-carousel__dot {
-        // width: 83px;
-        background-color: @white;
-        height: 8px;
-        // width: 10px;
-        width: 0;
-        border-radius: 999px;
-        margin-right: auto;
-        opacity: 0;
+    .swiper-pagination-bullet-active {
+        // background-color: @white;
 
-        transition: width 2s;
+        &::after {
+            opacity: 1;
+            width: 100%;
+        }
     }
 
-    .f-carousel__dots li.is-current .f-carousel__dot {
-        width: 100%;
+    .swiper-button-prev, .swiper-button-next {
         opacity: 1;
     }
+    
 }

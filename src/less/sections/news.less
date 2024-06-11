@@ -7,23 +7,11 @@
     &__slider {
         position: relative;
         padding-left: 40px;
-        --f-carousel-spacing: 24px;
-        // --f-carousel-slide-width: calc((100% - 16px) / 3);
-        // --f-carousel-slide-width: calc((100% - 40px )/ 3);
-        --f-carousel-slide-width: 612px;
 
         .md-block({
             padding-left: 16px;
-            --f-carousel-spacing: 16px;
-            --f-carousel-slide-width: calc(100% - 40px);
         });
     }
-
-    // &__slide {
-        // width: 612px;
-        // width: 35%;
-        // height: 536px;
-    // }
 
     &__pic {
         margin-bottom: 16px;
@@ -80,12 +68,8 @@
         });
     }
 
-    
-
-    .is-horizontal .f-carousel__nav .f-button.is-next,
-    .is-horizontal .f-carousel__nav .f-button.is-prev {
+    .swiper-button-prev, .swiper-button-next {
         top: 40%;
     }
-
     
 }

@@ -1,0 +1,252 @@
+.service {
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .service__card {
+            width: 474px;
+            max-width: 100%;
+        }
+    }
+
+    &__card {
+        position: relative;
+        // width: 450px;
+        height: 495px;
+
+        .xs-block({
+            // width: 256px;
+            height: 264px;
+        });
+    }
+
+    &__card-box {
+        position: relative;
+        z-index: 3;
+        padding: 32px;
+        height: 100%;
+
+        transition: height 0.5s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        font-size: 36px;
+        line-height: 1.2;
+
+        color: @black;
+        background: @white url(../img/service-slider-bg.png) no-repeat center/cover;
+        border-radius: 14px;
+
+        .xs-block({
+            padding: 16px;
+            font-size: 22px;
+            // border-radius: 16px;
+        });
+
+        span {
+            display: block;
+            color: fade(@black, 40%);
+        }
+    }
+
+    &__card:hover &__card-box {
+        height: 85%;
+
+        .xs-block({
+            height: 100%;
+        });
+    }
+
+    &__title {
+        font-size: 36px;
+
+        .xs-block({
+            font-size: 22px;
+        });
+    }
+
+    &__buttons {
+        position: absolute;
+        z-index: 1;
+        bottom: 2px;
+        // left: 2px;
+        right: 2px;
+        background-color: @bg;
+
+        width: 100%;
+        margin-top: 8px;
+        display: flex;
+
+        .xs-block({
+            z-index: 30;
+            width: auto;
+            padding-left: 16px;
+            padding-top: 16px;
+            border-top-left-radius: 16px;
+            bottom: 0;
+            right: 0;
+        });
+
+        .btn {
+            width: 100%;
+            padding-left: 1vw;
+            padding-right: 1vw;
+
+            .xs-block({
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                overflow: hidden;
+                font-size: 0;
+            });
+        }
+
+        .btn-w::after {
+            .xs-block({
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                content: '...';
+                color: @black;
+                font-size: 20px;
+            });
+        }
+
+        .btn-link::after {
+            .xs-block({
+                left: 0;
+                right: 0;
+                top: 4px;
+                bottom: 0;
+                transform: scale(.7);
+                content: url(../img/perm_phone_msg.svg);
+            });
+        }
+
+        .btn + .btn {
+            margin-left: 8px;
+
+            .xs-block({
+                margin-left: 4px;
+            });
+        }
+    }
+}
+
+.page-service .content,
+.page-service .content__header,
+.page-service .content__main {
+    background-color: @bg;
+}
+
+.page-service .content {
+    border: 3px solid  fade(@black, 5%);
+}
+
+.page-service .pagination {
+    margin-top: 24px;
+}
+
+// service slider
+
+.ss {
+
+    &__content {
+        padding: 40px 0;
+        border: 3px solid fade(@black, 5%);
+        border-radius: 40px;
+
+        .md-block({
+            padding: 24px 0;
+            border-radius: 24px;
+        });
+    }
+
+    &__header {
+        padding: 0 40px;
+        margin-bottom: 40px;
+
+        .md-block({
+            padding: 0 24px;
+            margin-bottom: 24px;
+        });
+    }
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: fade(@black, 40%);
+        }
+    }
+
+
+
+
+    &__filter-buttons {
+
+        button {
+            flex-grow: 1;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            border-radius: 16px;
+        }
+
+        .search {
+            max-width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:active, &:focus {
+                background-color: fade(@black, 5%);
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+        padding-left: 40px;
+
+        // мне кажется это не нужно:
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            // -webkit-filter: grayscale(100%);
+            // -moz-filter: grayscale(100%);
+            // -ms-filter: grayscale(100%);
+            // -o-filter: grayscale(100%);
+            // filter: grayscale(100%);
+            // filter: gray; /* IE 6-9 */
+            // background-color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(-90deg, #f0f2f0, hsla(120, 7%, 95%, 0));
+
+            .xs-block({
+                width: 20px;
+            });
+        }
+
+        .xs-block({
+            padding-left: 24px;
+        });
+    }
+
+
+
+    
+
+}

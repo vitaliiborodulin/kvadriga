@@ -1,49 +1,3 @@
-.f-carousel {
-    position: relative;
-}
-
-.f-button {
-    position: absolute;
-    opacity: 0;
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
-    background-color: @white;
-
-    transition: opacity 0.5s;
-    box-shadow: 8px 8px 16px 0px #021A0D1A;
-    z-index: 999;
-}
-
-.f-button:hover:not([disabled]){
-    background-color: @white;
-}
-
-.f-carousel:hover .f-button {
-    opacity: 1;
-}
-
-.f-carousel__dots {
-    // margin-top: 24px;
-    margin-left: 40px;
-    margin-right: 40px;
-    width: 90%;
-
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.f-carousel__dots li, 
-.f-carousel__dots li button,
-.f-carousel__dot {
-    width: 100%;
-    height: 8px;
-}
-
-.f-carousel__dot {
-    border-radius: 0;
-}
-
 // swiper
 
 .swiper {
@@ -88,22 +42,32 @@
 
     transition: opacity 0.5s;
     box-shadow: 8px 8px 16px 0px #021A0D1A;
-    // opacity: 0;
+    opacity: 0;
+
+    svg path {
+      transition: fill 0.5s;
+    }
   }
 
-//   .swiper-button-disabled {
-//     opacity: 0!important;
-//   }
+  .swiper-button-prev:hover svg, .swiper-button-next:hover svg {
+    path {
+      fill: @accent;
+    }
+  }
 
-//   .case__slider:hover .swiper-button-next, 
-//   .case__slider:hover .swiper-button-prev {
-//     opacity: 1;
-//   }
+  .swiper-button-disabled {
+    opacity: 0!important;
+  }
 
-//   .case__slider:hover .swiper-button-next.swiper-button-disabled, 
-//   .case__slider:hover .swiper-button-prev.swiper-button-disabled {
-//     opacity: 0.35!important;
-//   }
+  .swiper:hover .swiper-button-next, 
+  .swiper:hover .swiper-button-prev {
+    opacity: 1;
+  }
+
+  .swiper:hover .swiper-button-next.swiper-button-disabled, 
+  .swiper:hover .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.35!important;
+  }
 
   .swiper-button-next svg, .swiper-button-prev svg {
     width: auto;

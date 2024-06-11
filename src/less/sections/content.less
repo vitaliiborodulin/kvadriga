@@ -93,6 +93,23 @@
             border-bottom-right-radius: 24px;
         });
 
+       
+
+        // в блоке карточек карты
+        .map__wrapper a {
+            color: @black;
+            transition: color 0.5s;
+
+            &:hover {
+                color: @accent;
+            }
+        }
+
+
+    }
+
+    &__page {
+        
         h2 {
             margin-top: 40px;
             margin-bottom: 16px;
@@ -155,16 +172,6 @@
             }
         }
 
-        // в блоке карточек карты
-        .map__wrapper a {
-            color: @black;
-            transition: color 0.5s;
-
-            &:hover {
-                color: @accent;
-            }
-        }
-
         blockquote {
             margin: 40px 0;
             padding: 40px;
@@ -185,7 +192,6 @@
             line-height: 1.4;
             color: fade(@black, 40%);
         }
-        
     }
 
     &__tags {
