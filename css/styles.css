@@ -258,6 +258,7 @@ input[type='submit'] {
 }
 
 .btn {
+  position: relative;
   display: inline-block;
   padding: 16px 52px;
   font-size: 17px;
@@ -1049,6 +1050,7 @@ option:checked {
   z-index: 1;
   bottom: 2px;
   right: 2px;
+  background-color: #F0F2F0;
   width: 100%;
   margin-top: 8px;
   display: flex;
@@ -3198,11 +3200,58 @@ option:checked {
   }
 
   .service__card:hover .service__card-box {
-    height: 75%;
+    height: 100%;
   }
 
   .service__title {
     font-size: 22px;
+  }
+
+  .service__buttons {
+    z-index: 30;
+    width: auto;
+    padding-left: 16px;
+    padding-top: 16px;
+    border-top-left-radius: 16px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .service__buttons .btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .service__buttons .btn-w::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '...';
+    color: #021A0D;
+    font-size: 20px;
+  }
+
+  .service__buttons .btn-link::after {
+    left: 0;
+    right: 0;
+    top: 4px;
+    bottom: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    content: url(../img/perm_phone_msg.svg);
+  }
+
+  .service__buttons .btn + .btn {
+    margin-left: 4px;
+  }
+
+  .ss__slider::after {
+    width: 20px;
   }
 
   .ss__slider {
