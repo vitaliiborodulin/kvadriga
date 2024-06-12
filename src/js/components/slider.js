@@ -101,22 +101,35 @@ const caseSlider = new Swiper('.case__slider', {
     }
 });
 
-// const feedbackSlider = new Swiper('.feedback__slider', {
-//     loop: true,
+// feedback slider
+const fsSlider = new Swiper('.fs__slider', {
+    // loop: true,
 
-//     slidesPerView: 3,
-//     spaceBetween: 16,
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+
+    breakpoints: {
+        768: {
+          slidesPerView: 1.7,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 2.2,
+          spaceBetween: 24
+        },
+
+    },
     
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     scrollbar: {
-//         el: '.swiper-scrollbar',
-//         draggable: true,
-//         // dragSize: 20
-//     }
-// });
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        dragSize: 300
+    }
+});
 
 
 var licenseSlider = new Swiper('.license__slider', {

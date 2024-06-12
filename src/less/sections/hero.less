@@ -58,6 +58,12 @@
 
         white-space: nowrap;
         border-radius: 999px;
+        opacity: 0.6;
+        transition: opacity 0.5s;
+
+        &:hover, &:active, &:focus {
+            opacity: 1;
+        }
 
         * {
             vertical-align: middle;

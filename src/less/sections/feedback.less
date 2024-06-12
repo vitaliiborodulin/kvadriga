@@ -28,6 +28,11 @@
         border-radius: 24px;
         background-color: fade(@black, 5%);
 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
         .xs-block({
             margin: 0;
             margin-bottom: 24px;
@@ -36,11 +41,44 @@
         });
     }
 
+    &__item-c {
+        max-width: 368px;
+        border: 3px solid fade(@black, 5%);
+        background-color: transparent;
+
+        .lg-block({
+            max-width: 100%;
+        });
+
+        .feedback__image {
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+            align-self: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-height: 200px;
+                .lg-block({
+                    max-height: 115px;
+                });
+            }
+        }
+
+        .feedback__footer {
+            justify-content: flex-end;
+        }
+    }
+
     &__item--width2 {
         width: 100%;
     }
 
     &__header {
+        width: 100%;
         margin-bottom: 8px;
         padding: 7px 0;
         display: flex;
@@ -67,11 +105,14 @@
         font-weight: 500;
 
         .xs-block({
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 5;
+            // -webkit-box-orient: vertical;
+            // overflow: hidden;
             font-size: 17px;
+
+            max-height: 250px;
+            overflow-y: auto;
         });
 
         p+p {
@@ -80,10 +121,15 @@
     }
 
     &__author {
+        margin-top: 14px;
         font-size: 19px;
         line-height: 1.4;
         font-weight: 500;
         color: fade(@black, 40%);
+
+        .xs-block({
+            font-size: 17px;
+        });
     }
 
     &__item-first .feedback__text,
@@ -97,7 +143,8 @@
     }
 
     &__footer {
-        margin-top: 56px;
+        width: 100%;
+        // margin-top: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -137,6 +184,7 @@
     }
 
     &__greet {
+        margin-left: auto;
         position: relative;
         padding-right: 52px;
 
@@ -162,4 +210,108 @@
         }
     }
 
+}
+
+.fs {
+    margin: 24px 0;
+
+    .xs-block({
+        margin: 16px 0;
+    });
+    
+    &__content {
+        display: flex;
+        align-items: stretch;
+
+        background-color: @white;
+        border-radius: 40px;
+        padding: 40px 0;
+
+        .lg-block({
+            padding: 24px 16px 16px;
+            flex-direction: column;
+            border-radius: 24px;
+        });
+
+    }
+
+    &__intro {
+        width: 34%;
+        padding: 0 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .lg-block({
+            width: 100%;
+            padding: 0;
+            margin-bottom: 24px;
+        });
+
+        h2 span {
+            display: block;
+            color: @accent;
+
+            .lg-block({
+                display: inline-block;
+            });
+        }
+
+        .section__header-link {
+            margin-top: auto;
+        }
+    }
+
+    &__slider {
+        width: 66%;
+        padding-right: 40px;
+        padding-bottom: 24px;
+
+        .lg-block({
+            width: 100%;
+        });
+    }
+        
+    &__slide {
+        height: 560px;
+        float: none;
+        width: auto;
+        margin: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .lg-block({
+            height: 360px;
+        });
+
+        .feedback__item {
+            width: auto;
+            max-width: 100%;
+            margin: 0;
+            height: 268px;
+
+            .lg(height, 170px);
+        }
+
+        .feedback__text {
+            max-height: 300px;
+            overflow-y: auto;
+
+            .lg-block({
+                height: 200px;
+            });
+
+            .md-block({
+                height: 150px;
+            });
+        }
+    }
+
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+        bottom: 0;
+    }
 }

@@ -36,6 +36,7 @@
 
         font-size: 36px;
         line-height: 1.2;
+        font-weight: 500;
 
         color: @black;
         background: @white url(../img/service-slider-bg.png) no-repeat center/cover;
@@ -63,6 +64,7 @@
 
     &__title {
         font-size: 36px;
+        font-weight: 500;
 
         .xs-block({
             font-size: 22px;
@@ -84,8 +86,8 @@
         .xs-block({
             z-index: 30;
             width: auto;
-            padding-left: 16px;
-            padding-top: 16px;
+            padding-left: 8px;
+            padding-top: 8px;
             border-top-left-radius: 16px;
             bottom: 0;
             right: 0;
@@ -156,6 +158,11 @@
 // service slider
 
 .ss {
+    margin: 24px 0;
+
+    .md-block({
+        margin: 16px 0;
+    });
 
     &__content {
         padding: 40px 0;
