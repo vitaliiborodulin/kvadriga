@@ -258,6 +258,10 @@ button {
   text-align: center;
 }
 
+.tar {
+  text-align: right;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 
 *:focus:not(:focus-visible) {
@@ -2162,6 +2166,34 @@ option:checked {
   padding: 32px;
   border-radius: 24px;
   background-color: rgba(2, 26, 13, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.feedback__item-c {
+  max-width: 368px;
+  border: 3px solid rgba(2, 26, 13, 0.05);
+  background-color: transparent;
+}
+
+.feedback__item-c .feedback__image {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback__item-c .feedback__image img {
+  max-height: 200px;
+}
+
+.feedback__item-c .feedback__footer {
+  justify-content: flex-end;
 }
 
 .feedback__item--width2 {
@@ -2169,6 +2201,7 @@ option:checked {
 }
 
 .feedback__header {
+  width: 100%;
   margin-bottom: 8px;
   padding: 7px 0;
   display: flex;
@@ -2193,6 +2226,7 @@ option:checked {
 }
 
 .feedback__author {
+  margin-top: 14px;
   font-size: 19px;
   line-height: 1.4;
   font-weight: 500;
@@ -2206,7 +2240,7 @@ option:checked {
 }
 
 .feedback__footer {
-  margin-top: 56px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2239,6 +2273,7 @@ option:checked {
 }
 
 .feedback__greet {
+  margin-left: auto;
   position: relative;
   padding-right: 52px;
   font-size: 17px;
@@ -2253,6 +2288,68 @@ option:checked {
   margin-top: -20px;
   width: 40px;
   height: 40px;
+}
+
+.fs {
+  margin: 24px 0;
+}
+
+.fs__content {
+  display: flex;
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px 0;
+}
+
+.fs__intro {
+  width: 34%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fs__intro h2 span {
+  display: block;
+  color: #00C466;
+}
+
+.fs__intro .section__header-link {
+  margin-top: auto;
+}
+
+.fs__slider {
+  width: 66%;
+  padding-right: 40px;
+  padding-bottom: 24px;
+}
+
+.fs__slide {
+  height: 560px;
+  float: none;
+  width: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fs__slide .feedback__item {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  height: 268px;
+}
+
+.fs__slide .feedback__text {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.fs .swiper-horizontal > .swiper-scrollbar,
+.fs .swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: 0;
 }
 
 .request {
@@ -2875,6 +2972,46 @@ option:checked {
     max-width: 100%;
     font-size: 35px;
   }
+
+  .feedback__item-c {
+    max-width: 100%;
+  }
+
+  .feedback__item-c .feedback__image img {
+    max-height: 115px;
+  }
+
+  .fs__content {
+    padding: 24px 16px 16px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .fs__intro {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .fs__intro h2 span {
+    display: inline-block;
+  }
+
+  .fs__slider {
+    width: 100%;
+  }
+
+  .fs__slide {
+    height: 360px;
+  }
+
+  .fs__slide .feedback__item {
+    height: 170px;
+  }
+
+  .fs__slide .feedback__text {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -3005,6 +3142,10 @@ option:checked {
 
   .news__slider {
     padding-left: 16px;
+  }
+
+  .fs__slide .feedback__text {
+    height: 150px;
   }
 
   .request {
@@ -3404,10 +3545,12 @@ option:checked {
   }
 
   .feedback__text {
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    font-size: 17px;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .feedback__author {
     font-size: 17px;
   }
 
@@ -3431,6 +3574,10 @@ option:checked {
   .feedback__greet::after {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+
+  .fs {
+    margin: 16px 0;
   }
 
   .p404__content {
