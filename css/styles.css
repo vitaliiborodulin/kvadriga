@@ -354,7 +354,8 @@ input[type='submit'] {
   content: url(../img/arrow-right-b.svg);
 }
 
-.btn-b.btn-link:hover::after {
+.btn-b.btn-link:hover::after,
+.btn.map__tel-btn:hover::after {
   content: url(../img/arrow-right-green-gr.svg);
 }
 
@@ -2591,11 +2592,11 @@ option:checked {
 
 .map__info {
   position: absolute;
-  left: 34px;
-  top: 34px;
+  left: 12px;
+  top: 12px;
   background-color: #fff;
   width: 512px;
-  height: 89%;
+  height: 85%;
   z-index: 2;
   border-radius: 32px;
   box-shadow: 8px 8px 16px 0px #021A0D1A;
@@ -2718,6 +2719,10 @@ option:checked {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.map__mail-btn:hover svg path {
+  fill: #00C466;
 }
 
 .map__hide {
@@ -3229,8 +3234,7 @@ option:checked {
   }
 
   .map__hide {
-    left: 0;
-    right: unset;
+    right: 50%;
     top: -55px;
   }
 
