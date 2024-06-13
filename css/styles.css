@@ -1700,6 +1700,14 @@ option:checked {
   top: 0;
 }
 
+.header--fixed {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
 .hero {
   margin-bottom: 24px;
 }
@@ -2819,11 +2827,11 @@ option:checked {
 }
 
 .popup.map.fancybox__content > .f-button.is-close-btn {
-  top: 34px;
-  right: 34px;
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
   background-color: #fff !important;
   border: 2px solid rgba(2, 26, 13, 0.05);
   opacity: 1;
@@ -2836,11 +2844,6 @@ option:checked {
 
 .popup.map.fancybox__content > .f-button.is-close-btn:hover {
   opacity: 1;
-}
-
-.is-compact .popup.map.fancybox__content > .f-button.is-close-btn {
-  top: 34px;
-  right: 34px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -3246,18 +3249,6 @@ option:checked {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-
-  .popup.map.fancybox__content > .f-button.is-close-btn {
-    width: 44px;
-    height: 44px;
-    top: 20px;
-    right: 8px;
-  }
-
-  .is-compact .popup.map.fancybox__content > .f-button.is-close-btn {
-    top: 20px;
-    right: 8px;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -3389,8 +3380,8 @@ option:checked {
   .service__buttons {
     z-index: 30;
     width: auto;
-    padding-left: 8px;
-    padding-top: 8px;
+    padding-left: 16px;
+    padding-top: 16px;
     border-top-left-radius: 16px;
     bottom: 0;
     right: 0;
