@@ -1,5 +1,4 @@
 .popup {
-    max-width: 480px;
     padding: 40px;
     border-radius: 32px;
     background-color: @white;
@@ -8,6 +7,10 @@
         padding: 24px 16px;
         border-radius: 16px;
     });
+
+    &__inner {
+        height: 100%;
+    }
 
     &__title {
         margin-bottom: 8px;
@@ -64,10 +67,21 @@
 
 
 .popup.popup-thank {
-    
+    max-width: 480px;
 
     .btn {
         margin-top: 80px;
+    }
+}
+
+.popup.popup-city {
+    // width: 1028px;
+    // height: 880px;
+    // overflow-y: auto;
+
+    .popup__title {
+        font-size: 30px;
+        .md(font-size, 20px);
     }
 }
 
@@ -79,22 +93,22 @@
 }
 
 .popup.map.fancybox__content > .f-button.is-close-btn {
-    top: 34px;
-    right: 34px;
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
     background-color: @white!important;
     border: 2px solid fade(@black, 5%);
     opacity: 1;
     box-shadow: 8px 8px 16px 0px #021A0D1A;
 
-    .md-block({
-        width: 44px;
-        height: 44px;
-        top: 20px;
-        right: 8px;
-    });
+    // .md-block({
+    //     // width: 44px;
+    //     // height: 44px;
+    //     top: 20px;
+    //     right: 8px;
+    // });
 
     svg {
         stroke: @black;
@@ -105,14 +119,14 @@
     }
 }
 
-.is-compact .popup.map.fancybox__content>.f-button.is-close-btn {
-    top: 34px;
-    right: 34px;
+// .is-compact .popup.map.fancybox__content>.f-button.is-close-btn {
+//     top: 34px;
+//     right: 34px;
 
-    .md-block({
-        top: 20px;
-        right: 8px;
-    });
-}
+//     .md-block({
+//         top: 20px;
+//         right: 8px;
+//     });
+// }
 
 

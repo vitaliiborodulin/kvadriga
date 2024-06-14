@@ -1,39 +1,67 @@
 .filter {
+    
     &__buttons {
         margin-top: 24px;
         display: flex;
         overflow-x: auto;
         .xs(margin-top, 16px);
+    }
 
-        button {
-            flex-shrink: 0;
-            margin-right: 8px;
-            padding: 5px 16px;
-            font-size: 22px;
-            font-weight: 500;
-            border: none;
-            border-radius: 50px;
+    &__buttons + &__buttons {
+        position: relative;
+        margin-left: 20px;
+        padding-left: 20px;
 
-            color: @black;
-            background-color: fade(@black, 5%);
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 1px;
+            height: 40px;
+            background-color: fade(@black, 10%);
+        }
 
-            cursor: pointer;
-            transition: all 0.5s;
-
-            .xs-block({
-                padding: 4px 16px;
-                font-size: 15px;
-                border-radius: 12px;
-            });
-
-            &:hover {
-                background-color: fade(@black, 10%);
+        .md-block({
+            margin-left: 0;
+            padding-left: 0;
+            
+            &::before {
+                display: none;
             }
+        })
+    }
 
-            &:active, &:focus {
-                color: @white;
-                background-color: @black;
-            }
+    &__button {
+        flex-shrink: 0;
+        margin-right: 8px;
+        // margin-top: 24px;
+        padding: 5px 16px;
+        font-size: 22px;
+        font-weight: 500;
+        border: none;
+        border-radius: 50px;
+
+        color: @black;
+        background-color: fade(@black, 5%);
+
+        cursor: pointer;
+        transition: all 0.5s;
+
+        .xs-block({
+            // margin-top: 16px;
+            padding: 4px 16px;
+            font-size: 15px;
+            border-radius: 12px;
+        });
+
+        &:hover {
+            background-color: fade(@black, 10%);
+        }
+
+        &:active, &:focus {
+            color: @white;
+            background-color: @black;
         }
     }
 }

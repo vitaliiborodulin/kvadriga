@@ -1,0 +1,63 @@
+.requisites {
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+
+        .xs(font-size, 17px);
+    }
+
+    &__buttons {
+        display: flex;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 44px;
+            height: 44px;
+            background-color: fade(@black, 5%);
+            border-radius: 12px;
+
+            &:hover {
+                background-color: fade(@black, 10%);
+            }
+        }
+
+        a + a {
+            margin-left: 4px;
+        }
+    }
+
+    &__list {
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+
+        li {
+            margin-bottom: 16px;
+
+            ol {
+                padding-left: 0;
+                
+                li{
+                    list-style-position: inside!important;
+                    list-style: decimal;
+                }
+            }
+        }
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        color: fade(@black, 40%);
+    }
+}

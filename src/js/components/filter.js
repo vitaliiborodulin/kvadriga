@@ -1,20 +1,29 @@
-if(document.querySelector('.filter__items')){
-    let mixer = mixitup('.filter__items', {
-        animation: {
-            enable: false
-        },
-    });
-    mixer.filter('all');
-}
+// проверяем класс страницы иначе два вида фильтра не работают
 
-// services slider
-if(document.querySelector('.ssfilter__items')){
-    var mixer = mixitup('.ssfilter__items', {
-        animation: {
-            enable: false
-        },
-    });
-    mixer.filter('all');
+if(document.querySelector('.page-contacts')){
+
+    //map cards filter with requisites
+    if(document.querySelector('.map__cards')){
+        var mixer = mixitup('.map__cards', {
+            animation: {
+                enable: false
+            },
+        });
+        mixer.filter('.cat-rus');
+    }
+
+} else {
+
+    // all filters (default)
+    if(document.querySelector('.filter-all')){
+        var mixerAll = mixitup('.filter-all', {
+            animation: {
+                enable: false
+            },
+        });
+        mixerAll.filter('all');
+    }
+
 }
 
 // reinit masonry

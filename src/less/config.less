@@ -27,9 +27,9 @@
 }
 
 
-// ::placeholder {
-// 	color: @white;
-// }
+::placeholder {
+	color: fade(@black, 40%);
+}
 
 ::selection {
 	background-color: fade(@accent, 30%);
@@ -184,9 +184,15 @@ button {
     flex-wrap: wrap;
 }
 
+.d-none {
+    display: none;
+}
+
 .d-xl-none {
     .xl(display, none);
 }
+
+
 
 .d-lg-none {
     .lg(display, none);
@@ -198,6 +204,18 @@ button {
 
 .d-xs-none {
     .xs(display, none);
+}
+
+@media screen and (max-width: 1200px) {
+    .d-xl-block {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .d-md-block {
+        display: block;
+    }
 }
 
 // размерные

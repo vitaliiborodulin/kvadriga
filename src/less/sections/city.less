@@ -1,0 +1,59 @@
+.city {
+    // width: 948px;
+    
+    
+    &__list {
+        margin-top: 24px;
+        column-count: 3;
+        // height: 624px;
+        // overflow-y: auto;
+
+        .lg(column-count, 2);
+        .md(column-count, 1);
+    }
+
+    &__list-item {
+        margin-bottom: 16px;
+
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__letter {
+        margin-right: 14px;
+        font-size: 19px;
+        font-weight: 500;
+        padding: 6px;
+    }
+
+    &__letter-list {
+        font-size: 17px;
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        a {
+            display: block;
+            width: 268px;
+
+            color: inherit;
+            padding: 7px 20px 7px 16px;
+            border-radius: 8px;
+            transition: background-color 0.5s;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover {
+                background-color: fade(@black, 5%);
+            }
+        }
+
+        a.active {
+            color: @white;
+            background: @black url(../img/check-w.svg) no-repeat 97% center;
+        }
+    }
+}
