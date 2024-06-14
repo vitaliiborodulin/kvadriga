@@ -121,6 +121,18 @@ img {
   padding-right: 24px;
 }
 
+::-webkit-input-placeholder {
+  color: rgba(2, 26, 13, 0.4);
+}
+
+:-ms-input-placeholder {
+  color: rgba(2, 26, 13, 0.4);
+}
+
+::placeholder {
+  color: rgba(2, 26, 13, 0.4);
+}
+
 ::selection {
   background-color: rgba(0, 196, 102, 0.3);
   color: #021A0D;
@@ -592,6 +604,46 @@ option:checked {
   margin: 4px;
 }
 
+.search__box {
+  max-width: 723px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.search__input {
+  width: 100%;
+  position: relative;
+  padding: 15px 16px;
+  padding-left: 50px;
+  border-radius: 16px;
+  color: rgba(2, 26, 13, 0.4);
+  background: rgba(2, 26, 13, 0.05) url(../img/search.svg) no-repeat 16px center;
+  border: none;
+  outline: none;
+}
+
+.search__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search__item {
+  flex-shrink: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  display: inline-block;
+  color: inherit;
+  padding: 5px 16px;
+  border-radius: 999px;
+  font-size: 17px;
+  background-color: rgba(2, 26, 13, 0.05);
+  transition: background-color 0.5s;
+}
+
+.search__item:hover {
+  background-color: rgba(2, 26, 13, 0.1);
+}
+
 .form__input {
   width: 100%;
   padding: 15px 24px;
@@ -599,6 +651,7 @@ option:checked {
   border-radius: 16px;
   border: none;
   outline: none;
+  opacity: 0.6;
 }
 
 .form__input:focus {
@@ -1583,6 +1636,54 @@ option:checked {
   content: url(../img/arrow-right-b.svg);
 }
 
+.city__list {
+  margin-top: 24px;
+  -webkit-column-count: 3;
+          column-count: 3;
+}
+
+.city__list-item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.city__letter {
+  margin-right: 14px;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 6px;
+}
+
+.city__letter-list {
+  font-size: 17px;
+}
+
+.city__letter-list li + li {
+  margin-top: 8px;
+}
+
+.city__letter-list a {
+  display: block;
+  width: 268px;
+  color: inherit;
+  padding: 7px 20px 7px 16px;
+  border-radius: 8px;
+  transition: background-color 0.5s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.city__letter-list a:hover {
+  background-color: rgba(2, 26, 13, 0.05);
+}
+
+.city__letter-list a.active {
+  color: #fff;
+  background: #021A0D url(../img/check-w.svg) no-repeat 97% center;
+}
+
 .header__top-content {
   padding: 8px 0;
   display: flex;
@@ -2103,6 +2204,18 @@ option:checked {
   content: url(../img/notice.svg);
   left: 0;
   top: 0;
+}
+
+.price__filters {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.price__filters button {
+  flex-grow: 1;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 16px;
 }
 
 .price__box {
@@ -2878,10 +2991,13 @@ option:checked {
 }
 
 .popup {
-  max-width: 480px;
   padding: 40px;
   border-radius: 32px;
   background-color: #fff;
+}
+
+.popup__inner {
+  height: 100%;
 }
 
 .popup__title {
@@ -2930,8 +3046,16 @@ option:checked {
   background-color: transparent;
 }
 
+.popup.popup-thank {
+  max-width: 480px;
+}
+
 .popup.popup-thank .btn {
   margin-top: 80px;
+}
+
+.popup.popup-city .popup__title {
+  font-size: 30px;
 }
 
 .popup.map {
@@ -3070,6 +3194,11 @@ option:checked {
     border-top: 1px solid rgba(255, 255, 255, 0.4);
   }
 
+  .city__list {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+
   .header__address {
     margin-left: 0;
   }
@@ -3177,6 +3306,20 @@ option:checked {
     margin-bottom: 8px;
   }
 
+  .search__box {
+    margin-top: 16px;
+  }
+
+  .search__input {
+    padding: 10px 16px;
+    padding-left: 50px;
+  }
+
+  .search__list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
   .section {
     margin: 16px 0;
   }
@@ -3277,6 +3420,11 @@ option:checked {
   .case__card-05 .case__descr {
     font-size: 17px;
     margin-bottom: 12px;
+  }
+
+  .city__list {
+    -webkit-column-count: 1;
+            column-count: 1;
   }
 
   .header__address {
@@ -3401,6 +3549,10 @@ option:checked {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
+
+  .popup.popup-city .popup__title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -3442,6 +3594,11 @@ option:checked {
   }
 
   .content__sort {
+    padding: 4px 16px;
+    font-size: 14px;
+  }
+
+  .search__item {
     padding: 4px 16px;
     font-size: 14px;
   }

@@ -27,7 +27,7 @@
 	
 	                    <div class="header__top-content ">
 	                        <div class="header__address">
-	                            <a href="javascript:void(0);" class="header__address-link" data-fancybox data-src="#thank">Волгоград</a>, ул. Рокоссовского, 62
+	                            <a href="javascript:void(0);" class="header__address-link" data-fancybox data-src="#city">Волгоград</a>, ул. Рокоссовского, 62
 	                        </div>
 	                        <div class="header__work d-xl-none">с 9 до 20</div>
 	                        <ul class="header__top-menu">
@@ -60,7 +60,7 @@
 	                                <img src="img/logo.svg" alt="">
 	                            </a>
 	                            <div class="header__address d-none d-md-block">
-	                                <a href="javascript:void(0);" class="header__address-link" data-fancybox data-src="#thank">Волгоград</a>
+	                                <a href="javascript:void(0);" class="header__address-link" data-fancybox data-src="#city">Волгоград</a>
 	                            </div>
 	                            <ul class="header__bottom-menu d-md-none">
 	                                <li><a href="service.html">Услуги <span class="c-b40 online">36</span></a></li>
@@ -110,6 +110,16 @@
                     </div>
                     <h1 class="content__title">Цены на наши услуги <span class="c-b40">(без НДС)</span></h1>
 
+                    <div class="search__box">
+                        <input type="search" name="search" id="search" class="search__input" placeholder="Введите ваш поиск">
+                        <div class="search__list">
+                            <a href="case-item.html" class="search__item">Экологическая проектная документация</a>
+                            <a href="case-item.html" class="search__item">Постановка на учет объекта НВОС</a>
+                            <a href="case-item.html" class="search__item">Оценка влияния на окружающую среду</a>
+                            <a href="case-item.html" class="search__item">СЗЗ</a>
+                        </div>
+                    </div>
+
                 </div>
     
                 <div class="content__main">
@@ -118,45 +128,51 @@
 
                         <div class="price__box">
 
-                            <div class="price__list">
+                            <div class="price__filters filter__buttons">
+                                <button type="button" data-filter="all" class="filter__button mixitup-control-active">Все</button>
+                                <button type="button" data-filter=".cat-lic" class="filter__button">Лицензирование</button>
+                                <button type="button" data-filter=".cat-eco" class="filter__button">Экологическое проектирование</button>
+                            </div>
 
-                                <div class="price__item">
+                            <div class="price__list filter-all">
+
+                                <div class="price__item mix cat-lic">
                                     <div class="price__text"><a href="service-item.html">Паспорта отходов</a></div>
                                     <div class="price__money">5 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-lic">
                                     <div class="price__text"><a href="service-item.html">Биотестирование отходов 5 класса опасности</a></div>
                                     <div class="price__money">5 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-lic">
                                     <div class="price__text"><a href="service-item.html">Расчет и определение класса опасности токсичных отходов</a></div>
                                     <div class="price__money">4 500 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-lic">
                                     <div class="price__text"><a href="service-item.html">Производственно экологический контроль (ПЭК)</a></div>
                                     <div class="price__money">4 500 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-lic">
                                     <div class="price__text"><a href="service-item.html">Отчетности об образовании, утилизации, обезвреживании, о размещении отходов субъектов малого и среднего предпринимательства (МСП)</a></div>
                                     <div class="price__money">от 42 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-eco">
                                     <div class="price__text"><a href="service-item.html">Проект нормативов образования отходов и лимитов на их размещение (ПНООЛР)</a></div>
                                     <div class="price__money">от 47 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-eco">
                                     <div class="price__text"><a href="service-item.html">Постановка объектов, оказывающих негативное воздействие на окружающую среду (НВОС), на государственный учет в Росприроднадзоре</a></div>
                                     <div class="price__money">16 000 ₽ <span>/ 1 площадка</span></div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-eco">
                                     <div class="price__text"><a href="service-item.html">Разработка и согласование проекта нормативов предельно-допустимых выбросов (ПДВ)</a></div>
                                     <div class="price__money">от 180 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-eco">
                                     <div class="price__text"><a href="service-item.html">Проект нормативов допустимых сбросов (НДС)</a></div>
                                     <div class="price__money">от 400 000 ₽</div>
                                 </div>
-                                <div class="price__item">
+                                <div class="price__item mix cat-eco">
                                     <div class="price__text"><a href="service-item.html">Разработка и согласование проекта санитарной защитной зоны (СЗЗ)</a></div>
                                     <div class="price__money">от 1 млн ₽</div>
                                 </div>
@@ -402,7 +418,7 @@
 	            <div class="footer__bottom">
 	                <p>&copy; ООО «Квадрига», 2016–2024</p>
 	                <p><a href="privacy.html">Политика конфиденциальности</a></p>
-	                <p>Сделано в <a href="#">ibrush</a></p>
+	                <p>Сделано в <a href="#"  data-fancybox data-src="#thank">ibrush</a></p>
 	            </div>
 	
 	        </div>
@@ -419,6 +435,155 @@
 			</div>
 	
 			<a href="#" class="btn btn-link w-100" data-fancybox-close>Отлично</a>
+	
+		</div>
+	</div>
+	
+	<div class="popup popup-city" id="city" style="display: none;">
+		<div class="popup__inner">
+	
+			<div class="popup__title">Выберите ваш город</div>
+	
+			<div class="search__box">
+				<input type="search" name="search" id="search" class="search__input" placeholder="Поиск по городам">
+				<div class="search__list">
+					<a href="case-item.html" class="search__item">Москва</a>
+					<a href="case-item.html" class="search__item">Санкт-Петербург</a>
+					<a href="case-item.html" class="search__item">Екатеринбург</a>
+				</div>
+			</div>
+	
+			<div class="city__list">
+	
+				<div class="city__list-item">
+					<div class="city__letter">А</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Архангельск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Б</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Барнаул</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">В</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Владимир</a></li>
+						<li><a class="active" href="home.html">Волгоград</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Г</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Гатчина (Ленинградская обл.)</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Е</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Екатеринбург</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">И</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Ижевск</a></li>
+						<li><a href="home.html">Иркутск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">К</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Казань</a></li>
+						<li><a href="home.html">Кемерово</a></li>
+						<li><a href="home.html">Красногорск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Н</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Нижневартовск</a></li>
+						<li><a href="home.html">Нижний Новгород</a></li>
+						<li><a href="home.html">Новосибирск</a></li>
+						<li><a href="home.html">Норильск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">О</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Омск</a></li>
+						<li><a href="home.html">Оренбург</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">П</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Пенза</a></li>
+						<li><a href="home.html">Пермь</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Р</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Ростов-на-Дону</a></li>
+						<li><a href="home.html">Рязань</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">С</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Салехард</a></li>
+						<li><a href="home.html">Самара</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">У</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Улан-Удэ</a></li>
+						<li><a href="home.html">Уфа</a></li>
+						<li><a href="home.html">Ухта</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Х</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Хабаровск</a></li>
+						<li><a href="home.html">Ханты-Мансийск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Ч</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Челябинск</a></li>
+					</ul>
+				</div>
+	
+				<div class="city__list-item">
+					<div class="city__letter">Я</div>
+					<ul class="city__letter-list">
+						<li><a href="home.html">Якутск</a></li>
+						<li><a href="home.html">Ярославль</a></li>
+					</ul>
+				</div>
+	
+			</div>
+	
 	
 		</div>
 	</div>
