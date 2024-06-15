@@ -138,8 +138,6 @@ $('.rp').each(function(){
         } else {
             btn.removeClass('disabled')
         }
-
-        console.log(!check.is(':checked'))
         
     },500);
 

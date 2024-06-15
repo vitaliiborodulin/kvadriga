@@ -110,14 +110,27 @@
                     </div>
                     <h1 class="content__title">Наши услуги в Волгограде</h1>
 
-                    <div class="search__box">
-                        <input type="search" name="search" id="search" class="search__input" placeholder="Введите ваш поиск">
-                        <div class="search__list">
-                            <a href="case-item.html" class="search__item">Экологическая проектная документация</a>
-                            <a href="case-item.html" class="search__item">Постановка на учет объекта НВОС</a>
-                            <a href="case-item.html" class="search__item">Оценка влияния на окружающую среду</a>
-                            <a href="case-item.html" class="search__item">СЗЗ</a>
+                    <div class="content__header-wrapper">
+
+                        <div class="search__box">
+                            <input type="search" name="search" id="search" class="search__input" placeholder="Введите ваш поиск">
+                            <div class="search__list">
+                                <a href="case-item.html" class="search__item">Экологическая проектная документация</a>
+                                <a href="case-item.html" class="search__item">Постановка на учет объекта НВОС</a>
+                                <a href="case-item.html" class="search__item">Оценка влияния на окружающую среду</a>
+                                <a href="case-item.html" class="search__item">СЗЗ</a>
+                            </div>
                         </div>
+                        
+                        <div class="select__box">
+                            <select name="sort" id="sort" class="select">
+                                <option value="new" selected>Сначала новые</option>
+                                <option value="old">Сначала старые</option>
+                                <option value="big">Сначала крупные</option>
+                                <option value="small">Сначала небольшие</option>
+                            </select>
+                        </div>
+
                     </div>
 
                     <div class="ss__filter-buttons filter__buttons">
@@ -125,7 +138,7 @@
                         <button type="button" data-filter=".cat-lic" class="filter__button">Лицензирование</button>
                         <button type="button" data-filter=".cat-eco" class="filter__button">Экологическое проектирование</button>
                     </div>
-    
+
                 </div>
     
                 <div class="content__main">
