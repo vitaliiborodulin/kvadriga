@@ -171,29 +171,66 @@
                 margin-left: 4px;
             }
 
-            span.online {
-                position: relative;
-                padding-right: 10px;
+        }
+    }
 
-                &::after {
-                    position: absolute;
-                    content: '';
-                    right: 0;
-                    top: 50%;
-                    margin-top: -3px;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background-color: @accent;
-                }
-            }
+    .online {
+        position: relative;
+        padding-right: 10px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 50%;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: @accent;
         }
     }
 
     &__tel {
+        position: relative;
         padding: 30px 24px;
+        padding-right: 44px;
         border-radius: 24px;
+        font-weight: 500;
         background-color: @white;
+        cursor: pointer;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            top: 50%;
+            margin-top: -10px;
+            background: url(../img/shevron.svg) no-repeat center;
+            transition: transform .3s linear;
+        }
+
+
+        .widget {
+            position: absolute;
+            width: 320px;
+            top: 100%;
+            right: 0;
+            background: @white;
+            z-index: 40;
+            box-shadow: 8px 8px 16px 0px #021A0D1A;
+
+            .btn {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__tel.open::after {
+            transform: scaleY(-1);
+            // transform: rotate(180deg);
     }
 
     &__mail {
@@ -214,39 +251,10 @@
         border-radius: 24px;
     }
 
-    // header mobile
-
-    &__mobile {
-        position: fixed;
-        // padding-top: 32px;
-        padding-top: 8px;
-        padding-bottom: 24px;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: @white;
-        z-index: 50;
-
-        &::after {
-            display: block;
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 32px;
-            left: 0;
-            top: 0;
-            z-index: 49;
-            background: linear-gradient(0deg, #f0f2f0, hsla(120, 7%, 95%, 0));
-        }
-    }
 }
 
 
-
-
-
-
-// sticky menu
+// sticky header
 
 .sticky-nav {
 	position: fixed;

@@ -18,14 +18,27 @@
                     </div>
                     <h1 class="content__title">Наши услуги в Волгограде</h1>
 
-                    //= html/search.html
+                    <div class="content__header-wrapper">
+
+                        //= html/search.html
+                        
+                        <div class="select__box">
+                            <select name="sort" id="sort" class="select">
+                                <option value="new" selected>Сначала новые</option>
+                                <option value="old">Сначала старые</option>
+                                <option value="big">Сначала крупные</option>
+                                <option value="small">Сначала небольшие</option>
+                            </select>
+                        </div>
+
+                    </div>
 
                     <div class="ss__filter-buttons filter__buttons">
                         <button type="button" data-filter="all" class="filter__button mixitup-control-active">Все</button>
                         <button type="button" data-filter=".cat-lic" class="filter__button">Лицензирование</button>
                         <button type="button" data-filter=".cat-eco" class="filter__button">Экологическое проектирование</button>
                     </div>
-    
+
                 </div>
     
                 <div class="content__main">

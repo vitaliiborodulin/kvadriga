@@ -1,6 +1,6 @@
 $(function() {
 
-
+//= components/menu.js
 //= components/clipboard.js
 //= components/accordion.js
 //= components/filter.js
