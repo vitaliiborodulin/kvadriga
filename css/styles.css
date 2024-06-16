@@ -3717,12 +3717,6 @@ input[type='submit'] {
     max-width: 100%;
   }
 
-  .map {
-    padding: 0;
-    padding-top: 24px;
-    border-radius: 0;
-  }
-
   .map__info {
     padding: 16px;
     left: 0;
@@ -3774,12 +3768,20 @@ input[type='submit'] {
 
   .map__box {
     border-radius: 16px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
 
   .popup.popup-city .popup__title {
     font-size: 20px;
+  }
+
+  .popup.map {
+    padding: 0;
+    padding-top: 32px;
+  }
+
+  .popup.map .map__box {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
