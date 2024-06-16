@@ -41,10 +41,10 @@
         position: absolute;
         top: 16px;
         right: 16px;
-        top: 16px;
-        right: 16px;
-        width: 14px;
-        height: 14px;
+        // width: 14px;
+        // height: 14px;
+        width: 36px;
+        height: 36px;
         color: rgba(2, 26, 13, 0.4);
         opacity: 1;
         background-color: transparent;
@@ -52,8 +52,8 @@
         svg {
             stroke: fade(@black, 40%);
             stroke-width: 2;
-            width: 18px;
-            height: 18px;
+            width: 24px;
+            height: 24px;
             fill: none;
         }
     }
@@ -82,6 +82,7 @@
         position: relative;
         z-index: 990;
         // display: none;
+        overflow-y: auto;
 
         .md-block({
             transform       : translateY(-200%);
@@ -127,6 +128,9 @@
     
     &__top-1 {
         margin-bottom: 16px;
+    }
+
+    &__menus, &__infos {
         border-bottom: 1px solid fade(@black, 5%);
     }
 
@@ -138,5 +142,87 @@
         a {
             color: inherit;
         }
+    }
+}
+
+.header {
+
+    .mobile__infos {
+        .site-logo {
+            margin-bottom: 20px;
+            // width: 135px;
+            // height: auto;
+        }
+
+        .city-address {
+            margin-bottom: 10px;
+        }
+
+        .time-work {
+            margin-bottom: 18px;
+            margin-left: 0;
+            font-size: 13px;
+        }
+    }
+
+    .mobile__btn-wrap {
+        display: flex;
+        align-items: flex-start;
+        
+        .btn-consult {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            margin-right: 4px;
+            flex-grow: 1;
+            border-radius: 16px;
+        }
+
+        .btn-mail {
+            padding: 16px;
+            border-radius: 16px;
+        }
+    }
+
+    .mail-copy {
+        margin: 16px 0;
+        font-size: 14px;
+    }
+
+    .mobile__menus {
+        .main-menu {
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                a {
+                    padding: 16px 0;
+                }
+            }
+
+            li + li {
+                margin-top: 8px;
+            }
+        }
+        .nav-menu {
+            padding: 16px 0;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                a {
+                    padding: 0;
+                    margin-right: 0;
+                    font-size: 14px;
+                }
+            }
+
+            li + li {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .mobile__top-2 .btn-link::after {
+        right: 80px;
     }
 }

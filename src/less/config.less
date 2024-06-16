@@ -187,19 +187,27 @@ button {
 }
 
 .d-xl-none {
-    .xl(display, none);
+    .xl-block({
+        display: none!important;
+    });
 }
 
 .d-lg-none {
-    .lg(display, none);
+    .lg-block({
+        display: none!important;
+    });
 }
 
 .d-md-none {
-    .md(display, none);
+    .md-block({
+        display: none!important;
+    });
 }
 
 .d-xs-none {
-    .xs(display, none);
+    .xs-block({
+        display: none!important;
+    });
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,4 +1,4 @@
-new ClipboardJS('.header__copy-btn');
+new ClipboardJS('.mail-copy-btn');
 
 // var clipboardDemos=new ClipboardJS('.header__copy-btn');
 
