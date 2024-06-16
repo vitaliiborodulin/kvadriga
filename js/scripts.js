@@ -23,7 +23,7 @@ $(document).keyup(function(e) {
         $('html, body').removeClass('overflow');
     }
 });
-new ClipboardJS('.header__copy-btn');
+new ClipboardJS('.mail-copy-btn');
 
 // var clipboardDemos=new ClipboardJS('.header__copy-btn');
 
@@ -202,7 +202,7 @@ headerTel.on('click', function(){
 
 window.addEventListener('click', e => {
     const target = e.target
-    if (!target.closest('.header') && !target.closest('.header__tel')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+    if (!target.closest('.header') && !target.closest('.header__tel')) {
         headerTel.removeClass('open');
         headerTel.find('.widget').slideUp();
     }
