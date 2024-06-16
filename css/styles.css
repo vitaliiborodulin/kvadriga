@@ -3130,10 +3130,12 @@ input[type='submit'] {
   padding-left: 22px!important;
   padding-right: 42px!important;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .map__tel-btn::after {
-  right: 20px;
+  right: 18px;
+  top: 45%;
 }
 
 .map__mail-btn {
@@ -3725,7 +3727,7 @@ input[type='submit'] {
     bottom: 0;
     border-radius: 16px;
     width: 95%;
-    max-height: 45%;
+    max-height: 65%;
   }
 
   .map__card {
@@ -3747,8 +3749,17 @@ input[type='submit'] {
   }
 
   .map__tel-btn {
+    line-height: 2;
+    padding-top: 6px!important;
+    padding-bottom: 6px!important;
     padding-left: 6px!important;
     padding-right: 30px!important;
+    border-radius: 10px;
+  }
+
+  .map__mail-btn {
+    padding: 6px!important;
+    border-radius: 10px;
   }
 
   .map__hide {
