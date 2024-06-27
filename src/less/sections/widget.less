@@ -10,7 +10,7 @@
 
     &__title {
         margin-bottom: 8px;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 500;
         line-height: 1.3;
 
@@ -52,9 +52,20 @@
         }
     }
 
+    &__text--bottom {
+        margin-top: 8px;
+        font-size: 13px;
+        color: fade(@black, 40%);
+        letter-spacing: -0.01em;
+    }
+
     &__btn {
         margin-top: 16px;
         width: 100%;
+    }
+
+    .btn-subscribe {
+        margin-top: 0;
     }
 
     &__chat {
@@ -81,6 +92,57 @@
 
     .form {
         margin-top: 24px;
+    }
+
+    &__blog {
+        &-image {
+            flex-shrink: 0;
+            width: 112px;
+            height: 63px;
+            border-radius: 4px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-list {
+            margin-top: 24px;
+
+            li {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    color: inherit;
+                    transition: color 0.5s;
+
+                    &:hover {
+                        color: @accent;
+                    }
+                }
+            }
+
+            li + li {
+                margin-top: 24px;
+            }
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+
+            .xs-block({
+                margin-bottom: 8px;
+                font-size: 14px;
+            });
+        }
+
     }
 
     // модификаторы
@@ -112,5 +174,17 @@
                 content: url(../img/arrow-right-b.svg);
             }
         }
+    }
+
+    &--subscribe {
+        .form {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    &--popular {
+        background-color: @white;
+        padding: 0;
     }
 }

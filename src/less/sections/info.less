@@ -22,23 +22,10 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
 
-        &.watch {
-            padding-left: 24px;
-            margin-left: 12px;
-
-            &::before {
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin-top: -12px;
-                content: '';
-                background: url(../img/watch.svg) no-repeat;
-                width: 20px;
-                height: 20px;
-            }
-        }
-
+    .watch {
+        margin-left: 12px;
     }
 
     // span + span {
@@ -63,4 +50,23 @@
         margin-bottom: 8px;
     }
 
+}
+
+.watch {
+    padding-left: 24px;
+    position: relative;
+    color: fade(@black, 40%);
+    font-size: 14px;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -12px;
+        // transform: translateY(-50%);
+        content: '';
+        background: url(../img/watch.svg) no-repeat;
+        width: 20px;
+        height: 20px;
+    }
 }
