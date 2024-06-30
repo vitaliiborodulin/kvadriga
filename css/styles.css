@@ -1473,6 +1473,7 @@ input[type='submit'] {
   height: 608px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .case__card-wrapper-big {
@@ -1711,6 +1712,14 @@ input[type='submit'] {
 .case__cont-aim {
   margin-top: auto;
   color: rgba(2, 26, 13, 0.4);
+}
+
+.map__wrapper--case .case__card-05 {
+  height: 284px;
+}
+
+.content__main .map__wrapper.map__wrapper--case a {
+  color: inherit;
 }
 
 .page-case .content__header {
@@ -4149,6 +4158,10 @@ input[type='submit'] {
     align-items: flex-start;
     font-size: 17px;
     gap: 16px;
+  }
+
+  .map__wrapper--case .case__card-05 {
+    height: 208px;
   }
 
   .page-case .content__header {
