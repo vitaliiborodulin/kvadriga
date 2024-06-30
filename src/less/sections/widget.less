@@ -9,6 +9,7 @@
     background-color: fade(@black, 5%);
 
     &__title {
+        position: relative;
         margin-bottom: 8px;
         font-size: 22px;
         font-weight: 500;
@@ -90,6 +91,16 @@
         }
     }
 
+    &__soc-wrap {
+        display: flex;
+        align-items: center;
+
+        .md-block({
+            flex-direction: column;
+            align-items: flex-start
+        });
+    }
+
     .form {
         margin-top: 24px;
     }
@@ -147,13 +158,12 @@
 
     // модификаторы
     &--greet {
-        .widget__title, 
+        .widget__title,
         .widget__text {
             padding-left: 56px;
         }
 
         .widget__title {
-            position: relative;
 
             &::before {
                 position: absolute;
@@ -176,6 +186,117 @@
         }
     }
 
+    &--case {
+        .widget__title {
+            padding-left: 32px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 26px;
+                height: 26px;
+                background: url(../img/release-green.svg) no-repeat center/contain;
+            }
+        }
+
+        .widget__chat {
+            // margin-top: 0;
+            padding-top: 0;
+            padding-left: 15px;
+            margin-left: 15px;
+            border-left: 1px solid fade(@black, 5%);
+            border-top: none;
+
+            .md-block({
+                margin-left: 0;
+                padding-left: 0;
+                padding-top: 16px;
+                border-left: none;
+                border-top: 1px solid fade(@black, 5%);
+            });
+        }
+
+        .widget__soc {
+            margin-right: 0;
+            .xl(margin-right, 16px);
+        }
+
+        .widget__btn {
+            width: auto;
+            .xs(width, 100%);
+        }
+    }
+
+    &--share {
+        border-top: 1px solid fade(@black, 10%);
+        border-bottom: 1px solid fade(@black, 10%);
+        background-color: @white;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        .widget__soc {
+            display: flex;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 56px;
+                height: 56px;
+                border-radius: 16px;
+                background-color: fade(@black, 5%);
+                transition: background-color 0.5s;
+
+                &:hover {
+                    background-color: fade(@black, 10%);
+                }
+            }
+        }
+    }
+
+    &--service {
+        background: fade(@black, 5%) url(../img/service-slider-bg.png) no-repeat center / cover;
+
+        .widget__title {
+            flex-direction: column;
+        }
+
+        .widget-bottom {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service__price {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .widget-arrow {
+            width: 56px;
+            height: 56px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg path {
+                transition: fill 0.5s;
+            }
+
+            &:hover {
+                svg path {
+                    fill: @accent;
+                }
+            }
+        }
+    }
+
     &--subscribe {
         .form {
             display: flex;
@@ -186,5 +307,26 @@
     &--popular {
         background-color: @white;
         padding: 0;
+    }
+}
+
+.map-section {
+    .section__header {
+        padding-bottom: 24px;
+        .md(padding-bottom, 16px);
+    }
+    .filter__buttons {
+        .md(margin-top, 8px);
+    }
+    .map__wrapper {
+        // padding-left: 40px;
+        // padding-right: 40px;
+        width: calc(100% - 80px);
+        margin-left: auto;
+        margin-right: auto;
+
+        .md-block({
+            width: calc(100% - 32px);
+        });
     }
 }

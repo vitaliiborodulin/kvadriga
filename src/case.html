@@ -18,11 +18,30 @@
                         <span>Кейсы</span>
                     </div>
                     <h1 class="content__title">Реализованные проекты</h1>
+
+                    <div class="content__header-wrapper">
     
-                    <div class="filter__buttons">
-                        <button type="button" data-filter="all" class=" filter__button mixitup-control-active">Все</button>
-                        <button type="button" data-filter=".cat-lic" class="filter__button">Лицензирование</button>
-                        <button type="button" data-filter=".cat-eco" class="filter__button">Экологическое проектирование</button>
+                        <div class="filter__buttons">
+                            <button type="button" data-filter="all" class=" filter__button search__item mixitup-control-active">Все</button>
+                            <button type="button" data-filter=".cat-lic" class="filter__button search__item">Лицензирование</button>
+                            <button type="button" data-filter=".cat-eco" class="filter__button search__item">Экологическое проектирование</button>
+                        </div>
+
+                        <div class="filter__buttons">
+                            <button type="button" data-filter=".cat-req" class="filter__button filter__button-earth search__item">
+                                На карте
+                            </button>
+                        </div>
+
+                        <div class="select__box">
+                            <select name="sort" id="sort" class="select">
+                                <option value="new" selected>Сначала новые</option>
+                                <option value="old">Сначала старые</option>
+                                <option value="big">Сначала крупные</option>
+                                <option value="small">Сначала небольшие</option>
+                            </select>
+                        </div>
+
                     </div>
 
                 </div>

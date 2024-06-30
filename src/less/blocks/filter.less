@@ -33,6 +33,7 @@
     }
 
     &__button {
+        position: relative;
         flex-shrink: 0;
         margin-right: 8px;
         // margin-top: 24px;
@@ -64,6 +65,32 @@
             background-color: @black;
         }
     }
+
+    &__button-news,
+    &__button-earth {
+        padding-left: 40px!important;
+        
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 10px;
+            top: 50%;
+            margin-top: -12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 16px;
+            background: url(../img/blog-logo.png) no-repeat center/contain;
+        }
+    }
+
+    &__button-earth {
+        &::before {
+            background: url(../img/earth.png) no-repeat center/contain;
+        }
+    }
+
+
 }
 
 .mixitup-control-active {

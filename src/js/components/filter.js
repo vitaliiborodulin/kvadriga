@@ -1,6 +1,6 @@
 // проверяем класс страницы иначе два вида фильтра не работают
 
-if(document.querySelector('.page-contacts')){
+if(document.querySelector('.page-contacts') || document.querySelector('.map-section')){
 
     //map cards filter with requisites
     if(document.querySelector('.map__cards')){
