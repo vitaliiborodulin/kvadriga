@@ -440,5 +440,7 @@ if(window.matchMedia('(max-width: 768px)').matches){
     });
 
 }
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
 
 });
