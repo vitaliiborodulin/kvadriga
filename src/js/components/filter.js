@@ -26,6 +26,41 @@ if(document.querySelector('.page-contacts') || document.querySelector('.map-sect
 
 }
 
+// case page
+const filterEarthBtn = $('.filter__button-earth');
+const paginationBtns = $('.pagination');
+const selectBox = $('.select__box');
+const caseBox = $('.case__box');
+const mapWrapper = $('.map__wrapper');
+
+const filterButtons = $('.filter__buttons--first button')
+
+let isActiveMap = false;
+
+filterEarthBtn.on('click', function(){
+    isActiveMap = true;
+
+    if(isActiveMap){
+        caseBox.hide();
+        selectBox.hide();
+        paginationBtns.hide();
+        mapWrapper.show();
+
+        isActiveMap = false;
+    }
+});
+
+filterButtons.on('click', function(){
+    isActiveMap = false;
+
+    if(!isActiveMap){
+        caseBox.show();
+        selectBox.show();
+        paginationBtns.show();
+        mapWrapper.hide();
+    }
+});
+
 // reinit masonry
 $('.feedback__filters button').on('click', function(){
     $('.feedback__items').masonry({

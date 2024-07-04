@@ -131,6 +131,41 @@ const fsSlider = new Swiper('.fs__slider', {
     }
 });
 
+// staff slider
+const staffSlider = new Swiper('.staff__slider', {
+
+    loop: true,
+    parallax: true,
+    watchSlidesProgress: true,
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+
+    breakpoints: {
+        576: {
+          slidesPerView: 2.1,
+          spaceBetween: 20,
+          loop: false,
+          parallax: false,
+        },
+        1200: {
+          slidesPerView: 2.5,
+          spaceBetween: 24,
+          loop: false,
+          parallax: false,
+        },
+
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        dragSize: 300
+    },
+});
+
 
 var licenseSlider = new Swiper('.license__slider', {
     loop: true,

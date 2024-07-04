@@ -22,6 +22,7 @@
         height: 608px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         .md-block({
             height: 432px;
@@ -358,6 +359,21 @@
     }
 }
 
+// case page
+
+.map__wrapper--case {
+    .case__card-05 {
+        height: 284px;
+        .md(height, 208px);
+    }
+}
+
+.content__main .map__wrapper.map__wrapper--case a {
+    color: inherit;
+}
+
+// case item
+
 .page-case {
     .content__header {
         position: relative;
@@ -382,9 +398,13 @@
         }
     }
 
+    .content__title {
+        color: @white;
+    }
+
     .info {
         color: rgba(255, 255, 255, 0.6);
-        
+
         span {
             max-width: 140px;
         }

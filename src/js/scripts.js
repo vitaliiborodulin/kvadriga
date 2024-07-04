@@ -9,5 +9,6 @@ $(function() {
 //= components/slider.js
 //= components/masonry.js
 //= components/map.js
+//= components/parallax.js
 
 });

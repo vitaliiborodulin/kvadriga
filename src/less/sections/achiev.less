@@ -1,0 +1,158 @@
+.achiev {
+    overflow: hidden;
+    padding-top: 58px;
+    .lg(padding-top, 24px);
+
+    &__title {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 58px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        text-align: center;
+
+        .lg-block({
+            font-size: 30px;
+        });
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        // background: transparent;
+        background-image: url(../img/achiev-bg.jpg);
+        // background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .lg-block({
+            min-height: 540px;
+        });
+    }
+
+    &__item {
+        position: absolute!important;
+        padding: 24px;
+        width: 288px;
+        min-height: 200px;
+        overflow: hidden;
+
+        display: flex!important;
+        flex-direction: column;
+        justify-content: space-between;
+
+        border-radius: 24px;
+        background-color: @bg;
+        border: 5px solid @white;
+
+        .lg-block({
+            padding: 16px;
+            width: 200px;
+            min-height: 122px;
+            border-radius: 16px;
+        });
+    }
+
+    &__item:nth-child(1) {
+        top: 1vw!important;
+        left: 6vw!important;
+        
+        .lg-block({
+            left: unset!important;
+            right: -70px!important;
+            top: 45%!important;
+            animation: wave 10s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        });
+    }
+    
+    &__item:nth-child(2) {
+        top: 3vw!important;
+        left: unset!important;
+        right: 18vw!important;
+
+        .lg-block({
+            right: unset!important;
+            left: -10px!important;
+            top: 30%!important;
+            animation: wave 15s 0.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        });
+    }
+
+    &__item:nth-child(3) {
+        top: 35%!important;
+        left: unset!important;
+        right: 0!important;
+
+        .lg-block({
+            right: unset!important;
+            left: 30%!important;
+            top: unset!important;
+            bottom: 0!important;
+            animation: wave 12s 0.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        });
+    }
+
+    &__item:nth-child(4) {
+        top: unset!important;
+        bottom: 4vw!important;
+        left: 11vw!important;
+
+        .lg-block({
+            left: -10px!important;
+            bottom: unset!important;
+            top: 26px!important;
+            animation: wave 14s 0.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        });
+    }
+
+    &__item:nth-child(5) {
+        top: unset!important;
+        bottom: 1vw!important;
+        left: 50%!important;
+
+        .lg-block({
+            left: unset!important;
+            right: -60px!important;
+            bottom: unset!important;
+            top: 10px!important;
+            animation: wave 10s 0.4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        });
+    }
+
+    &__digit {
+        color: @accent;
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+
+        .lg(font-size, 22px);
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        color: fade(@black, 40%);
+
+        .lg(font-size, 14px);
+    }
+}
+
+.flag {
+    display: inline-block;
+    margin: 0 5px -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../img/rus.jpg) no-repeat center/cover;
+
+    .lg-block({
+        width: 30px;
+        height: 30px;
+    });
+}

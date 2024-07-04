@@ -1,6 +1,88 @@
 .page-about {
     
     .content__header {
-        background-color: @black;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 600px;
+        color: @white;
+        background: #021A0D url(../img/about-bg.jpg) no-repeat top right/cover;
+
+        .md-block({
+            min-height: 512px;
+            background: @black;
+            border-radius: 16px;
+        });
+
+        .info {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .info:last-child {
+            margin-top: auto;
+            max-width: 50%;
+
+            color: @white;
+            font-size: 17px;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+
+            .md(max-width, 100%);
+        }
+    }
+
+    .content__main {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        .lg-block({
+            margin-top: 16px;
+            border-radius: 16px;
+            padding-left: 0;
+            padding-right: 0;
+        });
     }
 }
+
+.about {
+
+    &__icons {
+        margin-bottom: 24px;
+        display: flex;
+        position: relative;
+
+        a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid fade(@white, 40%);
+            outline: 4px solid @black;
+            // margin-left: -4px;
+        }
+
+        a:first-of-type {
+            background-color: @accent;
+            align-items: flex-end;
+            z-index: 5;
+        }
+
+        a:nth-of-type(2) {
+            z-index: 4;
+        }
+        a:nth-of-type(3) {
+            z-index: 3;
+        }
+        a:nth-of-type(4) {
+            z-index: 2;
+        }
+        a:nth-of-type(5) {
+            z-index: 1;
+        }
+    }
+}
+
