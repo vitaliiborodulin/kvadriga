@@ -24,6 +24,26 @@
         text-overflow: ellipsis;
     }
 
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 4px;
+        padding: 18px 24px;
+        font-size: 17px;
+        color: @white;
+        border-radius: 999px;
+        border: 2px solid @white;
+        max-width: none;
+
+        .xs-block({
+            padding: 8px 16px;
+            font-size: 14px;
+            border: 1px solid @white;
+        });
+    }
+
     .watch {
         margin-left: 12px;
     }
