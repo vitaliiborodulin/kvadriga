@@ -1,0 +1,135 @@
+.agenda {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    // scrollbar-color: hsl(0 0% 50%);
+
+    &__box {
+        padding: 24px;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        border-radius: 24px;
+        background-color: @bg;
+
+        .md-block({
+            padding: 16px;
+            border-radius: 16px;
+        });
+    }
+    
+    &__wrapper {
+        position: relative;
+        width: 1064px;
+        height: 688px;
+        margin-bottom: 8px;
+        // overflow-x: auto;
+        // border-radius: 24px;
+
+    }
+
+    &__month {
+        padding-left: 16px;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        color: fade(@black, 40%);
+        flex-grow: 1;
+    }
+
+    &__month + &__month {
+        border-left: 1px solid fade(@black, 10%);
+    }
+
+    &__list, &__cal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__list {
+        overflow: hidden;
+    }
+
+    &__cal {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__item {
+        position: absolute;
+        font-size: 14px;
+        z-index: 2;
+        padding: 8px 16px;
+        // width: 100%;
+        white-space: nowrap;
+        
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 8px;
+            z-index: -1;
+            height: 100%;
+            background-color: @white;
+        }
+    }
+
+    &__item--border {
+        z-index: 3;
+        color: @accent;
+        border-left: 1px solid @accent;
+        height: 100%;
+
+        span {
+            padding-left: 42px;
+            height: 20px;
+            background: url(../img/release-green.svg) no-repeat 16px center/contain;
+        }
+    }
+}
+
+.cs__agenda {
+    &-title {
+        position: relative;
+
+        .md-block({
+            padding-left: 40px;
+            font-size: 22px;
+            cursor: pointer;
+        });
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            left: 0;
+            top: 50%;
+            margin-top: -18px;
+            background: fade(@black, 5%) url(../img/shevron.svg) no-repeat center;
+            transition: transform .3s linear;
+
+            .md-block({
+                display: block;
+            });
+        }
+
+        &.active::after {
+            transform: scaleY(-1);
+            background-color: fade(@black, 10%);
+        }
+    }
+    .filter__button-save {
+        margin-left: auto;
+        font-weight: 400;
+        margin-right: 0;
+        background-color: transparent;
+        .md(margin-left, 0);
+    }
+}
+
+.agenda-filter, .agenda__box {
+    .md(display, none);
+}

@@ -166,6 +166,45 @@ const staffSlider = new Swiper('.staff__slider', {
     },
 });
 
+// cs slider
+let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+
+if(mobile.matches) {
+    const csSlider = new Swiper('.cs__slider', {
+      slidesPerView: 1.1,
+      spaceBetween: 8,
+      // autoHeight: true
+    });
+}
+
+// cs slider more service
+const csSliderMore = new Swiper('.cs__slider-more', {
+
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+
+  breakpoints: {
+      576: {
+        slidesPerView: 1.8,
+        spaceBetween: 24,
+      },
+  //     1200: {
+  //       slidesPerView: 1.9,
+  //       spaceBetween: 24,
+  //     },
+
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize: 300
+  },
+});
+
 
 var licenseSlider = new Swiper('.license__slider', {
     loop: true,

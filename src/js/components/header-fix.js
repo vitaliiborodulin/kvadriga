@@ -33,7 +33,7 @@ const headerHeight = header.outerHeight();
 
 let lastScrollTop = 0;
 
-console.log(headerHeight)
+// console.log(headerHeight)
 
 window.addEventListener('scroll', () => {
 	console.log(headerHeight)
