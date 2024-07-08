@@ -73,6 +73,67 @@ $('.accomp__title').on('click', function () {
     }
 });
 
+$('.cs__act-title').on('click', function () {
+    const descr = $(this).next();
+    
+    if (!$(this).hasClass('active')){
+        $(this).addClass('active');
+        descr.addClass('open');
+        // descr.css('max-height', 700);
+    } else {
+        $(this).removeClass('active');
+        descr.removeClass('open');
+        // descr.css('max-height', 140);
+    }
+});
+
+
+
+// agenda
+if(window.matchMedia('(min-width: 0px) and (max-width: 768px)').matches){
+    $('.cs__agenda-title').on('click', function () {
+        const descr = $('.agenda__box');
+        const filter = $('.agenda-filter');
+
+        if (!$(this).hasClass('active')){
+            $(this).addClass('active');
+            filter.slideDown();
+            descr.slideDown();
+            // descr.css('max-height', 700);
+        } else {
+            $(this).removeClass('active');
+            filter.slideUp();
+            descr.slideUp();
+            // descr.css('max-height', 140);
+        }
+    });
+}
+
+let mobile1 = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+
+let mx = 120;
+
+if(mobile1.matches) {
+    mx = 72;
+}
+
+$('.cs__title').on('click', function () {
+    const descr = $(this).next();
+    // const heightMax = $('.cs__descr').height();
+    // console.log(heightMax);
+
+    if (!$(this).hasClass('active')){
+        $(this).addClass('active');
+        descr.addClass('open');
+        descr.css('max-height', 200);
+    } else {
+        $(this).removeClass('active');
+        descr.removeClass('open');
+        descr.css('max-height', mx);
+    }
+});
+
+
 // виджет содержания
 
 $('.context-title').on('click', function () {
@@ -417,6 +478,45 @@ const staffSlider = new Swiper('.staff__slider', {
     },
 });
 
+// cs slider
+let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+
+if(mobile.matches) {
+    const csSlider = new Swiper('.cs__slider', {
+      slidesPerView: 1.1,
+      spaceBetween: 8,
+      // autoHeight: true
+    });
+}
+
+// cs slider more service
+const csSliderMore = new Swiper('.cs__slider-more', {
+
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+
+  breakpoints: {
+      576: {
+        slidesPerView: 1.8,
+        spaceBetween: 24,
+      },
+  //     1200: {
+  //       slidesPerView: 1.9,
+  //       spaceBetween: 24,
+  //     },
+
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize: 300
+  },
+});
+
 
 var licenseSlider = new Swiper('.license__slider', {
     loop: true,
@@ -475,7 +575,9 @@ if(window.matchMedia('(max-width: 768px)').matches){
     });
 
 }
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
+if(document.querySelector('#scene')){
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+}
 
 });
