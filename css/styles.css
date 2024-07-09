@@ -4281,6 +4281,115 @@ input[type='submit'] {
   margin-left: 8px;
 }
 
+.quiz__over-modal {
+  display: none;
+}
+
+.quiz .widget__title {
+  display: block;
+}
+
+.quiz-container {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(2, 26, 13, 0.05);
+}
+
+.quiz__question {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz__number {
+  font-size: 17px;
+  color: rgba(2, 26, 13, 0.4);
+}
+
+.quiz__name {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.quiz__content {
+  margin-top: 16px;
+  margin-bottom: 56px;
+}
+
+.quiz__item {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.quiz__item label {
+  cursor: pointer;
+  display: flex;
+  border-radius: 999px;
+  font-size: 17px;
+  padding: 5px 16px;
+  background-color: rgba(2, 26, 13, 0.05);
+}
+
+.quiz .form__checkbox:checked + label {
+  color: #fff;
+  background-color: #021A0D;
+}
+
+.quiz__content.last .quiz__item {
+  display: block;
+}
+
+.quiz__content.last .quiz__item label {
+  padding: 0;
+  background-color: transparent;
+}
+
+.quiz__progress {
+  display: flex;
+  gap: 4px;
+}
+
+.quiz__progress-item {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background-color: rgba(2, 26, 13, 0.05);
+  transition: background-color 0.5s;
+}
+
+.quiz [data-progress="0"] .quiz__progress-item:first-child {
+  background-color: rgba(0, 196, 102, 0.3);
+}
+
+.quiz [data-progress="1"] .quiz__progress-item:first-child {
+  background-color: #00C466;
+}
+
+.quiz [data-progress="1"] .quiz__progress-item:nth-child(2) {
+  background-color: rgba(0, 196, 102, 0.3);
+}
+
+.quiz [data-progress="2"] .quiz__progress-item:first-child {
+  background-color: #00C466;
+}
+
+.quiz [data-progress="2"] .quiz__progress-item:nth-child(2) {
+  background-color: #00C466;
+}
+
+.quiz [data-progress="2"] .quiz__progress-item:nth-child(3) {
+  background-color: rgba(0, 196, 102, 0.3);
+}
+
+.widget.quiz .quiz__form {
+  margin-top: 0;
+}
+
+.quiz__over-modal .widget__text {
+  margin-bottom: 20px;
+}
+
 .footer {
   font-size: 14px;
   line-height: 1.4;
@@ -5810,6 +5919,11 @@ input[type='submit'] {
             transform: translate(-50%, -50%);
   }
 
+  .widget {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
   .widget__title {
     font-size: 20px;
   }
@@ -6108,6 +6222,18 @@ input[type='submit'] {
     margin-top: 24px;
     margin-bottom: 24px;
     font-size: 22px;
+  }
+
+  .quiz__name {
+    font-size: 17px;
+  }
+
+  .quiz__content {
+    margin-bottom: 40px;
+  }
+
+  .quiz__item label {
+    font-size: 14px;
   }
 
   .footer__content {
