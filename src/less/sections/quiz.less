@@ -1,0 +1,118 @@
+.quiz {
+    &__over-modal {
+        display: none;
+    }
+
+    .widget__title {
+        display: block;
+    }
+
+    &-container {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid fade(@black, 5%);
+    }
+
+    &__question {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__number {
+        font-size: 17px;
+        color: fade(@black, 40%);
+       
+    }
+
+    &__name {
+        font-size: 19px;
+        font-weight: 500;
+        .xs(font-size, 17px);
+    }
+
+    &__content {
+        margin-top: 16px;
+        margin-bottom: 56px;
+        .xs(margin-bottom, 40px)
+    }
+
+    &__item {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        display: inline-block;
+
+        label {
+            cursor: pointer;
+            display: flex;
+            border-radius: 999px;
+            font-size: 17px;
+            padding: 5px 16px;
+            background-color: fade(@black, 5%);
+
+            .xs(font-size, 14px);
+        }
+    }
+
+    .form__checkbox:checked + label {
+        color: @white;
+        background-color: @black;
+    }
+
+    &__content.last .quiz__item {
+        display: block;
+    }
+
+    &__content.last .quiz__item label{
+        padding: 0;
+        background-color: transparent;
+    }
+
+    &__progress {
+        display: flex;
+        gap: 4px;
+    }
+
+    &__progress-item {
+        width: 100%;
+        height: 8px;
+        border-radius: 999px;
+        background-color: fade(@black, 5%);
+        transition: background-color 0.5s;
+    }
+
+    [data-progress="0"]{
+        .quiz__progress-item:first-child {
+            background-color: fade(@accent, 30%);
+        }
+    }
+
+    [data-progress="1"]{
+        .quiz__progress-item:first-child {
+            background-color: @accent;
+        }
+        .quiz__progress-item:nth-child(2){
+            background-color: fade(@accent, 30%);
+        }
+    }
+    [data-progress="2"]{
+        .quiz__progress-item:first-child {
+            background-color: @accent;
+        }
+        .quiz__progress-item:nth-child(2){
+            background-color: @accent;
+        }
+        .quiz__progress-item:nth-child(3){
+            background-color: fade(@accent, 30%);
+        }
+    }
+
+}
+
+.widget.quiz .quiz__form {
+    margin-top: 0;
+}
+
+.quiz__over-modal .widget__text {
+    margin-bottom: 20px;
+}

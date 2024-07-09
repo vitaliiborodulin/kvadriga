@@ -7,6 +7,7 @@ $(function() {
 //= components/form.js
 //= components/popup.js
 //= components/slider.js
+//= components/widget-quiz.js
 //= components/masonry.js
 //= components/map.js
 //= components/parallax.js

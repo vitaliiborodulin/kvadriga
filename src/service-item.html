@@ -468,6 +468,53 @@
                         </form>
 					</div>
 
+                    <div class="widget quiz">
+						<div class="quiz__caption">
+                            <div class="widget__title">Калькулятор стоимости</div>
+						    <div class="widget__text">Ответьте на вопросы и получите рассчёт стоимости лицензии на обращение с отходами</div>
+                        </div>
+
+                        <form class="form rp quiz__form" onsubmit="return false;">
+                            
+                            <div class="quiz__over-modal">
+                                <div class="widget__title">Стоимость вашей <br> лицензии: от <span id="total"></span> руб.</div>
+                                <div class="widget__text">Оставьте заявку и мы предоставим услугу «под ключ»!</div>
+
+                                <input type="text" class="form__input rpole" name="name" placeholder="Имя">
+                                <input type="text" class="form__input rpole" name="contact" placeholder="Телефон или почта">
+                                <div class="acceptance">
+                                    <label>
+                                        <input type="checkbox" name="accept" class="form__checkbox">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-link form__submit w-100">Оставить заявку</button>
+
+                            </div>
+
+
+                            <div class="quiz-container">
+
+                                <div class="quiz__question">
+                                    <div class="quiz__name"></div>
+                                    <div class="quiz__number">
+                                        <span class="quiz__number-of-question"></span> /
+                                        <span class="quiz__number-of-all-questions"></span>
+                                    </div>
+                                </div>
+
+                                <div class="quiz__progress"></div>
+                        
+                                <div class="quiz__content"></div>
+                                <button id="quiz-next" class="btn btn-link btn-quiz w-100" disabled>Далее</button>
+                        
+                            </div>
+
+                        </form>
+
+                    </div>
+
                 </aside>
 
             </div>
