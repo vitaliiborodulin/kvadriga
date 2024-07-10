@@ -54,6 +54,30 @@ const questions = [{
             money: 3000,
             html: '<label><input type="checkbox" name="tp" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Технический персонал</label>'
         },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="so" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Специализированное оборудование</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ez" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Экспертное заключение ФБУЗ</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ps" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Получение СЭЗ (Роспотребнадзор)</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ld" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Формирование лицензионного дела</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="so" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Сопровождение при проверке (Росприроднадзор)</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="sr" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Срочное получение</label>'
+        },
 
     ]
 }];

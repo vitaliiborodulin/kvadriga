@@ -131,6 +131,36 @@ const fsSlider = new Swiper('.fs__slider', {
     }
 });
 
+// clients slider
+const clientsSlider = new Swiper('.clients__slider', {
+  // loop: true,
+
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+
+  breakpoints: {
+      768: {
+        slidesPerView: 1.7,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3.8,
+        spaceBetween: 24
+      },
+
+  },
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize: 300
+  }
+});
+
 // staff slider
 const staffSlider = new Swiper('.staff__slider', {
 

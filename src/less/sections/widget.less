@@ -2,6 +2,7 @@
 
     & + & {
         margin-top: 40px;
+        .xs(margin-top, 24px);
     }
 
     padding: 24px;
@@ -187,6 +188,37 @@
             &::after {
                 right: 50px;
                 content: url(../img/arrow-right-b.svg);
+            }
+        }
+    }
+
+    &--flamp {
+        color: @white;
+        background-color: @flamp;
+
+        &-text {
+            margin-bottom: 40px;
+            position: relative;
+            padding-right: 50px;
+            font-size: 22px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                right: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow_forward_bold.svg) no-repeat center;
+            }
+        }
+
+        &-btn {
+            display: flex;
+
+            img:nth-child(2) {
+                margin-left: auto;
+                margin-right: 10px;
             }
         }
     }
