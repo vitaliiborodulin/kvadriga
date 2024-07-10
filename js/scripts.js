@@ -443,6 +443,36 @@ const fsSlider = new Swiper('.fs__slider', {
     }
 });
 
+// clients slider
+const clientsSlider = new Swiper('.clients__slider', {
+  // loop: true,
+
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+
+  breakpoints: {
+      768: {
+        slidesPerView: 1.7,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3.8,
+        spaceBetween: 24
+      },
+
+  },
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      dragSize: 300
+  }
+});
+
 // staff slider
 const staffSlider = new Swiper('.staff__slider', {
 
@@ -593,6 +623,30 @@ const questions = [{
         {
             money: 3000,
             html: '<label><input type="checkbox" name="tp" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Технический персонал</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="so" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Специализированное оборудование</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ez" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Экспертное заключение ФБУЗ</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ps" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Получение СЭЗ (Роспотребнадзор)</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="ld" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Формирование лицензионного дела</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="so" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Сопровождение при проверке (Росприроднадзор)</label>'
+        },
+        {
+            money: 3000,
+            html: '<label><input type="checkbox" name="sr" class="form__checkbox"><span class="custom-checkbox custom-checkbox-b"></span>Срочное получение</label>'
         },
 
     ]

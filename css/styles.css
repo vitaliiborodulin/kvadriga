@@ -240,7 +240,7 @@ button {
 }
 
 .d-flex {
-  display: flex;
+  display: flex!important;
 }
 
 .f-column {
@@ -261,6 +261,10 @@ button {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .d-none {
@@ -777,6 +781,10 @@ input[type='submit'] {
 
 .form__input + .form__input {
   margin-top: 8px;
+}
+
+.form__textarea {
+  min-height: 200px;
 }
 
 .form__submit {
@@ -2044,6 +2052,37 @@ input[type='submit'] {
 .widget--greet .widget__btn::after {
   right: 50px;
   content: url(../img/arrow-right-b.svg);
+}
+
+.widget--flamp {
+  color: #fff;
+  background-color: #2E6BE6;
+}
+
+.widget--flamp-text {
+  margin-bottom: 40px;
+  position: relative;
+  padding-right: 50px;
+  font-size: 22px;
+}
+
+.widget--flamp-text::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/arrow_forward_bold.svg) no-repeat center;
+}
+
+.widget--flamp-btn {
+  display: flex;
+}
+
+.widget--flamp-btn img:nth-child(2) {
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .widget--case .widget__title {
@@ -3448,6 +3487,7 @@ input[type='submit'] {
 }
 
 .feedback__footer {
+  margin-top: 66px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -3558,6 +3598,26 @@ input[type='submit'] {
 .fs .swiper-horizontal > .swiper-scrollbar,
 .fs .swiper-scrollbar.swiper-scrollbar-horizontal {
   bottom: 0;
+}
+
+.clients__slider {
+  padding-left: 40px;
+  padding-bottom: 24px;
+}
+
+.clients__slider .fs__slide {
+  max-width: 360px;
+  max-width: 100%;
+}
+
+.clients__slider .fs__slide .feedback__item {
+  max-width: 360px;
+  max-width: 100%;
+}
+
+.clients__slider .feedback__item,
+.fs__slider .feedback__item {
+  margin-bottom: 0;
 }
 
 .staff {
@@ -5456,6 +5516,10 @@ input[type='submit'] {
     height: 150px;
   }
 
+  .clients__slider {
+    padding-left: 16px;
+  }
+
   .page-about .content__header {
     min-height: 512px;
     background: #021A0D;
@@ -5917,6 +5981,10 @@ input[type='submit'] {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+
+  .widget + .widget {
+    margin-top: 24px;
   }
 
   .widget {

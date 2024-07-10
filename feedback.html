@@ -275,10 +275,10 @@
                     <h1 class="content__title">Отзывы о нашей работе</h1>
     
 					<div class="feedback__filters filter__buttons">
-						<button type="button" data-filter="all" class="filter__button mixitup-control-active">Все</button>
-						<button type="button" data-filter=".cat-waste" class="filter__button">Обращение с отходами</button>
-						<button type="button" data-filter=".cat-row" class="filter__button">Лом черных и цветных металлов</button>
-						<button type="button" data-filter=".cat-szz" class="filter__button">СЗЗ</button>
+						<button type="button" data-filter="all" class="filter__button search__item mixitup-control-active">Все</button>
+						<button type="button" data-filter=".cat-waste" class="filter__button search__item">Обращение с отходами</button>
+						<button type="button" data-filter=".cat-row" class="filter__button search__item">Лом черных и цветных металлов</button>
+						<button type="button" data-filter=".cat-szz" class="filter__button search__item">СЗЗ</button>
 					</div>
 
                 </div>
@@ -302,7 +302,8 @@
 								</div>
 								<div class="feedback__footer">
 									<a href="case-single.html" class="feedback__link">Кейс</a>
-									<a href="javascript:;" class="feedback__greet" data-fancybox="gallery" data-src="https://lipsum.app/id/1/1600x1200">Благодарность</a>
+									<a href="javascript:;" class="feedback__greet" data-fancybox="single" data-src="img/feedback-3.png">Благодарность</a>
+									<a href="javascript:;" class="d-none" data-fancybox="gallery" data-src="img/feedback-3.png">Благодарность</a>
 								</div>
 							</div>
 
@@ -334,7 +335,8 @@
 								</div>
 								<div class="feedback__footer">
 									<a href="case-single.html" class="feedback__link">Кейс</a>
-									<a href="javascript:;" class="feedback__greet" data-fancybox="gallery" data-src="img/feedback-2.png">Благодарность</a>
+									<a href="javascript:;" class="feedback__greet" data-fancybox="single" data-src="img/feedback-2.png">Благодарность</a>
+									<a href="javascript:;" class="d-none" data-fancybox="gallery" data-src="img/feedback-2.png">Благодарность</a>
 								</div>
 							</div>
 
@@ -382,17 +384,116 @@
 						<a href="javascript:;" class="btn btn-link widget__btn" data-fancybox="gallery" data-src="img/feedback-1.png">Смотреть все</a>
 					</div>
 
+					<div class="widget widget--flamp">
+						<div class="widget--flamp-text">Больше слов о нас на Флампе</div>
+						<a class="btn btn-o widget--flamp-btn" target="_blank" href="https://ekaterinburg.flamp.ru/firm/kvadriga_ooo-70000001055473992?utm_source=widget&utm_medium=open_filial&utm_campaign=micro_widget&utm_content=flamp4&__cf_chl_tk=soHa8HrWJZm6o0ilokmrXgt7FhVovUzbc3JWiE9LBzE-1713778973-0.0.1.1-1898#reviews">
+                            <img src="img/flamp.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            5 из 5
+                        </a>
+					</div>
+
+					<div class="widget">
+						<div class="widget__title">Работали с нами?</div>
+						<div class="widget__text">Поделитесь впечатлениями — ваш отзыв важен для нас</div>
+                        <form class="form rp">
+                            <input type="text" class="form__input rpole" name="name" placeholder="Имя">
+                            <input type="text" class="form__input rpole" name="contact" placeholder="E-mail">
+							<textarea class="form__input form__textarea" name="feedback-text" placeholder="Текст отзыва"></textarea>
+                            <div class="acceptance">
+                                <label>
+                                    <input type="checkbox" name="accept" class="form__checkbox">
+                                    <span class="custom-checkbox"></span>
+                                    <span class="c-b40">Принимаю <b>условия соглашения</b> и даю согласие на <b>обработку своих персональных данных</b> на условиях <a href="#" target="_blank">политики конфиденциальности</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-link form__submit w-100">Оставить отзыв</button>
+                        </form>
+					</div>
+
                 </aside>
 
             </div>
         </div>
 
-		<section style="padding: 40px;">
-            <div class="container">
-                слайдер наши клиенты
-            </div>
-        </section>
-
+		<section class="fs">
+		    <div class="container">
+		
+		        <div class="section__content">
+		
+		            <div class="section__header">
+		                <div class="section__header-wrapper">
+		                    <h2 class="h2 section__title">Наши клиенты</h2>
+		                    <a href="about.html" class="section__header-link d-md-none">о компании</a>
+		                </div>
+		            </div>
+		        
+		            <div class="swiper clients__slider">
+		                <div class="swiper-wrapper">
+		
+		                    <div class="feedback__item feedback__item-c fs__slide swiper-slide">
+		                        <div class="feedback__header">
+		                            <div class="feedback__firm">Курганмашзавод</div>
+		                        </div>
+		                        <div class="feedback__image">
+		                            <img src="img/feedback-slider-logo-1.png" alt="">
+		                        </div>
+		                        <div class="feedback__footer">
+		                            Сотрудничаем с 2019 года
+		                        </div>
+		                    </div>
+		
+		
+		                    <div class="fs__slide  swiper-slide">
+		                        <div class="feedback__item feedback__item-c">
+		                            <div class="feedback__image">
+		                                <img src="img/feedback-slider-logo-2.png" alt="">
+		                            </div>
+		                        </div>
+		                        <div class="feedback__item feedback__item-c">
+		                            <div class="feedback__image">
+		                                <img src="img/feedback-slider-logo-3.png" alt="">
+		                            </div>
+		                        </div>
+		                    </div>
+		
+		                    <div class="feedback__item feedback__item-c fs__slide swiper-slide">
+		                        <div class="feedback__image">
+		                            <img src="img/clients-logo-1.png" alt="">
+		                        </div>
+		                    </div>
+		
+		                    <div class="feedback__item feedback__item-c fs__slide swiper-slide">
+		                        <div class="feedback__image">
+		                            <img src="img/clients-logo-2.png" alt="">
+		                        </div>
+		                    </div>
+		
+		                    <div class="feedback__item feedback__item-c fs__slide swiper-slide">
+		                        <div class="feedback__image">
+		                            <img src="img/clients-logo-1.png" alt="">
+		                        </div>
+		                    </div>
+		
+		                </div>
+		                <div class="swiper-scrollbar"></div>
+		                <div class="swiper-button-prev">
+		                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+		                        <path d="M3.4 6L8 1.4L6.6 0L0.6 6L6.6 12L8 10.6L3.4 6Z" fill="#021A0D"/>
+		                    </svg>                        
+		                  </div>
+		                  <div class="swiper-button-next">
+		                      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+		                          <path d="M4.6 6L0 1.4L1.4 0L7.4 6L1.4 12L0 10.6L4.6 6Z" fill="#021A0D"/>
+		                      </svg>
+		                  </div>
+		                
+		            </div>
+		            
+		        </div>
+		
+		    </div>
+		</section>
 		<section class="discuss">
 		    <div class="container">
 		
@@ -851,7 +952,7 @@
 	<script src="js/fancybox.umd.js"></script>
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/clipboard.min.js"></script>
-	<script src="js/scripts.js?v=2"></script>
+	<script src="js/scripts.js?v=3"></script>
 	<!-- end scripts -->
 
 </body>
