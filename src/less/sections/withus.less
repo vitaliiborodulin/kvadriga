@@ -64,6 +64,7 @@
     .swiper-button-next {
         left: 60px;
         bottom: 0;
+
     }
 
     &__slider {
@@ -188,6 +189,14 @@
 
     .swiper-button-prev, .swiper-button-next {
         opacity: 1;
+
+        &:hover {
+            background-color: fade(@black, 5%)!important;
+
+            svg path {
+                fill: #021A0D!important;
+            }
+        }
     }
     
 }
