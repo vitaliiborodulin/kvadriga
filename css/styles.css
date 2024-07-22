@@ -1091,6 +1091,16 @@ input[type='submit'] {
   opacity: 1;
 }
 
+.withus .swiper-button-prev:hover,
+.withus .swiper-button-next:hover {
+  background-color: rgba(2, 26, 13, 0.05) !important;
+}
+
+.withus .swiper-button-prev:hover svg path,
+.withus .swiper-button-next:hover svg path {
+  fill: #021A0D !important;
+}
+
 .section {
   margin: 24px 0;
 }
@@ -1645,10 +1655,6 @@ input[type='submit'] {
   font-weight: 500;
   line-height: 1.4;
   transition: color 0.5s;
-}
-
-.case__descr:hover {
-  color: #00C466;
 }
 
 .case__card-05 .case__descr {
@@ -2926,6 +2932,10 @@ input[type='submit'] {
 
 .content__main .map__wrapper a:hover {
   color: #00C466;
+}
+
+.content__main .map__wrapper a.case__card:hover {
+  color: inherit;
 }
 
 .content__page h2 {
