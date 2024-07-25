@@ -1,13 +1,19 @@
 .service {
 
     &__box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        .row-flex();
 
         .service__card {
-            width: 474px;
-            max-width: 100%;
+            // width: 474px;
+            // max-width: 100%;
+            margin-bottom: 24px;
+            .col();
+            .size(4);
+            .size-lg(6);
+            .size-md(12);
         }
     }
 
@@ -223,7 +229,6 @@
         position: relative;
         padding-left: 40px;
 
-        // мне кажется это не нужно:
         &::after {
             display: block;
             position: absolute;
@@ -233,13 +238,6 @@
             right: 0;
             top: 0;
             z-index: 2;
-            // -webkit-filter: grayscale(100%);
-            // -moz-filter: grayscale(100%);
-            // -ms-filter: grayscale(100%);
-            // -o-filter: grayscale(100%);
-            // filter: grayscale(100%);
-            // filter: gray; /* IE 6-9 */
-            // background-color: rgba(255, 255, 255, 0.8);
             background: linear-gradient(-90deg, #f0f2f0, hsla(120, 7%, 95%, 0));
 
             .xs-block({

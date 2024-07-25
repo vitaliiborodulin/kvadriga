@@ -15,17 +15,9 @@ module.exports = {
 		md: {
 			width: "768px"
 		},
-		// sm: {
-		// 	width: "768px",
-		// 	// fields: "24px"
-		// },
 		xs: {
 			width: "576px",
 			fields: "16px"
 		},
-		// xxs: {
-		// 	width: "320px",
-		// 	fields: "15px"
-		// }
 	}
 }
