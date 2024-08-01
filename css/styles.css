@@ -112,6 +112,15 @@ img {
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .container {
@@ -269,6 +278,11 @@ button {
 
 .d-none {
   display: none;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
 }
 
 .overflow {
@@ -433,7 +447,7 @@ input[type='submit'] {
 .btn-link::after {
   position: absolute;
   content: url(../img/arrow-right.svg);
-  right: 1.5vw;
+  right: 30px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -4053,7 +4067,6 @@ input[type='submit'] {
 
 .cs__card {
   width: 320px;
-  min-height: 320px;
   margin-right: 8px;
   margin-bottom: 8px;
   padding: 24px;
@@ -5770,10 +5783,6 @@ input[type='submit'] {
     padding: 18px 7vw;
   }
 
-  .btn-link::after {
-    right: 3vw;
-  }
-
   .btn-page {
     width: 44px;
     height: 44px;
@@ -6212,7 +6221,6 @@ input[type='submit'] {
 
   .cs__card {
     width: 100%;
-    min-height: 150px;
     padding: 16px;
     border-radius: 16px;
   }
