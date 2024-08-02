@@ -23,6 +23,10 @@ $(document).keyup(function(e) {
         $('html, body').removeClass('overflow');
     }
 });
+let mobile2 = window.matchMedia('(min-width: 1200px)');
+
+if(mobile2.matches) {
+
 var sticky = new Sticky('.sticky');
 
 window.onscroll = () => {
@@ -32,13 +36,15 @@ window.onscroll = () => {
     if (window.scrollY >= div.offsetTop + div.clientHeight - aside.clientHeight) {
         sticky.destroy();
         sticky.update();
-        console.log('destroy')
+        // console.log('destroy')
     } else {
         sticky.run();
         sticky.update();
-        console.log('update')
+        // console.log('update')
     }
   };
+
+}
 new ClipboardJS('.mail-copy-btn');
 
 // var clipboardDemos=new ClipboardJS('.header__copy-btn');
