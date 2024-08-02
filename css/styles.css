@@ -2636,6 +2636,15 @@ input[type='submit'] {
 .header .mail-copy {
   display: flex;
   align-items: center;
+  -webkit-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+}
+
+.header .mail-copy * {
+  -webkit-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 .header .mail-copy-btn {
